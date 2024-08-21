@@ -22,7 +22,7 @@
 #### 🛠️ Backend:
 <p style="margin-bottom: 20px;">
     <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" style="display: inline-block; background-color: white; padding: 5px; border-radius: 5px; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="42" height="42" style="display: block;" /></a>
+    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://img.shields.io/badge/Express-ffffff?style=for-the-badge" alt="express" width="80" height="40" style="display: block;" /></a>
     <a target="_blank" href="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" style="display: inline-block;"><img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="42" height="42" /></a>
 </p>
 
