@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/FierceSpectrum/build/static/css/main.fc3553e6.css",
-    "main.js": "/FierceSpectrum/build/static/js/main.e85b26b3.js",
-    "index.html": "/FierceSpectrum/build/index.html",
-    "main.fc3553e6.css.map": "/FierceSpectrum/build/static/css/main.fc3553e6.css.map",
-    "main.e85b26b3.js.map": "/FierceSpectrum/build/static/js/main.e85b26b3.js.map"
+    "main.css": "/FierceSpectrum/static/css/main.fc3553e6.css",
+    "main.js": "/FierceSpectrum/static/js/main.e85b26b3.js",
+    "index.html": "/FierceSpectrum/index.html",
+    "main.fc3553e6.css.map": "/FierceSpectrum/static/css/main.fc3553e6.css.map",
+    "main.e85b26b3.js.map": "/FierceSpectrum/static/js/main.e85b26b3.js.map"
   },
   "entrypoints": [
     "static/css/main.fc3553e6.css",
