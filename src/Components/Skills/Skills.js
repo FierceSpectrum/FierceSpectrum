@@ -76,8 +76,6 @@ const Skills = () => {
                   <img
                   src={skill.icon}
                   alt={skill.name}
-                  width="60"
-                  height="60"
                   style={{ display: "inline-block", marginRight: "10px" }}
                 />
                 ))}

@@ -195,87 +195,6 @@ $elementos-frontend: 4;
   }
 }
 
-/* Consultas de medios para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .Skills {
-    width: calc($container-size * 0.8); // Reducir el tamaño del contenedor
-    height: calc($container-size * 0.8); // Reducir el tamaño del contenedor
-
-    h2 {
-      height: 40px;
-      padding: 5px 10px;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    .circle {
-      &.Frontend {
-        width: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
-        height: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
-      }
-
-      &.Backend {
-        width: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
-        height: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
-      }
-
-      li {
-        img {
-          width: 50px; // Reducir el tamaño de los íconos
-          height: 50px; // Reducir el tamaño de los íconos
-        }
-
-        span {
-          font-size: 20px; // Reducir el tamaño del texto
-        }
-      }
-    }
-  }
-
-}
-
-@media (max-width: 480px) {
-  .Skills {
-    width: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
-    height: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
-    // background-color: #1abc9c;
-    // border-radius: 50%;
-    // margin-left: -20px;
-
-    h2 {
-      height: 25px;
-      padding: 5px 6px;
-      font-size: 13px;
-      border-radius: 5px;
-    }
-
-    .circle {
-      &.Frontend {
-        width: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
-        height: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
-      }
-
-      &.Backend {
-        width: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
-        height: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
-        // z-index: 10;
-      }
-
-      li {
-        img {
-          width: 20px; // Reducir aún más el tamaño de los íconos
-          height: 20px; // Reducir aún más el tamaño de los íconos
-        }
-
-        span {
-          font-size: 16px; // Reducir aún más el tamaño del texto
-        }
-      }
-    }
-  }
-}
-
-
 /* Estilo del modal específico para la sección de habilidades */
 .skills-section.modal {
   background: #2c3e50;
@@ -327,25 +246,19 @@ $elementos-frontend: 4;
       flex-wrap: wrap;
       gap: 10px;
       /* Espacio entre los íconos */
-    }
-
-    a {
-      display: inline-block;
-      margin-right: 10px;
-      transition: transform 0.3s, filter 0.3s;
 
       img {
-        width: 42px;
-        height: 42px;
-        filter: brightness(0) invert(1);
-        /* Efecto de color blanco para iconos */
-      }
+        width: 60px;
+        height: 60px;
 
-      &:hover {
-        transform: scale(1.1);
-        filter: brightness(1.2);
+        /* Efecto de color blanco para iconos */
+        &:hover {
+          transform: scale(1.1);
+          filter: brightness(1.2);
+        }
       }
     }
+
   }
 
   .modal-close-button {
@@ -362,6 +275,123 @@ $elementos-frontend: 4;
     &:hover {
       color: #ff6f61;
       /* Color del botón al pasar el cursor */
+    }
+  }
+}
+
+/* Consultas de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .Skills {
+    width: calc($container-size * 0.8); // Reducir el tamaño del contenedor
+    height: calc($container-size * 0.8); // Reducir el tamaño del contenedor
+
+    h2 {
+      height: 40px;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .circle {
+      &.Frontend {
+        width: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
+        height: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
+      }
+
+      &.Backend {
+        width: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
+        height: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
+      }
+
+      li {
+        img {
+          width: 50px; // Reducir el tamaño de los íconos
+          height: 50px; // Reducir el tamaño de los íconos
+        }
+
+        span {
+          font-size: 20px; // Reducir el tamaño del texto
+        }
+      }
+    }
+  }
+
+  .skills-section.modal {
+    width: 70%;
+
+    // max-width: 800px;
+    .skills-category {
+      h4 {
+        font-size: 18px;
+      }
+
+      div {
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Skills {
+    width: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
+    height: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
+    // background-color: #1abc9c;
+    // border-radius: 50%;
+    // margin-left: -20px;
+
+    h2 {
+      height: 25px;
+      padding: 5px 6px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
+
+    .circle {
+      &.Frontend {
+        width: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
+        height: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
+      }
+
+      &.Backend {
+        width: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
+        height: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
+        // z-index: 10;
+      }
+
+      li {
+        img {
+          width: 20px; // Reducir aún más el tamaño de los íconos
+          height: 20px; // Reducir aún más el tamaño de los íconos
+        }
+
+        span {
+          font-size: 16px; // Reducir aún más el tamaño del texto
+        }
+      }
+    }
+  }
+
+  .skills-section.modal {
+    width: 70%;
+
+    // max-width: 800px;
+    .skills-category {
+      h4 {
+        font-size: 15px;
+      }
+
+      div {
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
   }
 }
