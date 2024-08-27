@@ -1,0 +1,367 @@
+/* Variables para reutilización y cambios rápidos */
+$container-size: 600px;
+$circle-size-frontend: 125px;
+$circle-size-backend: 225px;
+$animation-duration: 10s;
+$primary-color: #1abc9c;
+$elementos-backend: 6;
+$elementos-frontend: 4;
+
+/* Estilos principales */
+.Skills {
+  position: relative;
+  width: $container-size; // Ancho del contenedor de habilidades
+  height: $container-size; // Alto del contenedor de habilidades
+  margin: 0 auto; // Centrar el contenedor en la página
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    z-index: 10;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c, 0 0 60px #1abc9c, 0 0 100px #1abc9c;
+    }
+
+    &:active {
+      box-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 15px #1abc9c, 0 0 30px #1abc9c, 0 0 50px #1abc9c;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+
+    &.Frontend,
+    &.Backend {
+      animation-play-state: running;
+
+      &:hover {
+        animation-play-state: paused;
+
+        svg,
+        img,
+        span {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    &.Frontend {
+      width: $circle-size-frontend;
+      height: $circle-size-frontend;
+      animation: rotateleft $animation-duration linear infinite;
+      transform-origin: center;
+
+      svg,
+      img,
+      span {
+        animation: rotateright $animation-duration linear infinite;
+      }
+
+      // Distribuir elementos li en un círculo con mayor radio
+      li {
+        @for $i from 1 through $elementos-frontend {
+          &:nth-child(#{$i}) {
+            transform: rotate(#{($i - 1) * (360/$elementos-frontend)}deg) translate(100%) rotate(-#{($i - 1) * (360/$elementos-frontend)}deg);
+          }
+        }
+      }
+    }
+
+    &.Backend {
+      width: $circle-size-backend;
+      height: $circle-size-backend;
+      animation: rotateright $animation-duration linear infinite;
+      transform-origin: center;
+
+      svg,
+      img,
+      span {
+        animation: rotateleft $animation-duration linear infinite;
+      }
+
+      // Distribuir elementos li en un círculo con mayor radio
+      li {
+        @for $i from 1 through $elementos-backend {
+          &:nth-child(#{$i}) {
+            transform: rotate(#{($i - 1) * (360/$elementos-backend)}deg) translate(100%) rotate(-#{($i - 1) * (360/$elementos-backend)}deg);
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg,
+    img,
+    span {
+      transition: all 0.3s ease;
+    }
+
+    img {
+      padding: 10px;
+      width: 60px;
+      height: 60px;
+      z-index: 100;
+      border-radius: 25%;
+      border: #1abc9c;
+    }
+
+    span {
+      cursor: default;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      font-size: 25px;
+      color: $primary-color;
+    }
+
+    // Cuando el svg esté en hover, aplica estilos al span también
+    svg:hover+span,
+    img:hover+span {
+      opacity: 1;
+      text-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 40px #1abc9c, 0 0 80px #1abc9c;
+    }
+
+    // Cuando el span esté en hover, aplica estilos al svg también
+    span:hover+svg,
+    img:hover,
+    svg:hover {
+      opacity: 0.1;
+      border-radius: 50%;
+      border: #1abc9c solid;
+      box-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 40px #1abc9c, 0 0 80px #1abc9c;
+    }
+  }
+}
+
+// Definir la animación de rotación del contenedor
+@keyframes rotateleft {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Definir la animación de rotación de los íconos
+@keyframes rotateright {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg); // Rotación en sentido contrario
+  }
+}
+
+/* Consultas de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .Skills {
+    width: calc($container-size * 0.8); // Reducir el tamaño del contenedor
+    height: calc($container-size * 0.8); // Reducir el tamaño del contenedor
+
+    h2 {
+      height: 40px;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .circle {
+      &.Frontend {
+        width: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
+        height: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
+      }
+
+      &.Backend {
+        width: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
+        height: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
+      }
+
+      li {
+        img {
+          width: 50px; // Reducir el tamaño de los íconos
+          height: 50px; // Reducir el tamaño de los íconos
+        }
+
+        span {
+          font-size: 20px; // Reducir el tamaño del texto
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .Skills {
+    width: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
+    height: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
+    // background-color: #1abc9c;
+    // border-radius: 50%;
+    // margin-left: -20px;
+
+    h2 {
+      height: 25px;
+      padding: 5px 6px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
+
+    .circle {
+      &.Frontend {
+        width: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
+        height: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
+      }
+
+      &.Backend {
+        width: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
+        height: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
+        // z-index: 10;
+      }
+
+      li {
+        img {
+          width: 20px; // Reducir aún más el tamaño de los íconos
+          height: 20px; // Reducir aún más el tamaño de los íconos
+        }
+
+        span {
+          font-size: 16px; // Reducir aún más el tamaño del texto
+        }
+      }
+    }
+  }
+}
+
+
+/* Estilo del modal específico para la sección de habilidades */
+.skills-section.modal {
+  background: #2c3e50;
+  /* Fondo oscuro para el modal */
+  color: #eee;
+  /* Color de texto claro */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  width: 40%;
+  max-width: 800px;
+  position: relative;
+  overflow-y: auto;
+
+  h3 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1abc9c;
+    /* Color de texto para el encabezado */
+    border-bottom: 2px solid #444;
+    /* Línea inferior del encabezado */
+    padding-bottom: 10px;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que las columnas se ajusten en caso de espacio limitado */
+    gap: 20px;
+    /* Espacio entre columnas */
+  }
+
+  .skills-category {
+    flex: 1 1 calc(50% - 20px);
+    /* Dos columnas con un espacio entre ellas */
+    box-sizing: border-box;
+
+    h4 {
+      color: #1abc9c;
+      /* Color para los títulos de categorías */
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      /* Espacio entre los íconos */
+    }
+
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s, filter 0.3s;
+
+      img {
+        width: 42px;
+        height: 42px;
+        filter: brightness(0) invert(1);
+        /* Efecto de color blanco para iconos */
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  .modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #eee;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff6f61;
+      /* Color del botón al pasar el cursor */
+    }
+  }
+}

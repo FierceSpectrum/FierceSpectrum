@@ -1,3 +1,66 @@
+@import "../../Styles/Mixins/media-queries.scss";
+@import "../../Styles/Variables/brakpoints.scss";
+@import "../../Styles/Variables/colors.scss";
+
 .Footer {
-  // Estilos para el componente Footer
+  .footer {
+    background-color: $color-nav;
+    color: $color-secundario;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px -5px 5px $color-background;
+    animation: changeColor 1.5s infinite alternate;
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .contact-info,
+      .social-links,
+      .quick-links,
+      .privacy-terms {
+        margin: 10px 0;
+      }
+
+      .contact-info p {
+        margin: 0;
+        color: white;
+      }
+
+      .social-links a,
+      .quick-links a,
+      .privacy-terms a {
+        color: $color-secundario;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-primario;
+        }
+      }
+    }
+  }
+
+  /* Media Queries */
+  @include respond-to($desktop) {
+    .footer {
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .contact-info,
+        .social-links,
+        .quick-links,
+        .privacy-terms {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
 }
