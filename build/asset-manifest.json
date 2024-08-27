@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/FierceSpectrum/build/static/css/main.fc3553e6.css",
-    "main.js": "/FierceSpectrum/build/static/js/main.e85b26b3.js",
+    "main.css": "/FierceSpectrum/build/static/css/main.3306670d.css",
+    "main.js": "/FierceSpectrum/build/static/js/main.34d0d880.js",
+    "static/media/Web2.png": "/FierceSpectrum/build/static/media/Web2.8e9fa5ce63cec02a4122.png",
+    "static/media/Web1.png": "/FierceSpectrum/build/static/media/Web1.67930e0d44eac2909456.png",
     "index.html": "/FierceSpectrum/build/index.html",
-    "main.fc3553e6.css.map": "/FierceSpectrum/build/static/css/main.fc3553e6.css.map",
-    "main.e85b26b3.js.map": "/FierceSpectrum/build/static/js/main.e85b26b3.js.map"
+    "main.3306670d.css.map": "/FierceSpectrum/build/static/css/main.3306670d.css.map",
+    "main.34d0d880.js.map": "/FierceSpectrum/build/static/js/main.34d0d880.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc3553e6.css",
-    "static/js/main.e85b26b3.js"
+    "static/css/main.3306670d.css",
+    "static/js/main.34d0d880.js"
   ]
 }
