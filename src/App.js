@@ -12,7 +12,12 @@ const router = createHashRouter([
     children: [
       {
         path: "Portafolio",
-        element: <><Portafolio/><Footer/></>,
+        element: (
+          <>
+            <Portafolio />
+            {/* <Footer /> */}
+          </>
+        ),
       },
       {
         path: "Curriculum",

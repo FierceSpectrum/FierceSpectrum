@@ -4,15 +4,33 @@ $circle-size-frontend: 125px;
 $circle-size-backend: 225px;
 $animation-duration: 10s;
 $primary-color: #1abc9c;
+$text-color: #fff;
+$modal-background: #2c3e50;
+$modal-text-color: #eee;
+$modal-shadow-color: rgba(0, 0, 0, 0.8);
 $elementos-backend: 6;
 $elementos-frontend: 4;
 
+/* Mixin para animaciones */
+@mixin rotating($direction: left) {
+  @if $direction == left {
+    animation: rotateleft $animation-duration linear infinite;
+  } @else if $direction == right {
+    animation: rotateright $animation-duration linear infinite;
+  }
+  transform-origin: center;
+}
+
+/* Mixin para sombras */
+@mixin box-shadow($color) {
+  box-shadow: 0 0 10px $color, 0 0 20px $color, 0 0 30px $color, 0 0 60px $color, 0 0 100px $color;
+}
+
 /* Estilos principales */
 .Skills {
-  position: relative;
-  width: $container-size; // Ancho del contenedor de habilidades
-  height: $container-size; // Alto del contenedor de habilidades
-  margin: 0 auto; // Centrar el contenedor en la página
+  width: $container-size;
+  height: $container-size;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,9 +41,8 @@ $elementos-frontend: 4;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #1abc9c;
-    color: #fff;
+    background-color: $primary-color;
+    color: $text-color;
     border: none;
     padding: 5px 10px;
     font-size: 18px;
@@ -35,101 +52,97 @@ $elementos-frontend: 4;
     transition: box-shadow 0.3s ease;
 
     &:hover {
-      box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c, 0 0 60px #1abc9c, 0 0 100px #1abc9c;
+      @include box-shadow($primary-color);
     }
 
     &:active {
-      box-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 15px #1abc9c, 0 0 30px #1abc9c, 0 0 50px #1abc9c;
+      @include box-shadow(rgba($primary-color, 0.7));
     }
   }
 
   .circle {
     position: absolute;
-    padding: 0;
-    margin: 0;
-
-    &.Frontend,
-    &.Backend {
-      animation-play-state: running;
-
-      &:hover {
-        animation-play-state: paused;
-
-        svg,
-        img,
-        span {
-          animation-play-state: paused;
-        }
-      }
-    }
 
     &.Frontend {
-      width: $circle-size-frontend;
-      height: $circle-size-frontend;
-      animation: rotateleft $animation-duration linear infinite;
-      transform-origin: center;
+      @include rotating(left);
 
-      svg,
       img,
       span {
-        animation: rotateright $animation-duration linear infinite;
+        @include rotating(right);
       }
 
-      // Distribuir elementos li en un círculo con mayor radio
       li {
         @for $i from 1 through $elementos-frontend {
           &:nth-child(#{$i}) {
-            transform: rotate(#{($i - 1) * (360/$elementos-frontend)}deg) translate(100%) rotate(-#{($i - 1) * (360/$elementos-frontend)}deg);
+            transform: rotate(#{($i - 1) * (360 / $elementos-frontend)}deg) translate(150%) rotate(-#{($i - 1) * (360 / $elementos-frontend)}deg);
           }
         }
       }
     }
 
     &.Backend {
-      width: $circle-size-backend;
-      height: $circle-size-backend;
-      animation: rotateright $animation-duration linear infinite;
-      transform-origin: center;
+      @include rotating(right);
 
-      svg,
       img,
       span {
-        animation: rotateleft $animation-duration linear infinite;
+        @include rotating(left);
       }
 
-      // Distribuir elementos li en un círculo con mayor radio
       li {
         @for $i from 1 through $elementos-backend {
           &:nth-child(#{$i}) {
-            transform: rotate(#{($i - 1) * (360/$elementos-backend)}deg) translate(100%) rotate(-#{($i - 1) * (360/$elementos-backend)}deg);
+            transform: rotate(#{($i - 1) * (360 / $elementos-backend)}deg) translate(280%) rotate(-#{($i - 1) * (360 / $elementos-backend)}deg);
           }
         }
       }
     }
-  }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ul {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover,
+    img:hover + &,
+    span:hover + & {
+      animation-play-state: paused;
+
+      img,
+      span {
+        animation-play-state: paused;
+      }
+    }
   }
 
   li {
     position: absolute;
-    width: 100%;
-    height: 100%;
     text-align: center;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    svg,
+    &:hover {
+      img {
+        opacity: 0.1;
+        border-radius: 50%;
+        @include box-shadow($primary-color);
+      }
+
+      span {
+        opacity: 1;
+        text-shadow: 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 20px $primary-color, 0 0 40px $primary-color, 0 0 80px $primary-color;
+      }
+    }
+
     img,
     span {
       transition: all 0.3s ease;
@@ -141,7 +154,7 @@ $elementos-frontend: 4;
       height: 60px;
       z-index: 100;
       border-radius: 25%;
-      border: #1abc9c;
+      border: $primary-color;
     }
 
     span {
@@ -153,57 +166,36 @@ $elementos-frontend: 4;
       font-size: 25px;
       color: $primary-color;
     }
-
-    // Cuando el svg esté en hover, aplica estilos al span también
-    svg:hover+span,
-    img:hover+span {
-      opacity: 1;
-      text-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 40px #1abc9c, 0 0 80px #1abc9c;
-    }
-
-    // Cuando el span esté en hover, aplica estilos al svg también
-    span:hover+svg,
-    img:hover,
-    svg:hover {
-      opacity: 0.1;
-      border-radius: 50%;
-      border: #1abc9c solid;
-      box-shadow: 0 0 5px #1abc9c, 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 40px #1abc9c, 0 0 80px #1abc9c;
-    }
   }
 }
 
-// Definir la animación de rotación del contenedor
+/* Definir la animación de rotación del contenedor */
 @keyframes rotateleft {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
 
-// Definir la animación de rotación de los íconos
+/* Definir la animación de rotación de los íconos */
 @keyframes rotateright {
   from {
     transform: rotate(0deg);
   }
-
   to {
-    transform: rotate(-360deg); // Rotación en sentido contrario
+    transform: rotate(-360deg);
   }
 }
 
 /* Estilo del modal específico para la sección de habilidades */
 .skills-section.modal {
-  background: #2c3e50;
-  /* Fondo oscuro para el modal */
-  color: #eee;
-  /* Color de texto claro */
+  background: $modal-background;
+  color: $modal-text-color;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 10px $modal-shadow-color;
   width: 40%;
   max-width: 800px;
   position: relative;
@@ -213,29 +205,23 @@ $elementos-frontend: 4;
     margin: 0 0 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #1abc9c;
-    /* Color de texto para el encabezado */
+    color: $primary-color;
     border-bottom: 2px solid #444;
-    /* Línea inferior del encabezado */
     padding-bottom: 10px;
   }
 
   .skills-list {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que las columnas se ajusten en caso de espacio limitado */
     gap: 20px;
-    /* Espacio entre columnas */
   }
 
   .skills-category {
     flex: 1 1 calc(50% - 20px);
-    /* Dos columnas con un espacio entre ellas */
     box-sizing: border-box;
 
     h4 {
-      color: #1abc9c;
-      /* Color para los títulos de categorías */
+      color: $primary-color;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
@@ -245,20 +231,18 @@ $elementos-frontend: 4;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      /* Espacio entre los íconos */
 
       img {
         width: 60px;
         height: 60px;
+        transition: transform 0.3s, filter 0.3s;
 
-        /* Efecto de color blanco para iconos */
         &:hover {
           transform: scale(1.1);
           filter: brightness(1.2);
         }
       }
     }
-
   }
 
   .modal-close-button {
@@ -267,14 +251,13 @@ $elementos-frontend: 4;
     right: 15px;
     background: transparent;
     border: none;
-    color: #eee;
+    color: $modal-text-color;
     font-size: 28px;
     cursor: pointer;
     transition: color 0.3s;
 
     &:hover {
       color: #ff6f61;
-      /* Color del botón al pasar el cursor */
     }
   }
 }
@@ -282,116 +265,68 @@ $elementos-frontend: 4;
 /* Consultas de medios para pantallas más pequeñas */
 @media (max-width: 768px) {
   .Skills {
-    width: calc($container-size * 0.8); // Reducir el tamaño del contenedor
-    height: calc($container-size * 0.8); // Reducir el tamaño del contenedor
+    width: calc($container-size * 0.8);
+    height: calc($container-size * 0.8);
 
     h2 {
       height: 40px;
-      padding: 5px 10px;
       font-size: 16px;
-      border-radius: 5px;
     }
 
-    .circle {
-      &.Frontend {
-        width: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
-        height: calc($circle-size-frontend * 0.8); // Reducir el tamaño del círculo
-      }
+    .circle li img {
+      width: 50px;
+      height: 50px;
+    }
 
-      &.Backend {
-        width: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
-        height: calc($circle-size-backend * 0.8); // Reducir el tamaño del círculo
-      }
-
-      li {
-        img {
-          width: 50px; // Reducir el tamaño de los íconos
-          height: 50px; // Reducir el tamaño de los íconos
-        }
-
-        span {
-          font-size: 20px; // Reducir el tamaño del texto
-        }
-      }
+    .circle li span {
+      font-size: 20px;
     }
   }
 
   .skills-section.modal {
     width: 70%;
 
-    // max-width: 800px;
-    .skills-category {
-      h4 {
-        font-size: 18px;
-      }
+    .skills-category h4 {
+      font-size: 18px;
+    }
 
-      div {
-
-        img {
-          width: 50px;
-          height: 50px;
-        }
-      }
+    .skills-category div img {
+      width: 50px;
+      height: 50px;
     }
   }
 }
 
 @media (max-width: 480px) {
   .Skills {
-    width: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
-    height: calc($container-size * 0.5); // Reducir aún más el tamaño del contenedor
-    // background-color: #1abc9c;
-    // border-radius: 50%;
-    // margin-left: -20px;
+    width: calc($container-size * 0.5);
+    height: calc($container-size * 0.5);
 
     h2 {
       height: 25px;
-      padding: 5px 6px;
       font-size: 13px;
-      border-radius: 5px;
     }
 
-    .circle {
-      &.Frontend {
-        width: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
-        height: calc($circle-size-frontend * 0.6); // Reducir aún más el tamaño del círculo
-      }
+    .circle li img {
+      width: 20px;
+      height: 20px;
+    }
 
-      &.Backend {
-        width: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
-        height: calc($circle-size-backend * 0.6); // Reducir aún más el tamaño del círculo
-        // z-index: 10;
-      }
-
-      li {
-        img {
-          width: 20px; // Reducir aún más el tamaño de los íconos
-          height: 20px; // Reducir aún más el tamaño de los íconos
-        }
-
-        span {
-          font-size: 16px; // Reducir aún más el tamaño del texto
-        }
-      }
+    .circle li span {
+      font-size: 16px;
     }
   }
 
   .skills-section.modal {
     width: 70%;
 
-    // max-width: 800px;
-    .skills-category {
-      h4 {
-        font-size: 15px;
-      }
+    .skills-category h4 {
+      font-size: 15px;
+    }
 
-      div {
-
-        img {
-          width: 40px;
-          height: 40px;
-        }
-      }
+    .skills-category div img {
+      width: 40px;
+      height: 40px;
     }
   }
 }

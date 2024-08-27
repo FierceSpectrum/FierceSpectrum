@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Social Hub",
+        "description": "Gestor de publicaciones para redes sociales. Construido con Node.js y React.",
+        "githubLink": "https://github.com/FierceSpectrum/Social-Hub-BackEnd",
+        "status": "completed"
+    },
+    {
+        "title": "API de Gestión de Tareas",
+        "description": "API RESTful con autenticación JWT. Construido con Node.js y MongoDB.",
+        "githubLink": "#",
+        "status": "in-progress"
+    }
+]

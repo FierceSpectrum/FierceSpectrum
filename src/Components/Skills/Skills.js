@@ -17,8 +17,8 @@ const categories = {
 };
 
 // Skill item component
-const SkillItem = ({ skill }) => (
-  <li>
+const SkillItem = ({ skill, angle, distance }) => (
+  <li style={{ "--angle": `${angle}deg`, "--distance": `${distance}px` }}>
     <img src={skill.icon} alt={skill.name} />
     <span>{skill.name}</span>
   </li>
@@ -29,6 +29,8 @@ SkillItem.propTypes = {
     icon: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
+  angle: PropTypes.number.isRequired,
+  distance: PropTypes.number.isRequired,
 };
 
 // Skills component
@@ -53,9 +55,18 @@ const Skills = () => {
       {skillsData.map((category) => (
         <div key={category.type} className={`circle ${category.type}`}>
           <ul>
-            {category.skills.map((skill) => (
-              <SkillItem key={skill.name} skill={skill} />
-            ))}
+            {category.skills.map((skill, index) => {
+              const angle = index * (360 / category.skills.length);
+              const distance = 50 + index * 20; // Adjust distance as needed
+              return (
+                <SkillItem
+                  key={skill.name}
+                  skill={skill}
+                  angle={angle}
+                  distance={distance}
+                />
+              );
+            })}
           </ul>
         </div>
       ))}
@@ -74,10 +85,11 @@ const Skills = () => {
               <div>
                 {category.items.map((skill) => (
                   <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  style={{ display: "inline-block", marginRight: "10px" }}
-                />
+                    key={skill.name}
+                    src={skill.icon}
+                    alt={skill.name}
+                    style={{ display: "inline-block", marginRight: "10px" }}
+                  />
                 ))}
               </div>
             </div>

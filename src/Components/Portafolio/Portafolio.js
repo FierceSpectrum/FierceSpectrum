@@ -2,6 +2,8 @@ import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
 
+import FeaturedProyects from "../../Jsons/FeaturedProyects.json"
+
 // Componente para la Sección de Bienvenida con imagen de fondo y título reubicado
 const WelcomeSection = () => (
   <div className="section welcome">
@@ -20,23 +22,24 @@ const SkillsSection = () => {
 
 const FeaturedProjectsSection = () => (
   <div className="section projects">
-    <h2>Proyectos Destacados</h2>
-    <div className="project-item">
-      <h3>Social Hub</h3>
-      <p>
-        Gestor de publicaciones para redes sociales. Construido con Node.js y
-        React.
-      </p>
-      <a href="#">Ver en GitHub</a>
+  <h2>Proyectos Destacados</h2>
+  {FeaturedProyects.map((project, index) => (
+    <div className="project-item" key={index}>
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      {project.title === 'Social Hub' && (
+        <>
+          <p><strong>Frontend:</strong> {project.frontend}</p>
+          <p><strong>Backend:</strong> {project.backend}</p>
+        </>
+      )}
+      {project.status === 'in-progress' && (
+        <p style={{ color: 'orange' }}>🚧 En desarrollo</p>
+      )}
+      <a href={project.githubLink}>Ver en GitHub</a>
     </div>
-    <div className="project-item">
-      <h3>API de Gestión de Tareas</h3>
-      <p>
-        API RESTful con autenticación JWT. Construido con Node.js y MongoDB.
-      </p>
-      <a href="#">Ver en GitHub</a>
-    </div>
-  </div>
+  ))}
+</div>
 );
 
 const AboutMeSection = () => (

@@ -71,7 +71,6 @@ a {
     border-radius: 5px;
 
     &.welcome {
-      position: relative;
       width: 70%; // Establece el ancho al 60% de la pantalla
       max-width: 1000px; // Limita el ancho máximo
       margin: 0 auto; // Centra horizontalmente
@@ -189,4 +188,55 @@ a {
       }
     }
   }
+}
+
+
+@media (max-width: 768px) {
+
+  .Portafolio {
+    .section {
+
+      &.welcome {
+        width: 70%;
+        max-width: 1000px;
+        .welcome-content {
+          padding: 10px;
+
+          h1 {
+            font-size: 1.5em;
+          }
+
+          p {
+            font-size: 0.8em; 
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .Portafolio {
+    .section {
+
+      &.welcome {
+        width: 70%;
+        // aspect-ratio: 4/3;
+        max-width: 1000px;
+        .welcome-content {
+          padding: 10px;
+
+          h1 {
+            font-size: 1em;
+          }
+
+          p {
+            font-size: 0.77em; 
+          }
+        }
+      }
+    }
+  }
+
 }
