@@ -107,26 +107,94 @@ a {
 
 
     &.projects {
-      .project-item {
+      $container-size: 600px;
+      $primary-color: #1abc9c;
+      $text-color: #fff;
+      $modal-background: #2c3e50;
+      $modal-shadow-color: rgba(0, 0, 0, 0.8);
+
+      .card-container {
+        width: $container-size;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        background-color: $modal-background;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px $modal-shadow-color;
+        overflow: hidden;
+        width: calc(100% / 2 - 20px); // Two cards per row with a gap
         margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid $primary-color;
-        border-radius: 5px;
-        background-color: $card-background-color;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        h3 {
-          margin-top: 0;
-          font-size: 1.5em;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
 
-        p {
-          margin: 10px 0;
-          color: lighten($text-color, 10%);
+        .card-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
         }
 
-        a {
-          font-weight: bold;
-          color: $secondary-color;
+        .card-content {
+          padding: 15px;
+          color: $text-color;
+
+          h3 {
+            color: $primary-color;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: lighten($primary-color, 10%);
+            }
+          }
+        }
+      }
+
+      // Media queries for responsive design
+      @media (max-width: 768px) {
+        .card-container {
+          width: 90%;
+        }
+
+        .card {
+          width: calc(100% - 20px); // Full width minus the gap
+        }
+
+        .card-content {
+          padding: 10px;
+
+          h3 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+          a {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -199,6 +267,7 @@ a {
       &.welcome {
         width: 70%;
         max-width: 1000px;
+
         .welcome-content {
           padding: 10px;
 
@@ -207,7 +276,7 @@ a {
           }
 
           p {
-            font-size: 0.8em; 
+            font-size: 0.8em;
           }
         }
       }
@@ -224,6 +293,7 @@ a {
         width: 70%;
         // aspect-ratio: 4/3;
         max-width: 1000px;
+
         .welcome-content {
           padding: 10px;
 
@@ -232,7 +302,7 @@ a {
           }
 
           p {
-            font-size: 0.77em; 
+            font-size: 0.77em;
           }
         }
       }
