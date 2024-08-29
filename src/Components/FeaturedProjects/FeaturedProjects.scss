@@ -1,0 +1,249 @@
+/* Variables globales */
+$container-size: 600px;
+$primary-color: #1abc9c;
+$text-color: #fff;
+$text-color2: #00faa7;
+$modal-background: #2c3e50;
+$modal-text-color: #eee;
+$modal-shadow-color: rgba(0, 0, 0, 0.8);
+$gap-size: 20px;
+$border-radius: 10px;
+$link-color: #42aff8; // Color para enlaces
+$tech-background-color: #355370; // Fondo para tecnologías
+
+/* Estilos para la sección de proyectos destacados */
+.FeaturedProjects {
+  h2 {
+    text-align: center;
+    color: $text-color;
+    margin-bottom: $gap-size;
+  }
+
+  .card-container {
+    width: $container-size;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-size;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: $modal-background;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px $modal-shadow-color;
+    overflow: hidden;
+    width: calc(50% - #{$gap-size});
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      color: $text-color;
+
+      h3 {
+        color: $primary-color;
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        margin-bottom: 15px;
+      }
+
+      .status {
+        color: orange;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: $link-color;
+          text-decoration: none;
+          font-weight: bold;
+          margin-top: 5px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: lighten($link-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  // Media queries para diseño responsivo
+  @media (max-width: 768px) {
+    .card-container {
+      width: 90%;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .card-content {
+      padding: 10px;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+
+      a {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+/* Estilos para los detalles del proyecto */
+.project-details {
+  background: $modal-background;
+  color: $modal-text-color;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px $modal-shadow-color;
+  width: 60%;
+  max-width: 900px;
+  position: relative;
+  max-height: 700px;
+  overflow-y: auto;
+  margin: 20px auto;
+
+  /* Estilos de la barra de desplazamiento */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: darken($modal-background, 10%);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 8px;
+    border: 2px solid $modal-background;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+
+  h3 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: $primary-color;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: lighten($modal-text-color, 20%);
+    margin-bottom: 20px;
+  }
+
+  .technologies {
+    margin-top: 20px;
+
+    h4 {
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $primary-color;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      li {
+        text-shadow: 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 20px $primary-color, 0 0 40px $primary-color, 0 0 80px $primary-color;
+        background: $tech-background-color;
+        color: $text-color2;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .additional-links {
+    margin-top: 30px;
+
+    h4 {
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $primary-color;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $link-color;
+          text-decoration: none;
+          font-size: 16px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: lighten($link-color, 20%);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: $modal-text-color;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff6f61;
+    }
+  }
+}

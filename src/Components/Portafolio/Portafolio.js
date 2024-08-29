@@ -1,10 +1,11 @@
 import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
+import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
 
 // import imgenesdfa from "/images/WebSocialHub.png"
 
-import FeaturedProyects from "../../FeaturedProyects.json";
+
 
 // Componente para la Sección de Bienvenida con imagen de fondo y título reubicado
 const WelcomeSection = () => (
@@ -20,26 +21,6 @@ const WelcomeSection = () => (
 
 // const SkillsSection = () => {};
 
-const FeaturedProjectsSection = () => (
-  <div className="section projects">
-    <h2>Proyectos Destacados</h2>
-    <div className="card-container">
-      {FeaturedProyects.map((project, index) => (
-        <div className="card" key={index}>
-          <img src={project.image} alt={project.title} className="card-image" />
-          <div className="card-content">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            {project.status === "in-progress" && (
-              <p style={{ color: "orange" }}>🚧 En desarrollo</p>
-            )}
-            <a href={project.githubLink}>Ver en GitHub</a>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
 
 const AboutMeSection = () => (
   <div className="section about-me">
@@ -82,7 +63,7 @@ const Portafolio = () => {
       <div className="portfolio-container">
         <WelcomeSection />
         <Skills />
-        <FeaturedProjectsSection />
+        <FeaturedProjects />
         <AboutMeSection />
         <ContactSection />
       </div>
