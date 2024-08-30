@@ -44,8 +44,8 @@ const Portafolio = () => {
       <div className="portfolio-container">
         <WelcomeSection />
         <Skills />
-        {/* <FeaturedProjects />
-        <AboutMeSection /> */}
+        <FeaturedProjects />
+        <AboutMeSection />
       </div>
     </div>
   );
