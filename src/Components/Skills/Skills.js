@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Skills.scss";
-import skillsData from "../../Jsons/Skills.json";
-import skillsModal from "../../Jsons/SkillsModal.json";
+import skillsData from "../../Skills.json";
+import skillsModal from "../../SkillsModal.json";
 import Modal from "../Modal/Modal";
 
 // Skill categories and icons
