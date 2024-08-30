@@ -31,6 +31,14 @@
 
         .navigation-container {
             text-align: left;
+            width: 100%;
+            display: flex;
+
+            .actions {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+            }
 
             .navigation-content {
                 display: flex;
@@ -46,12 +54,14 @@
                         height: 50px; // Reduce the height
                         display: block;
 
-                        .checkbox {
+                        .checkbox,
+                        .menu-icon {
                             position: absolute;
-                            height: 28px; // Slightly smaller
-                            width: 28px;
-                            top: 15px; // Adjust position for smaller height
-                            left: 25px; // Adjust position for smaller width
+                            top: 30px;
+                            left: 25px;
+                        }
+
+                        .checkbox {
                             z-index: 5;
                             opacity: 0;
                             cursor: pointer;
@@ -59,10 +69,7 @@
 
                         .menu-icon {
                             height: 20px; // Smaller height for icon
-                            width: 28px;
-                            position: absolute;
-                            top: 15px;
-                            left: 25px;
+                            width: 26px;
                             z-index: 2;
                             display: flex;
                             flex-direction: column;

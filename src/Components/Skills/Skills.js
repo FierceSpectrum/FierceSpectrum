@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Skills.scss";
-import skillsData from "../../Jsons/Skills.json";
-import skillsModal from "../../Jsons/SkillsModal.json";
 import Modal from "../Modal/Modal";
-
-// Skill categories and icons
-const categories = {
-  Lenguajes: "💻",
-  Frontend: "🎨",
-  Backend: "🛠️",
-  Database: "🗄️",
-  DevOps: "🚀",
-  Software: "🖥️",
-  Other: "🌐",
-};
+import { useTranslation } from "react-i18next";
 
 // Skill item component
 const SkillItem = ({ skill, angle, distance }) => (
@@ -36,23 +24,24 @@ SkillItem.propTypes = {
 // Skills component
 const Skills = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [skills, setSkills] = useState([]);
+  const [allSkills, setAllSkills] = useState([]);
+  const { t } = useTranslation();
+  const { fullstack, all } = t("skills", { returnObjects: true });
+  const { skills } = fullstack;
 
   useEffect(() => {
     if (modalIsOpen) {
-      setSkills(skillsModal);
+      setAllSkills(all);
     }
   }, [modalIsOpen]);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
-  const getCategoryIcon = (category) => categories[category] || "";
-
   return (
     <div className="Skills">
-      <h2 onClick={openModal}>Habilidades</h2>
-      {skillsData.map((category) => (
+      <h2 onClick={openModal}>{fullstack.button}</h2>
+      {skills.map((category) => (
         <div key={category.type} className={`circle ${category.type}`}>
           <ul>
             {category.skills.map((skill, index) => {
@@ -75,12 +64,12 @@ const Skills = () => {
         onClose={closeModal}
         nameClass="skills-section"
       >
-        <h3>Lista de Habilidades</h3>
+        <h3>{fullstack.modla.title1}</h3>
         <div className="skills-list">
-          {skills.map((category) => (
+          {allSkills.map((category) => (
             <div key={category.type} className="skills-category">
               <h4>
-                {getCategoryIcon(category.type)} {category.type}
+                {category.icon} {category.type}
               </h4>
               <div>
                 {category.items.map((skill) => (

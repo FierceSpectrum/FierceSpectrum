@@ -1,0 +1,315 @@
+{
+    "navigation": {
+        "english": "Ingles",
+        "espanish": "Español",
+        "links": [
+            {
+                "name": "Inicio",
+                "href": "Home"
+            },
+            {
+                "name": "Curriculum",
+                "href": "Curriculum"
+            },
+            {
+                "name": "Proyectos",
+                "href": "Projects"
+            },
+            {
+                "name": "Sobre Mí",
+                "href": "AboutMe"
+            }
+        ]
+    },
+    "welcome": {
+        "title": "¡Bienvenido, Soy Benjamín Sandí!",
+        "description": "Desarrollador Full Stack con un enfoque en Backend"
+    },
+    "skills": {
+        "all": [
+            {
+                "type": "Lenguajes",
+                "icon": "💻",
+                "items": [
+                    {
+                        "name": "JavaScript",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    },
+                    {
+                        "name": "C#",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+                    },
+                    {
+                        "name": "Python",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                    }
+                ],
+                "Futuro": {
+                    "name": "TypeScript",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+                    "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                }
+            },
+            {
+                "type": "Frontend",
+                "icon": "🎨",
+                "items": [
+                    {
+                        "name": "React",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                    },
+                    {
+                        "name": "HTML5",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                    },
+                    {
+                        "name": "Sass",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+                    }
+                ]
+            },
+            {
+                "type": "Backend",
+                "icon": "🛠️",
+                "items": [
+                    {
+                        "name": "Node.js",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                    },
+                    {
+                        "name": "Express",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+                    },
+                    {
+                        "name": "GraphQL",
+                        "icon": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
+                        "link": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+                    }
+                ]
+            },
+            {
+                "type": "Base de Datos",
+                "icon": "🗄️",
+                "items": [
+                    {
+                        "name": "MongoDB",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                    },
+                    {
+                        "name": "PostgreSQL",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                    },
+                    {
+                        "name": "MSSQL",
+                        "icon": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+                        "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+                    }
+                ]
+            },
+            {
+                "type": "DevOps",
+                "icon": "🚀",
+                "items": [
+                    {
+                        "name": "Vagrant",
+                        "icon": "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg",
+                        "link": "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg"
+                    },
+                    {
+                        "name": "Bash",
+                        "icon": "https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg",
+                        "link": "https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg"
+                    }
+                ]
+            },
+            {
+                "type": "Programas",
+                "icon": "🖥️",
+                "items": [
+                    {
+                        "name": "Postman",
+                        "icon": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+                        "link": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                    }
+                ]
+            },
+            {
+                "type": "Otras",
+                "icon": "🌐",
+                "items": [
+                    {
+                        "name": "Linux",
+                        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+                        "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                    },
+                    {
+                        "name": "Git",
+                        "icon": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+                        "link": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                    }
+                ]
+            }
+        ],
+        "fullstack": {
+            "button": "Habilidades",
+            "modla": {
+                "title1": "Lista de Habilidades"
+            },
+            "skills": [
+                {
+                    "type": "Backend",
+                    "skills": [
+                        {
+                            "name": "Express.js",
+                            "icon": "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                        },
+                        {
+                            "name": "Node.js",
+                            "icon": "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+                        },
+                        {
+                            "name": "MongoDB",
+                            "icon": "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"
+                        },
+                        {
+                            "name": "GraphQL",
+                            "icon": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+                        }
+                    ]
+                },
+                {
+                    "type": "Frontend",
+                    "skills": [
+                        {
+                            "name": "Sass",
+                            "icon": "https://upload.vectorlogo.zone/logos/sass-lang/images/a0ade321-2cfb-4671-b5a6-9999a7e55551.svg"
+                        },
+                        {
+                            "name": "React",
+                            "icon": "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "projects": {
+        "all": [],
+        "featured": {
+            "title": "Proyectos Destacados",
+            "projects": [
+                {
+                    "title": "Social Hub",
+                    "description": "Gestor de publicaciones para redes sociales, construido con Node.js y React.",
+                    "longDescription": "Social Hub es una plataforma que permite a los usuarios gestionar publicaciones en múltiples redes sociales desde un único lugar. Incluye características como programación de publicaciones, análisis de rendimiento y más. El backend está construido en Node.js con Express, y el frontend en React con SCSS. Utiliza un sistema de autenticación de dos factores (2FA) con OTP a través de Google Authenticator y códigos QR. Actualmente, soporta la vinculación de cuentas de Mastodon y Reddit para realizar publicaciones.",
+                    "status": "completado",
+                    "image": "./images/WebSocialHub.png",
+                    "technologies": [
+                        "Node.js",
+                        "Express.js",
+                        "React",
+                        "SCSS",
+                        "PostgreSQL",
+                        "OTP (Google Authenticator)"
+                    ],
+                    "githubLinks": [
+                        {
+                            "text": "Ver en GitHub el FrontEnd",
+                            "url": "https://github.com/FierceSpectrum/Social-Hub-FrontEnd"
+                        },
+                        {
+                            "text": "Ver en GitHub el BackEnd",
+                            "url": "https://github.com/FierceSpectrum/Social-Hub-BackEnd"
+                        }
+                    ],
+                    "morelinks": true,
+                    "additionalLinks": []
+                },
+                {
+                    "title": "Información sobre videojuegos",
+                    "description": "Una página web para dar información relevante de algunos juegos modernos por categorías.",
+                    "githubLink": {
+                        "text": "Ver en GitHub",
+                        "url": "https://github.com/FierceSpectrum/Proyecto-Web"
+                    },
+                    "longDescription": "Este proyecto es una página web que ofrece información detallada sobre una variedad de videojuegos modernos, organizados por categorías como MMORPG, MOBAS y Shooters. La web incluye descripciones, capturas de pantalla",
+                    "status": "completado",
+                    "image": "./images/WebJuegos.png",
+                    "technologies": [
+                        "HTML",
+                        "SCSS",
+                        "CSS"
+                    ],
+                    "additionalLinks": []
+                }
+            ],
+            "modal": {
+                "title1": "Tecnologías utilizadas",
+                "title2": "Enlaces adicionales"
+            }
+        }
+    },
+    "aboutMe": {
+        "title":"Sobre Mí",
+        "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Actualmente, estudio <strong>Ingeniería de Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
+        "passion": "Estoy siempre en busca de nuevas tecnologías y métodos para mejorar mis habilidades. Si deseas conectar o conocer más sobre mi trabajo, no dudes en contactarme a través de las redes sociales.",
+        "email": "benjaminsandisalas@gmail.com",
+        "socialLinks": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/FierceSpectrum",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://x.com/BenjaminSandiS1",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/fiercespectrum",
+                "logo": "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg"
+            }
+        ]
+    },
+    "curriculum": {},
+    "footer": {
+        "email": "Correo"
+    }
+}

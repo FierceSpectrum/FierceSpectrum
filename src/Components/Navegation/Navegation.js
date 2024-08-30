@@ -2,21 +2,20 @@ import "./Navegation.scss";
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+import LenguageSwitcher from "../LenguageSwitcher/LenguageSwitcher";
+import Footer from "../Footer/Footer";
+
 const NavigationItems = () => {
+  const { t } = useTranslation();
+  const links = t("navigation.links", { returnObjects: true });
   return (
     <ul className="Items">
-      <li>
-        <Link to="/Home">Inicio</Link>
-      </li>
-      <li>
-        <Link to="/Curriculum">Curriculum</Link>
-      </li>
-      <li>
-        <Link to="/Projects">Projects</Link>
-      </li>{" "}
-      <li>
-        <Link to="/AboutMe">About Me</Link>
-      </li>
+      {links.map((link) => (
+        <li>
+          <Link to={`/${link.href}`}>{link.name}</Link>
+        </li>
+      ))}
     </ul>
   );
 };
@@ -56,10 +55,14 @@ const Navegation = () => {
             <nav className="navigation-content">
               <div>{isMobile ? <HamburgerMenu /> : <NavigationItems />}</div>
             </nav>
+            <div className="actions">
+              <LenguageSwitcher />
+            </div>
           </div>
         </header>
       </div>
       <Outlet />
+      <Footer />
     </>
   );
 };

@@ -2,23 +2,29 @@ import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
-import AboutMeData from "../../Jsons/AboutMe.json";
+import { useTranslation } from "react-i18next";
 
-const WelcomeSection = () => (
-  <div className="section welcome">
-    <div className="welcome-content">
-      <h1>¡Bienvenido!<br/> Soy Benjamín Sandí</h1>
-      <p>Desarrollador Full Stack con un enfoque en Backend</p>
+const WelcomeSection = () => {
+  const { t } = useTranslation();
+  const welcome = t("welcome", { returnObjects: true });
+
+  return (
+    <div className="section welcome">
+      <div className="welcome-content">
+        <h1>{welcome.title}</h1>
+        <p>{welcome.description}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const AboutMeSection = () => {
-  const {aboutMe} = AboutMeData
+  const { t } = useTranslation();
+  const aboutMe = t("aboutMe", { returnObjects: true });
   const { introduction, passion } = aboutMe;
   return (
     <div className="section about-me">
-      <h2>Sobre Mí</h2>
+      <h2>{aboutMe.title}</h2>
       <p dangerouslySetInnerHTML={{ __html: introduction }} />
       <p dangerouslySetInnerHTML={{ __html: passion }} />
       <ul className="social-links">

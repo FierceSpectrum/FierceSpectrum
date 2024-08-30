@@ -2,12 +2,16 @@ import React from "react";
 import "./Footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
-
-import FooterDate from "../../Jsons/Footer.json";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { footer } = FooterDate;
-  const { email} = footer;
+  const { t } = useTranslation();
+
+  const footer = t("footer", { returnObjects: true });
+  const aboutMe = t("aboutMe", { returnObjects: true });
+  const navigation = t("navigation", { returnObjects: true });
+  const { email, socialLinks } = aboutMe;
+
   // Función para copiar el email al portapapeles
   const copyToClipboard = () => {
     navigator.clipboard
@@ -26,7 +30,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="contact-info">
             <p>
-              Email:{" "}
+              {footer.email}:{" "}
               <a href={`mailto:${email}`} className="email-link">
                 {email}
               </a>
@@ -36,7 +40,7 @@ const Footer = () => {
             </p>
           </div>
           <ul className="social-links">
-            {footer.socialLinks.map((link) => (
+            {socialLinks.map((link) => (
               <li key={link.name} className={`social-item ${link.name}`}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <img
@@ -49,7 +53,7 @@ const Footer = () => {
             ))}
           </ul>
           <div className="quick-links">
-            {footer.quicklinks.map((link) => (
+            {navigation.links.map((link) => (
               <a href={`#/${link.href}`}>{link.name}</a>
             ))}
           </div>
