@@ -43,7 +43,7 @@ const Portafolio = () => {
     <div className="Portafolio">
       <div className="portfolio-container">
         <WelcomeSection />
-        <Skills />
+        {/* <Skills /> */}
         {/* <FeaturedProjects />
         <AboutMeSection /> */}
       </div>
