@@ -15,7 +15,7 @@ const router = createHashRouter([
         element: (
           <>
             <Portafolio />
-            <Footer />
+            {/* <Footer /> */}
           </>
         ),
       },
