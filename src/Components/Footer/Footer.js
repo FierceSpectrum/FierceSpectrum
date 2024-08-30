@@ -11,7 +11,7 @@ const Footer = () => {
   // Función para copiar el email al portapapeles
   const copyToClipboard = () => {
     navigator.clipboard
-      .writeText(email)
+      .writeText(email || '')
       .then(() => {
         alert("Email copiado al portapapeles!");
       })
