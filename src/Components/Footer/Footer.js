@@ -6,7 +6,10 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import FooterDate from "../../Jsons/Footer.json";
 
 const Footer = () => {
+  console.log(FooterDate)
   const { email, socialLinks, quicklinks } = FooterDate[0].footer;
+  console.log(socialLinks)
+  console.log(quicklinks)
 
   // Función para copiar el email al portapapeles
   const copyToClipboard = () => {
