@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
-import FooterDate from "../../Footer.json";
+import FooterDate from "../Jsons/Footer.json";
 
 const Footer = () => {
   const { email, socialLinks, quicklinks } = FooterDate.footer;

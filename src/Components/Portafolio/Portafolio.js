@@ -2,7 +2,7 @@ import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
-import AboutMeData from "../../AboutMe.json";
+import AboutMeData from "../Jsons/AboutMe.json";
 
 const WelcomeSection = () => (
   <div className="section welcome">
