@@ -14,14 +14,15 @@ const WelcomeSection = () => (
 );
 
 const AboutMeSection = () => {
-  const { introduction, passion } = AboutMeData.aboutMe;
+  const {aboutMe} = AboutMeData
+  const { introduction, passion } = aboutMe;
   return (
     <div className="section about-me">
       <h2>Sobre Mí</h2>
       <p dangerouslySetInnerHTML={{ __html: introduction }} />
       <p dangerouslySetInnerHTML={{ __html: passion }} />
       <ul className="social-links">
-        {AboutMeData.aboutMe.socialLinks.map((link) => (
+        {aboutMe.socialLinks.map((link) => (
           <li key={link.name} className={`social-item ${link.name}`}>
             <a href={link.url} target="_blank" rel="noopener noreferrer">
               <img
