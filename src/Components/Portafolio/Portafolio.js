@@ -2,7 +2,7 @@ import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
-import AboutMeData from "../Jsons/AboutMe.json";
+import AboutMeData from "../../Jsons/AboutMe.json";
 
 const WelcomeSection = () => (
   <div className="section welcome">
@@ -14,7 +14,7 @@ const WelcomeSection = () => (
 );
 
 const AboutMeSection = () => {
-  const { introduction, passion, socialLinks } = AboutMeData.aboutMe;
+  const { introduction, passion, socialLinks } = AboutMeData[0].aboutMe;
   return (
     <div className="section about-me">
       <h2>Sobre Mí</h2>

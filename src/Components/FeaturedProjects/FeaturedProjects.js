@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FeaturedProjects.scss";
 import Modal from "../Modal/Modal";
-import featuredProjectsData from "../Jsons/FeaturedProjects.json";
+import featuredProjectsData from "../../Jsons/FeaturedProjects.json";
 
 const FeaturedProjects = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

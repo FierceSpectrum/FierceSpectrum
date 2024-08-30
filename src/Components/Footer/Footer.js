@@ -3,10 +3,10 @@ import "./Footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
-import FooterDate from "../Jsons/Footer.json";
+import FooterDate from "../../Jsons/Footer.json";
 
 const Footer = () => {
-  const { email, socialLinks, quicklinks } = FooterDate.footer;
+  const { email, socialLinks, quicklinks } = FooterDate[0].footer;
 
   // Función para copiar el email al portapapeles
   const copyToClipboard = () => {
