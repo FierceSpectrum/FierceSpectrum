@@ -14,9 +14,7 @@ const WelcomeSection = () => (
 );
 
 const AboutMeSection = () => {
-  console.log(AboutMeData)
   const { introduction, passion, socialLinks } = AboutMeData[0].aboutMe;
-  console.log(socialLinks) 
   return (
     <div className="section about-me">
       <h2>Sobre Mí</h2>
