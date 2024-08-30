@@ -6,7 +6,8 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import FooterDate from "../../Jsons/Footer.json";
 
 const Footer = () => {
-  const { email, socialLinks, quicklinks } = FooterDate[0].footer;
+  const { footer } = FooterDate;
+  const { email} = footer;
   // Función para copiar el email al portapapeles
   const copyToClipboard = () => {
     navigator.clipboard
@@ -35,7 +36,7 @@ const Footer = () => {
             </p>
           </div>
           <ul className="social-links">
-            {socialLinks.map((link) => (
+            {footer.socialLinks.map((link) => (
               <li key={link.name} className={`social-item ${link.name}`}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <img
@@ -48,7 +49,7 @@ const Footer = () => {
             ))}
           </ul>
           <div className="quick-links">
-            {quicklinks.map((link) => (
+            {footer.quicklinks.map((link) => (
               <a href={`#/${link.href}`}>{link.name}</a>
             ))}
           </div>
