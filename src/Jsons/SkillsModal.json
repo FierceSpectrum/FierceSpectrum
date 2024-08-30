@@ -1,7 +1,7 @@
 [
     {
         "type": "Lenguajes",
-        "items": [ 
+        "items": [
             {
                 "name": "JavaScript",
                 "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
@@ -16,13 +16,13 @@
                 "name": "Python",
                 "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
                 "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-            },
-            {
-                "name": "TypeScript",
-                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
-                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
             }
-        ]
+        ],
+        "Futuro": {
+            "name": "TypeScript",
+            "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+            "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+        }
     },
     {
         "type": "Frontend",

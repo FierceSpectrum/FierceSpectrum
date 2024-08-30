@@ -6,13 +6,16 @@ const NavigationItems = () => {
   return (
     <ul className="Items">
       <li>
-        <Link to="/Portafolio">Portafolio</Link>
+        <Link to="/Home">Inicio</Link>
       </li>
       <li>
         <Link to="/Curriculum">Curriculum</Link>
       </li>
       <li>
         <Link to="/Projects">Projects</Link>
+      </li>{" "}
+      <li>
+        <Link to="/AboutMe">About Me</Link>
       </li>
     </ul>
   );

@@ -2,60 +2,41 @@ import React from "react";
 import "./Portafolio.scss";
 import Skills from "../Skills/Skills";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
+import AboutMeData from "../../Jsons/AboutMe.json";
 
-// import imgenesdfa from "/images/WebSocialHub.png"
-
-
-
-// Componente para la Sección de Bienvenida con imagen de fondo y título reubicado
 const WelcomeSection = () => (
   <div className="section welcome">
     <div className="welcome-content">
-      <h1>¡Bienvenido a mi Portafolio!</h1>
+      <h1>¡Bienvenido!<br/> Soy Benjamín Sandí</h1>
       <p>Desarrollador Full Stack con un enfoque en Backend</p>
     </div>
   </div>
 );
 
-// Otros componentes permanecen iguales
-
-// const SkillsSection = () => {};
-
-
-const AboutMeSection = () => (
-  <div className="section about-me">
-    <h2>Sobre Mí</h2>
-    <p>
-      Soy un desarrollador apasionado por crear aplicaciones eficientes y
-      escalables. Me especializo en desarrollo backend y disfruto construyendo
-      APIs y sistemas complejos. Conecta conmigo en mis redes sociales.
-    </p>
-    <ul className="social-links">
-      <li>
-        <a href="#">LinkedIn</a>
-      </li>
-      <li>
-        <a href="#">GitHub</a>
-      </li>
-      <li>
-        <a href="#">Twitter</a>
-      </li>
-    </ul>
-  </div>
-);
-
-const ContactSection = () => (
-  <div className="section contact">
-    <h2>Contacto</h2>
-    <p>¿Interesado en colaborar conmigo? ¡Contáctame!</p>
-    <form>
-      <input type="text" placeholder="Nombre" />
-      <input type="email" placeholder="Correo Electrónico" />
-      <textarea placeholder="Mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-);
+const AboutMeSection = () => {
+  const { introduction, passion, socialLinks } = AboutMeData.aboutMe;
+  return (
+    <div className="section about-me">
+      <h2>Sobre Mí</h2>
+      <p dangerouslySetInnerHTML={{ __html: introduction }} />
+      <p dangerouslySetInnerHTML={{ __html: passion }} />
+      <ul className="social-links">
+        {socialLinks.map((link) => (
+          <li key={link.name} className={`social-item ${link.name}`}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              <img
+                src={link.logo}
+                alt={`${link.name} logo`}
+                className="social-logo"
+              />
+              <span className="social-name">{link.name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 const Portafolio = () => {
   return (
@@ -65,7 +46,6 @@ const Portafolio = () => {
         <Skills />
         <FeaturedProjects />
         <AboutMeSection />
-        <ContactSection />
       </div>
     </div>
   );

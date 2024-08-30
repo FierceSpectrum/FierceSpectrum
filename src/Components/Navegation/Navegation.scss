@@ -21,11 +21,10 @@
     z-index: 100;
     background-color: $color-nav;
     box-shadow: 0px 3px 3px $color-background;
-    animation: changeColor 1.5s infinite alternate;
-    padding: 5px 15px; // Reduce padding to make it smaller
+    padding: 5px 15px;
 
     .navigation-header {
-        color: white;
+        color: $color-secundario;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -124,7 +123,7 @@
                             padding-left: 40px;
                             transition: transform 0.5s ease-in-out;
                             background-color: $color-nav;
-                            animation: changeColor 1.5s infinite alternate;
+                            box-shadow: 0px 3px 3px $color-background;
 
                             .Items {
                                 display: flex;

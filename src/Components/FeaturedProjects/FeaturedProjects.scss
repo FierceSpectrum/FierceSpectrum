@@ -1,19 +1,10 @@
-/* Variables globales */
-$container-size: 600px;
-$primary-color: #1abc9c;
-$text-color: #fff;
-$text-color2: #00faa7;
-$modal-background: #2c3e50;
-$modal-text-color: #eee;
-$modal-shadow-color: rgba(0, 0, 0, 0.8);
-$gap-size: 20px;
-$border-radius: 10px;
-$link-color: #42aff8; // Color para enlaces
-$tech-background-color: #355370; // Fondo para tecnologías
+@import "../../Styles/Variables/colors.scss";
 
 /* Estilos para la sección de proyectos destacados */
 .FeaturedProjects {
+  
   h2 {
+    font-size: 2rem;
     text-align: center;
     color: $text-color;
     margin-bottom: $gap-size;
@@ -29,12 +20,13 @@ $tech-background-color: #355370; // Fondo para tecnologías
   }
 
   .card {
-    background-color: $modal-background;
+    background-color: $color-nav;
     border-radius: $border-radius;
     box-shadow: 0 4px 8px $modal-shadow-color;
     overflow: hidden;
     width: calc(50% - #{$gap-size});
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-5px);
@@ -52,7 +44,7 @@ $tech-background-color: #355370; // Fondo para tecnologías
       color: $text-color;
 
       h3 {
-        color: $primary-color;
+        color: $text-color2;
         margin-bottom: 10px;
         font-size: 1.25rem;
       }
@@ -71,6 +63,7 @@ $tech-background-color: #355370; // Fondo para tecnologías
       .links {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         a {
           color: $link-color;
@@ -78,6 +71,7 @@ $tech-background-color: #355370; // Fondo para tecnologías
           font-weight: bold;
           margin-top: 5px;
           transition: color 0.3s ease;
+          width: fit-content;
 
           &:hover {
             color: lighten($link-color, 10%);
@@ -117,8 +111,8 @@ $tech-background-color: #355370; // Fondo para tecnologías
 
 /* Estilos para los detalles del proyecto */
 .project-details {
-  background: $modal-background;
-  color: $modal-text-color;
+  background: $color-nav;
+  color: $text-color;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 10px $modal-shadow-color;
@@ -140,13 +134,13 @@ $tech-background-color: #355370; // Fondo para tecnologías
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $primary-color;
+    background-color: $text-color2;
     border-radius: 8px;
     border: 2px solid $modal-background;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: lighten($primary-color, 10%);
+      background-color: lighten($text-color2, 10%);
     }
   }
 
@@ -154,15 +148,15 @@ $tech-background-color: #355370; // Fondo para tecnologías
     margin: 0 0 20px;
     font-size: 28px;
     font-weight: bold;
-    color: $primary-color;
-    border-bottom: 2px solid #444;
+    color: $text-color2;
+    border-bottom: 2px solid $text-color2;
     padding-bottom: 10px;
   }
 
   p {
     font-size: 16px;
     line-height: 1.6;
-    color: lighten($modal-text-color, 20%);
+    color: lighten($text-color, 20%);
     margin-bottom: 20px;
   }
 
@@ -170,11 +164,11 @@ $tech-background-color: #355370; // Fondo para tecnologías
     margin-top: 20px;
 
     h4 {
-      color: $primary-color;
+      color: $text-color2;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
-      border-bottom: 1px solid $primary-color;
+      border-bottom: 1px solid $text-color2;
       padding-bottom: 5px;
     }
 
@@ -186,7 +180,7 @@ $tech-background-color: #355370; // Fondo para tecnologías
       gap: 10px;
 
       li {
-        text-shadow: 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 20px $primary-color, 0 0 40px $primary-color, 0 0 80px $primary-color;
+        text-shadow: 0 0 1px $primary-color, 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 0px $primary-color, 0 0 5px $primary-color;
         background: $tech-background-color;
         color: $text-color2;
         padding: 8px 12px;
@@ -201,11 +195,11 @@ $tech-background-color: #355370; // Fondo para tecnologías
     margin-top: 30px;
 
     h4 {
-      color: $primary-color;
+      color: $text-color2;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
-      border-bottom: 1px solid $primary-color;
+      border-bottom: 1px solid $text-color2;
       padding-bottom: 5px;
     }
 
@@ -237,7 +231,7 @@ $tech-background-color: #355370; // Fondo para tecnologías
     right: 15px;
     background: transparent;
     border: none;
-    color: $modal-text-color;
+    color: $text-color;
     font-size: 28px;
     cursor: pointer;
     transition: color 0.3s;

@@ -1,15 +1,4 @@
-/* Variables para reutilización y cambios rápidos */
-$container-size: 600px;
-$circle-size-frontend: 125px;
-$circle-size-backend: 225px;
-$animation-duration: 10s;
-$primary-color: #1abc9c;
-$text-color: #fff;
-$modal-background: #2c3e50;
-$modal-text-color: #eee;
-$modal-shadow-color: rgba(0, 0, 0, 0.8);
-$elementos-backend: 6;
-$elementos-frontend: 4;
+@import "../../Styles/Variables/colors.scss";
 
 /* Mixin para animaciones */
 @mixin rotating($direction: left) {
@@ -31,9 +20,13 @@ $elementos-frontend: 4;
   width: $container-size;
   height: $container-size;
   margin: 0 auto;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-nav;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   h2 {
     z-index: 10;
@@ -191,8 +184,8 @@ $elementos-frontend: 4;
 
 /* Estilo del modal específico para la sección de habilidades */
 .skills-section.modal {
-  background: $modal-background;
-  color: $modal-text-color;
+  background: $color-nav;
+  color: $text-color2;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 10px $modal-shadow-color;
@@ -227,7 +220,7 @@ $elementos-frontend: 4;
     margin: 0 0 20px;
     font-size: 24px;
     font-weight: bold;
-    color: $primary-color;
+    color: $text-color2;
     border-bottom: 2px solid #444;
     padding-bottom: 10px;
   }
@@ -243,7 +236,7 @@ $elementos-frontend: 4;
     box-sizing: border-box;
 
     h4 {
-      color: $primary-color;
+      color: $text-color2;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
@@ -257,8 +250,10 @@ $elementos-frontend: 4;
       img {
         width: 60px;
         height: 60px;
+        padding: 2px;
         transition: transform 0.3s, filter 0.3s;
-
+        background-color: lighten($color-nav, 5%);
+        border-radius: 10px;
         &:hover {
           transform: scale(1.1);
           filter: brightness(1.2);
@@ -273,7 +268,7 @@ $elementos-frontend: 4;
     right: 15px;
     background: transparent;
     border: none;
-    color: $modal-text-color;
+    color: $text-color;
     font-size: 28px;
     cursor: pointer;
     transition: color 0.3s;

@@ -11,11 +11,11 @@ const router = createHashRouter([
     element: <Navegation />,
     children: [
       {
-        path: "Portafolio",
+        path: "Home",
         element: (
           <>
             <Portafolio />
-            {/* <Footer /> */}
+            <Footer />
           </>
         ),
       },

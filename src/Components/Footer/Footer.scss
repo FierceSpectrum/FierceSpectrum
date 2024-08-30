@@ -1,64 +1,148 @@
-@import "../../Styles/Mixins/media-queries.scss";
-@import "../../Styles/Variables/brakpoints.scss";
 @import "../../Styles/Variables/colors.scss";
 
 .Footer {
+  background-color: $color-nav;
+  color: $text-color;
+
+  padding: 20px 10px;
+  text-align: center;
+
   .footer {
-    background-color: $color-nav;
-    color: $color-secundario;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px -5px 5px $color-background;
-    animation: changeColor 1.5s infinite alternate;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .footer-content {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
 
-      .contact-info,
-      .social-links,
-      .quick-links,
-      .privacy-terms {
-        margin: 10px 0;
+      .contact-info {
+        flex: 1;
+        padding: 10px;
+
+        p {
+          margin: 0;
+          font-size: 1rem;
+          color: $text-color;
+          width: fit-content;
+          padding-bottom: 3px;
+          border-bottom: $secondary-color solid;
+          cursor: pointer;
+
+          .email-link {
+            color: $primary-color;
+            text-decoration: none;
+            margin: 0 5px;
+
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+
+          .copy-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #42aff8;
+            font-size: 16px;
+            padding: 5px;
+            transition: color 0.3s;
+
+            &:hover {
+              color: #1abc9c;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
       }
 
-      .contact-info p {
-        margin: 0;
-        color: white;
+      .social-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex: 1;
+        padding: 10px;
+
+        .social-item {
+          background-color: $color-background;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s;
+
+          &.GitHub,
+          &.Twitter {
+            .social-logo {
+              filter: invert(1);
+            }
+          }
+
+          &:hover {
+            background-color: lighten($color-primario, 10%);
+          }
+
+          .social-logo {
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
       }
 
-      .social-links a,
-      .quick-links a,
-      .privacy-terms a {
-        color: $color-secundario;
-        text-decoration: none;
-        margin: 0 10px;
-        transition: color 0.3s ease;
+      .quick-links {
+        flex: 1;
+        padding: 10px;
 
-        &:hover {
-          color: $color-primario;
+        a {
+          color: $color-secundario;
+          text-decoration: none;
+          margin: 0 10px;
+          font-size: 1rem;
+          border-radius: 10px;
+          padding: 5px;
+
+          &:hover {
+            color: lighten($secondary-color, 60%);
+            background-color: $color-primario;
+            text-decoration: underline;
+          }
         }
       }
     }
   }
 
-  /* Media Queries */
-  @include respond-to($desktop) {
-    .footer {
-      .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+  // Media queries para responsividad
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
 
-        .contact-info,
-        .social-links,
-        .quick-links,
-        .privacy-terms {
-          margin: 0 20px;
+      .contact-info,
+      .social-links,
+      .quick-links {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .social-links {
+        justify-content: center;
+
+        .social-item {
+          width: 30px;
+          height: 30px;
+
+          .social-logo {
+            width: 20px;
+            height: 20px;
+          }
         }
       }
     }

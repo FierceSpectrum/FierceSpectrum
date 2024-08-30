@@ -1,50 +1,57 @@
 import React from "react";
 import "./Footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
+
+import FooterDate from "../../Jsons/Footer.json";
 
 const Footer = () => {
+  const { email, socialLinks, quicklinks } = FooterDate.footer;
+
+  // Función para copiar el email al portapapeles
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        alert("Email copiado al portapapeles!");
+      })
+      .catch((err) => {
+        console.error("Error al copiar el email: ", err);
+      });
+  };
+
   return (
     <div className="Footer">
       <footer className="footer">
         <div className="footer-content">
           <div className="contact-info">
-            <p>© 2024 [Tu Nombre]. Todos los derechos reservados.</p>
             <p>
               Email:{" "}
-              <a href="mailto:tuemail@example.com">tuemail@example.com</a>
+              <a href={`mailto:${email}`} className="email-link">
+                {email}
+              </a>
+              <button className="copy-button" onClick={copyToClipboard}>
+                <FontAwesomeIcon icon={faCopy} />
+              </button>
             </p>
           </div>
-          <div className="social-links">
-            <a
-              href="https://www.linkedin.com/in/tu-perfil/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/tu-usuario/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://twitter.com/tu-usuario/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-          </div>
+          <ul className="social-links">
+            {socialLinks.map((link) => (
+              <li key={link.name} className={`social-item ${link.name}`}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={link.logo}
+                    alt={`${link.name} logo`}
+                    className="social-logo"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
           <div className="quick-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#contacto">Contacto</a>
-          </div>
-          <div className="privacy-terms">
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Términos de Uso</a>
+            {quicklinks.map((link) => (
+              <a href={`#/${link.href}`}>{link.name}</a>
+            ))}
           </div>
         </div>
       </footer>

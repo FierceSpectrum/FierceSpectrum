@@ -17,16 +17,17 @@ const FeaturedProjects = () => {
     setSelectedProject(null);
   };
 
+  // Función para evitar la propagación del evento de clic
+  const handleLinkClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
     <div className="FeaturedProjects">
       <h2>Proyectos Destacados</h2>
       <div className="card-container">
         {featuredProjectsData.map((project, index) => (
-          <div
-            className="card"
-            key={index}
-            onClick={() => openModal(project)}
-          >
+          <div className="card" key={index} onClick={() => openModal(project)}>
             <img
               src={project.image}
               alt={`Imagen de ${project.title}`}
@@ -42,28 +43,33 @@ const FeaturedProjects = () => {
                 {project.title === "Social Hub" ? (
                   <>
                     <a
-                      href={project.frontEndLink}
+                      href={project.FrontEndLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={handleLinkClick}
                     >
                       Ver en GitHub el Frontend
                     </a>
                     <a
-                      href={project.backEndLink}
+                      href={project.BackEndLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={handleLinkClick}
                     >
                       Ver en GitHub el Backend
                     </a>
                   </>
                 ) : (
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ver en GitHub
-                  </a>
+                  <>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={handleLinkClick}
+                    >
+                      Ver en GitHub
+                    </a>
+                  </>
                 )}
               </div>
             </div>
