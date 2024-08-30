@@ -1,0 +1,28 @@
+{
+    "aboutMe": {
+        "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Actualmente, estudio <strong>Ingeniería de Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
+        "passion": "Estoy siempre en busca de nuevas tecnologías y métodos para mejorar mis habilidades. Si deseas conectar o conocer más sobre mi trabajo, no dudes en contactarme a través de las redes sociales.",
+        "socialLinks": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/FierceSpectrum",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://x.com/BenjaminSandiS1",
+                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/fiercespectrum",
+                "logo": "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg"
+            }
+        ]
+    }
+}

@@ -1,0 +1,132 @@
+[
+    {
+        "type": "Lenguajes",
+        "items": [
+            {
+                "name": "JavaScript",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            },
+            {
+                "name": "C#",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+            },
+            {
+                "name": "Python",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+            }
+        ],
+        "Futuro": {
+            "name": "TypeScript",
+            "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+            "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+        }
+    },
+    {
+        "type": "Frontend",
+        "items": [
+            {
+                "name": "React",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+            },
+            {
+                "name": "CSS3",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+            },
+            {
+                "name": "HTML5",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+            },
+            {
+                "name": "Sass",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+            }
+        ]
+    },
+    {
+        "type": "Backend",
+        "items": [
+            {
+                "name": "Node.js",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+            },
+            {
+                "name": "Express",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+            },
+            {
+                "name": "GraphQL",
+                "icon": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
+                "link": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+            }
+        ]
+    },
+    {
+        "type": "Database",
+        "items": [
+            {
+                "name": "MongoDB",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+            },
+            {
+                "name": "MSSQL",
+                "icon": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+                "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+            }
+        ]
+    },
+    {
+        "type": "DevOps",
+        "items": [
+            {
+                "name": "Vagrant",
+                "icon": "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg",
+                "link": "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg"
+            },
+            {
+                "name": "Bash",
+                "icon": "https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg",
+                "link": "https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg"
+            }
+        ]
+    },
+    {
+        "type": "Software",
+        "items": [
+            {
+                "name": "Postman",
+                "icon": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+                "link": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+            }
+        ]
+    },
+    {
+        "type": "Other",
+        "items": [
+            {
+                "name": "Linux",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+                "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+            },
+            {
+                "name": "Git",
+                "icon": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+                "link": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+            }
+        ]
+    }
+]

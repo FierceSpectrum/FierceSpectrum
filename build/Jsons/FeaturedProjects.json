@@ -1,0 +1,48 @@
+[
+    {
+        "title": "Social Hub",
+        "description": "Gestor de publicaciones para redes sociales, construido con Node.js y React.",
+        "longDescription": "Social Hub es una plataforma que permite a los usuarios gestionar publicaciones en múltiples redes sociales desde un único lugar. Incluye características como programación de publicaciones, análisis de rendimiento y más. El backend está construido en Node.js con Express, y el frontend en React con SCSS. Utiliza un sistema de autenticación de dos factores (2FA) con OTP a través de Google Authenticator y códigos QR. Actualmente, soporta la vinculación de cuentas de Mastodon y Reddit para realizar publicaciones.",
+        "BackEndLink": "https://github.com/FierceSpectrum/Social-Hub-BackEnd",
+        "FrontEndLink": "https://github.com/FierceSpectrum/Social-Hub-FrontEnd",
+        "status": "completed",
+        "image": "./images/WebSocialHub.png",
+        "technologies": [
+            "Node.js",
+            "Express.js",
+            "React",
+            "SCSS",
+            "PostgreSQL",
+            "OTP (Google Authenticator)"
+        ],
+        "additionalLinks": [
+            {
+                "text": "FrontEnd GitHub",
+                "url": "https://github.com/FierceSpectrum/Social-Hub-FrontEnd"
+            },
+            {
+                "text": "BackEnd GitHub",
+                "url": "https://github.com/FierceSpectrum/Social-Hub-BackEnd"
+            }
+        ]
+    },    
+    {
+        "title": "Información sobre videojuegos",
+        "description": "Una página web para dar información relevante de algunos juegos modernos por categorías.",
+        "longDescription": "Este proyecto es una página web que ofrece información detallada sobre una variedad de videojuegos modernos, organizados por categorías como MMORPG, MOBAS y Shooters. La web incluye descripciones, capturas de pantalla",
+        "githubLink": "https://github.com/FierceSpectrum/Proyecto-Web",
+        "status": "completed",
+        "image": "./images/WebJuegos.png",
+        "technologies": [
+            "HTML",
+            "SCSS",
+            "CSS"
+        ],
+        "additionalLinks": [
+            {
+                "text": "Ver en GitHub",
+                "url": "https://github.com/FierceSpectrum/Proyecto-Web"
+            }
+        ]
+    }
+]
