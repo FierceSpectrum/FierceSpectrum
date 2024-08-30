@@ -35,13 +35,13 @@
             display: flex;
 
             .actions {
-                width: 100%;
-                display: flex;
-                justify-content: end;
+                margin-right: 15px;
             }
 
             .navigation-content {
                 display: flex;
+                align-self: center;
+                width: 90%;
 
                 .nav-cell {
                     display: flex;
