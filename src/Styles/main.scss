@@ -1,0 +1,18 @@
+// main.scss
+
+// Importar variables globales primero
+@import './variables';
+
+// Importar utilidades como mixins y funciones
+@import './utils/mixins';
+// @import './utils/functions';
+
+// Importar temas (esto puede cambiar dependiendo del tema activo)
+@import './themes/_dark'; 
+@import './themes/_light';
+
+// Importar estilos base
+
+
+// Importar estilos de componentes
+

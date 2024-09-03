@@ -1,15 +1,13 @@
-@import "../../Styles/Mixins/media-queries.scss";
-@import "../../Styles/Variables/brakpoints.scss";
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 /* Keyframes */
 @keyframes changeColor {
     0% {
-        box-shadow: 0px 3px 3px $color-nav-box2;
+        box-shadow: 0px 3px 3px var(--color-nav-box2);
     }
 
     100% {
-        box-shadow: 0px 3px 3px $color-nav-box;
+        box-shadow: 0px 3px 3px var(--color-nav-box);
     }
 }
 
@@ -19,12 +17,12 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: $color-nav;
-    box-shadow: 0px 3px 3px $color-background;
+    background-color: var(--color-nav);
+    box-shadow: 0px 3px 3px var(--color-background);
     padding: 5px 15px;
 
     .navigation-header {
-        color: $color-secundario;
+        color: var(--color-secundario);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -35,6 +33,8 @@
             display: flex;
 
             .actions {
+                display: flex;
+                flex-direction: row;
                 margin-right: 15px;
             }
 
@@ -51,7 +51,7 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        height: 50px; // Reduce the height
+                        height: 50px;
                         display: block;
 
                         .checkbox,
@@ -77,10 +77,10 @@
                             justify-content: space-between;
 
                             .line {
-                                height: 3px; // Thinner lines
+                                height: 3px;
                                 width: 100%;
                                 border-radius: 10px;
-                                background: #ffffff;
+                                background: var(--color-secundario);
                                 transition: transform 0.4s ease-in-out;
 
                                 &.line1 {
@@ -121,25 +121,25 @@
                         }
 
                         .nav-items-wrapper {
-                            padding-top: 80px; // Adjusted padding for smaller design
+                            padding-top: 80px;
                             height: 100vh;
-                            width: 120%; // Slightly reduced width
+                            width: 120%;
                             transform: translateX(-150%);
                             display: flex;
                             flex-direction: column;
                             margin: -10px 0 0 -40px;
                             padding-left: 40px;
                             transition: transform 0.5s ease-in-out;
-                            background-color: $color-nav;
-                            box-shadow: 0px 3px 3px $color-background;
+                            background-color: var(--color-nav);
+                            box-shadow: 0px 3px 3px var(--color-background);
 
                             .Items {
                                 display: flex;
                                 flex-direction: column;
 
                                 li {
-                                    font-size: 1.2rem; // Smaller font size
-                                    padding: 8px; // Reduced padding
+                                    font-size: 1.2rem;
+                                    padding: 8px;
                                     color: #333;
                                     list-style: none;
                                     transition: background-color 0.3s ease;
@@ -149,15 +149,15 @@
                                         border: none;
                                         cursor: pointer;
                                         font: inherit;
-                                        color: $color-secundario;
+                                        color: var(--color-secundario);
                                         text-decoration: none;
-                                        font-size: 20px; // Slightly smaller text
+                                        font-size: 20px;
                                         font-weight: bold;
-                                        padding: 5px; // Reduced padding
+                                        padding: 5px;
                                         border-radius: 10px;
 
                                         &:hover {
-                                            background-color: $color-primario;
+                                            background-color: var(--color-primario);
                                         }
                                     }
                                 }
@@ -175,7 +175,7 @@
                     padding: 5px;
 
                     li {
-                        padding: 10px; // Reduced padding for nav items
+                        padding: 10px;
                         list-style: none;
 
                         button {
@@ -183,16 +183,16 @@
                             border: none;
                             cursor: pointer;
                             font: inherit;
-                            color: $color-secundario;
+                            color: var(--color-secundario);
                             text-decoration: none;
-                            font-size: 20px; // Slightly smaller text
+                            font-size: 20px;
                             font-weight: bold;
-                            padding: 5px; // Reduced padding
+                            padding: 5px;
                             border-radius: 10px;
                             transition: background-color 0.3s ease;
 
                             &:hover {
-                                background-color: $color-primario;
+                                background-color: var(--color-primario);
                             }
                         }
                     }

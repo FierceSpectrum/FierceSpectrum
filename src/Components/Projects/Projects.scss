@@ -1,10 +1,10 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 .Projects {
   h2 {
     font-size: 2rem;
     text-align: center;
-    color: $primary-color;
+    color: var(--primary-color);
     margin-bottom: $gap-size;
   }
 

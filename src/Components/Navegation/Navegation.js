@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import LenguageSwitcher from "../LenguageSwitcher/LenguageSwitcher";
+import ToggleTheme from "../ToggleTheme/ToggleTheme";
 
 const NavigationItems = () => {
   const { t } = useTranslation();
@@ -69,6 +70,7 @@ const Navegation = () => {
               <div>{isMobile ? <HamburgerMenu /> : <NavigationItems />}</div>
             </nav>
             <div className="actions">
+              <ToggleTheme />
               <LenguageSwitcher />
             </div>
           </div>

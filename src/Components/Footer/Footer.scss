@@ -1,9 +1,9 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 .Footer {
   margin-top: 25px;
-  background-color: $color-nav;
-  color: $text-color;
+  background-color: var(--color-nav);
+  color: var(--text-color);
 
   padding: 20px 10px;
   text-align: center;
@@ -25,14 +25,14 @@
         p {
           margin: 0;
           font-size: 1rem;
-          color: $text-color;
+          color: var(--text-color);
           width: fit-content;
           padding-bottom: 3px;
-          border-bottom: $secondary-color solid;
+          border-bottom: var(--secondary-color) solid;
           cursor: pointer;
 
           .email-link {
-            color: $primary-color;
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 5px;
 
@@ -51,7 +51,7 @@
             transition: color 0.3s;
 
             &:hover {
-              color: #1abc9c;
+              color: var(--primary-color);
             }
 
             &:focus {
@@ -70,7 +70,7 @@
         padding: 10px;
 
         .social-item {
-          background-color: $color-background;
+          background-color: var(--color-background);
           border-radius: 50%;
           width: 40px;
           height: 40px;
@@ -79,15 +79,10 @@
           justify-content: center;
           transition: background-color 0.3s;
 
-          &.GitHub,
-          &.Twitter {
-            .social-logo {
-              filter: invert(1);
-            }
-          }
+
 
           &:hover {
-            background-color: lighten($color-primario, 10%);
+            background-color: var(--color-primario-light);
           }
 
           .social-logo {
@@ -107,7 +102,7 @@
           border: none;
           cursor: pointer;
           font: inherit;
-          color: $color-secundario;
+          color: var(--color-secundario);
           text-decoration: none;
           margin: 0 10px;
           font-size: 1rem;
@@ -115,8 +110,8 @@
           padding: 5px;
 
           &:hover {
-            color: lighten($secondary-color, 60%);
-            background-color: $color-primario;
+            color: var(--secondary-color-light);
+            background-color: var(--color-primario);
             text-decoration: underline;
           }
         }
@@ -149,6 +144,16 @@
           }
         }
       }
+    }
+  }
+}
+
+[data-theme='dark'] {
+
+  .GitHub,
+  .Twitter {
+    .social-logo {
+      filter: invert(1);
     }
   }
 }

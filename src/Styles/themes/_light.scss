@@ -1,0 +1,30 @@
+// _light.scss
+
+[data-theme='light'] {
+    --color-primario: #ffffff;
+    --color-primario-light: #f5f5f5;
+    --color-secundario: #111111;
+    --color-secundario-light: #333333;
+    --color-nav: #e0e0e0;
+    --color-nav-light: #f2f2f2;
+    --color-nav-box: rgba(38, 198, 209, 0.5);
+    --color-nav-box2: rgba(8, 102, 226, 0.5);
+    --color-background: rgba(255, 255, 255, 0.7);
+    --primary-color: #3498db;
+    --primary-color-dark: #2980b9;
+    --primary-color-light: #5dade2;
+    --secondary-color: #ecf0f1;
+    --secondary-color-light: #bdc3c7;
+    --text-color: #333333;
+    --text-color-light: #4d4d4d;
+    --text-color2: #007bff;
+    --text-color2-light: #a0f1bd;
+    --link-color: #007bff;
+    --link-color-light: #66b0ff;
+    --card-background-color: #ffffff;
+    --modal-background: #f7f7f7;
+    --modal-background-dark: #e1e1e1;
+    --strong-text-color: #34495e;
+    --modal-shadow-color: rgba(0, 0, 0, 0.2);
+    --tech-background-color: #e8eaf6;
+}

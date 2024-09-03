@@ -1,0 +1,83 @@
+.ToggleTheme {
+  padding-right: 15px;
+
+  /* From Uiverse.io by rishichawda */
+  /* The switch - the box around the slider */
+  #theme-toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    margin-top: -5px;
+    cursor: pointer;
+
+    /* Hide default HTML checkbox */
+    #toggle {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+
+    #container,
+    #patches,
+    #stars,
+    #button,
+    #sun,
+    #moon,
+    #cloud {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.25s;
+    }
+
+    /* night sky background */
+    #toggle:checked+svg {
+      #container {
+        fill: #2b4360;
+      }
+
+      /* move button to right when checked */
+      #button {
+        transform: translate(28px, 2.333px);
+      }
+    }
+
+
+    /* show/hide sun and moon based on checkbox state */
+    #sun,
+    #cloud {
+      opacity: 1;
+    }
+
+    #moon,
+    #stars {
+      opacity: 0;
+    }
+
+    #toggle:checked+svg {
+      #sun {
+        opacity: 0;
+      }
+
+      #moon {
+        opacity: 1;
+      }
+
+      #cloud {
+        opacity: 0;
+      }
+
+
+      #stars {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+
+
+
+
+}

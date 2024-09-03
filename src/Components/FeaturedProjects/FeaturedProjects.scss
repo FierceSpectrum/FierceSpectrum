@@ -1,4 +1,4 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 /* Estilos para la sección de proyectos destacados */
 .FeaturedProjects {
@@ -6,7 +6,7 @@
   h2 {
     font-size: 2rem;
     text-align: center;
-    color: $primary-color;
+    color: var(--primary-color);
     margin-bottom: $gap-size;
   }
 
@@ -28,4 +28,3 @@
     }
   }
 }
-

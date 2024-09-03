@@ -1,19 +1,19 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 .LenguageSwitcher {
   display: flex;
   justify-content: center;
-  gap: $gap-size;
-  background-color: $color-nav;
+  gap: &gap-size;
+  background-color: var(--color-nav);
   padding: 10px;
   border-radius: $border-radius;
-  box-shadow: 0 4px 6px $modal-shadow-color;
+  box-shadow: 0 4px 6px var(--modal-shadow-color);
   margin: 10px 0;
   max-width: $container-size;
-  
+
   button {
-    background-color: $primary-color;
-    color: $text-color;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     padding: 7px;
     border-radius: $border-radius;
@@ -21,11 +21,11 @@
     font-size: 0.8rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 1px 4px 0px $modal-shadow-color;
+    box-shadow: 1px 4px 0px var(--modal-shadow-color);
 
     &:hover {
-      background-color: $secondary-color;
-      color: $text-color2;
+      background-color: var(--secondary-color);
+      color: var(--text-color2);
       transform: translateY(-2px);
     }
 
@@ -34,14 +34,14 @@
     }
 
     &.active {
-      background-color: $secondary-color;
-      color: $strong-text-color;
+      background-color: var(--secondary-color);
+      color: var(--strong-text-color);
       font-weight: bold;
-      box-shadow: inset 0 4px 6px $modal-shadow-color;
+      box-shadow: inset 0 4px 6px var(--modal-shadow-color);
 
       &:hover {
-        background-color: $secondary-color;
-        color: $strong-text-color;
+        background-color: var(--secondary-color);
+        color: var(--strong-text-color);
         transform: none;
       }
 

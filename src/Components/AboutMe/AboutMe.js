@@ -32,7 +32,7 @@ const AboutMe = () => {
           </li>
         ))}
       </ul>
-      <span onClick={openModal}>More AboutMe</span>
+      <span className="more" onClick={openModal}>More AboutMe</span>
       <Modal
         isOpen={modalIsOpen}
         onClose={closeModal}

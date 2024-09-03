@@ -1,9 +1,9 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 .Project {
-  background-color: $color-nav;
+  background-color: var(--color-nav);
   border-radius: $border-radius;
-  box-shadow: 0 4px 8px $modal-shadow-color;
+  box-shadow: 0 4px 8px var(--modal-shadow-color);
   overflow: hidden;
   width: calc(50% - #{$gap-size});
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -22,10 +22,10 @@
 
   .project-content {
     padding: 15px;
-    color: $text-color;
+    color: var(--text-color);
 
     h3 {
-      color: $text-color2;
+      color: var(--text-color2);
       margin-bottom: 10px;
       font-size: 1.25rem;
     }
@@ -47,7 +47,7 @@
       align-items: center;
 
       a {
-        color: $link-color;
+        color: var(--link-color);
         text-decoration: none;
         font-weight: bold;
         margin-top: 5px;
@@ -55,7 +55,7 @@
         width: fit-content;
 
         &:hover {
-          color: lighten($link-color, 10%);
+          color: var(--link-color-ligth);
         }
       }
     }
@@ -83,152 +83,15 @@
       }
     }
   }
-
-  &
-
-  /* Estilos para los detalles del proyecto */
-  .project-details {
-    background: $color-nav;
-    color: $text-color;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px $modal-shadow-color;
-    width: 60%;
-    max-width: 900px;
-    position: relative;
-    max-height: 700px;
-    overflow-y: auto;
-    margin: 20px auto;
-
-    /* Estilos de la barra de desplazamiento */
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: darken($modal-background, 10%);
-      border-radius: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $text-color2;
-      border-radius: 8px;
-      border: 2px solid $modal-background;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: lighten($text-color2, 10%);
-      }
-    }
-
-    h3 {
-      margin: 0 0 20px;
-      font-size: 28px;
-      font-weight: bold;
-      color: $text-color2;
-      border-bottom: 2px solid $text-color2;
-      padding-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: lighten($text-color, 20%);
-      margin-bottom: 20px;
-    }
-
-    .technologies {
-      margin-top: 20px;
-
-      h4 {
-        color: $text-color2;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        border-bottom: 1px solid $text-color2;
-        padding-bottom: 5px;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        li {
-          text-shadow: 0 0 1px $primary-color, 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 0px $primary-color, 0 0 5px $primary-color;
-          background: $tech-background-color;
-          color: $text-color2;
-          padding: 8px 12px;
-          border-radius: 5px;
-          font-size: 14px;
-          font-weight: bold;
-        }
-      }
-    }
-
-    .additional-links {
-      margin-top: 30px;
-
-      h4 {
-        color: $text-color2;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        border-bottom: 1px solid $text-color2;
-        padding-bottom: 5px;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          margin-bottom: 10px;
-
-          a {
-            color: $link-color;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-
-            &:hover {
-              color: lighten($link-color, 20%);
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-
-    .modal-close-button {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: transparent;
-      border: none;
-      color: $text-color;
-      font-size: 28px;
-      cursor: pointer;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #ff6f61;
-      }
-    }
-  }
-
-
 }
 
 /* Estilos para los detalles del proyecto */
-.project-details {
-  background: $color-nav;
-  color: $text-color;
+.project-details.modal {
+  background: var(--color-nav);
+  color: var(--text-color);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 10px $modal-shadow-color;
+  box-shadow: 0 4px 10px var(--modal-shadow-color);
   width: 60%;
   max-width: 900px;
   position: relative;
@@ -242,18 +105,18 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: darken($modal-background, 10%);
+    background: var(--modal-background-dark);
     border-radius: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $text-color2;
+    background-color: var(--primary-color);
     border-radius: 8px;
-    border: 2px solid $modal-background;
+    border: 2px solid var(--modal-background);
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: lighten($text-color2, 10%);
+      background-color: var(--primary-color-light);
     }
   }
 
@@ -261,15 +124,15 @@
     margin: 0 0 20px;
     font-size: 28px;
     font-weight: bold;
-    color: $text-color2;
-    border-bottom: 2px solid $text-color2;
+    color: var(--text-color2);
+    border-bottom: 2px solid var(--text-color2);
     padding-bottom: 10px;
   }
 
   p {
     font-size: 16px;
     line-height: 1.6;
-    color: lighten($text-color, 20%);
+    color: var(--text-color-light);
     margin-bottom: 20px;
   }
 
@@ -277,11 +140,11 @@
     margin-top: 20px;
 
     h4 {
-      color: $text-color2;
+      color: var(--text-color2);
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
-      border-bottom: 1px solid $text-color2;
+      border-bottom: 1px solid var(--text-color2);
       padding-bottom: 5px;
     }
 
@@ -293,9 +156,9 @@
       gap: 10px;
 
       li {
-        text-shadow: 0 0 1px $primary-color, 0 0 5px $primary-color, 0 0 10px $primary-color, 0 0 0px $primary-color, 0 0 5px $primary-color;
-        background: $tech-background-color;
-        color: $text-color2;
+        text-shadow: 0 0 1px var(--primary-color), 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 0px var(--primary-color), 0 0 5px var(--primary-color);
+        background: var(--tech-background-color);
+        color: var(--text-color2);
         padding: 8px 12px;
         border-radius: 5px;
         font-size: 14px;
@@ -308,11 +171,11 @@
     margin-top: 30px;
 
     h4 {
-      color: $text-color2;
+      color: var(--text-color2);
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
-      border-bottom: 1px solid $text-color2;
+      border-bottom: 1px solid var(--text-color2);
       padding-bottom: 5px;
     }
 
@@ -324,13 +187,13 @@
         margin-bottom: 10px;
 
         a {
-          color: $link-color;
+          color: var(--link-color);
           text-decoration: none;
           font-size: 16px;
           transition: color 0.3s ease;
 
           &:hover {
-            color: lighten($link-color, 20%);
+            // color: lighten(var(--link-color), 20%);
             text-decoration: underline;
           }
         }
@@ -344,7 +207,7 @@
     right: 15px;
     background: transparent;
     border: none;
-    color: $text-color;
+    color: var(--text-color);
     font-size: 28px;
     cursor: pointer;
     transition: color 0.3s;

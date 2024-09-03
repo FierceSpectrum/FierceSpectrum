@@ -22,7 +22,7 @@ const Layout = () => {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [location.state?.scrollTo, location.pathname]);
+  }, [location]);
 
   return (
     <>

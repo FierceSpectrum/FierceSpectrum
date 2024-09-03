@@ -1,4 +1,4 @@
-@import "../../Styles/Variables/colors.scss";
+@import "../../Styles/main.scss";
 
 @keyframes backgroundChange {
     0% {
@@ -28,18 +28,18 @@ body {
     padding: 0;
     font-family: $font-family;
     font-size: $font-size-base;
-    color: $text-color;
-    background-color: $color-primario;
+    color: var(--text-color);
+    background-color: var(--color-primario);
 }
 
 h1,
 h2,
 h3 {
-    color: $primary-color;
+    color: var(--primary-color);
 }
 
 a {
-    color: $primary-color;
+    color: var(--primary-color);
     text-decoration: none;
 
     &:hover {
@@ -56,45 +56,44 @@ a {
     .home-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: $padding-base;
+        padding: var(--padding-base);
     }
 
     .welcome {
         margin-bottom: 40px;
         padding: $padding-base;
-        background-color: $color-nav;
+        background-color: var(--color-nav);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        width: 70%; // Establece el ancho al 60% de la pantalla
-        max-width: 1000px; // Limita el ancho máximo
-        margin: 0 auto; // Centra horizontalmente
+        width: 70%; 
+        max-width: 1000px; 
+        margin: 0 auto;
         aspect-ratio: 16/9;
         background: url('../../Assets/Web1.png') no-repeat center center;
         background-size: cover;
         align-items: center;
         display: flex;
-        justify-content: center; // Centra el contenido dentro de la sección
+        justify-content: center;
         animation: backgroundChange 10s infinite;
-        box-shadow: 0px 3px 10px $secondary-color;
+        box-shadow: 0px 3px 10px var(--secondary-color);
 
         .welcome-content {
-            background-color: rgba(0, 0, 0, 0.8); // Fondo oscuro semitransparente para texto
+            background-color: rgba(0, 0, 0, 0.8); 
             padding: 30px;
             border-radius: 5px;
             color: #fff;
-            margin-left: 20px; // Separación del borde izquierdo
-            // text-align: center; // Centra el texto
+            margin-left: 20px;
 
             h1 {
                 margin: 0;
-                font-size: 2em; // Reduce el tamaño de fuente
-                line-height: 1.2; // Ajusta el espaciado entre líneas
+                font-size: 2em;
+                line-height: 1.2;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             }
 
             p {
                 margin: 10px 0 0 0;
-                font-size: 1em; // Ajusta el tamaño de la fuente del párrafo
+                font-size: 1em;
                 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
             }
         }
