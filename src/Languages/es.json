@@ -8,16 +8,22 @@
                 "href": "Home"
             },
             {
-                "name": "Curriculum",
-                "href": "Curriculum"
+                "name": "Sobre Mí",
+                "href": "Home",
+                "id": "AboutMe"
+            },
+            {
+                "name": "Habilidades",
+                "href": "Home",
+                "id": "Skills"
             },
             {
                 "name": "Proyectos",
                 "href": "Projects"
             },
             {
-                "name": "Sobre Mí",
-                "href": "AboutMe"
+                "name": "Curriculum",
+                "href": "Curriculum"
             }
         ]
     },
@@ -115,7 +121,7 @@
                         "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
                     },
                     {
-                        "name": "MSSQL",
+                        "name": "SQLServer",
                         "icon": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
                         "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
                     }
@@ -167,7 +173,7 @@
         ],
         "fullstack": {
             "button": "Habilidades",
-            "modla": {
+            "modal": {
                 "title1": "Lista de Habilidades"
             },
             "skills": [
@@ -225,7 +231,174 @@
         }
     },
     "projects": {
-        "all": [],
+        "all": {
+            "title": "Mis Proyectos",
+            "projects": [
+                {
+                    "title": "Backend de Project Track",
+                    "description": "Una API en desarrollo para la gestión de proyectos que incluye la creación de cuentas, comunidades, proyectos, roles y tareas, con administración de permisos y roles.",
+                    "githubLink": {
+                        "text": "Ver en GitHub",
+                        "url": "https://github.com/FierceSpectrum/ProjectTrack-backend"
+                    },
+                    "longDescription": "Project Track Backend es una API que facilita la gestión de proyectos a través de la creación de cuentas, comunidades y proyectos. Los usuarios pueden formar comunidades, invitar a otros usuarios a proyectos, y asignar roles con permisos específicos. La API también permite la creación y administración de tareas dentro de los proyectos, organizadas por roles como Backend y Frontend. Actualmente en desarrollo, se enfoca en la lógica de base de datos y permisos, y se planea una futura integración con un frontend.",
+                    "image": "./images/ProjectTrack.png",
+                    "technologies": [
+                        "JavaScript",
+                        "Node.js",
+                        "Express",
+                        "PostgreSQL",
+                        "Sequelize",
+                        "JSON Web Token",
+                        "Google Authenticator"
+                    ],
+                    "status": "En progreso",
+                    "additionalLinks": []
+                },
+                {
+                    "title": "Social Hub",
+                    "description": "Gestor de publicaciones para redes sociales, construido con Node.js y React.",
+                    "longDescription": "Social Hub es una plataforma que permite a los usuarios gestionar publicaciones en múltiples redes sociales desde un único lugar. Incluye características como programación de publicaciones, análisis de rendimiento y más. El backend está construido en Node.js con Express, y el frontend en React con SCSS. Utiliza un sistema de autenticación de dos factores (2FA) con OTP a través de Google Authenticator y códigos QR. Actualmente, soporta la vinculación de cuentas de Mastodon y Reddit para realizar publicaciones.",
+                    "status": "completado",
+                    "image": "./images/WebSocialHub.png",
+                    "technologies": [
+                        "Node.js",
+                        "Express.js",
+                        "React",
+                        "SCSS",
+                        "PostgreSQL",
+                        "OTP (Google Authenticator)"
+                    ],
+                    "githubLinks": [
+                        {
+                            "text": "Ver en GitHub el FrontEnd",
+                            "url": "https://github.com/FierceSpectrum/Social-Hub-FrontEnd"
+                        },
+                        {
+                            "text": "Ver en GitHub el BackEnd",
+                            "url": "https://github.com/FierceSpectrum/Social-Hub-BackEnd"
+                        }
+                    ],
+                    "morelinks": true,
+                    "additionalLinks": []
+                },
+                {
+                    "title": "Calculadora de Proposiciones",
+                    "description": "Una calculadora de proposiciones lógicas en Python que evalúa, simplifica y genera tablas de verdad para expresiones lógicas.",
+                    "githubLink": {
+                        "text": "Ver en GitHub",
+                        "url": "https://github.com/FierceSpectrum/Calculadora-de-proposiciones"
+                    },
+                    "longDescription": "La Calculadora de Proposiciones es una herramienta diseñada para evaluar, simplificar y generar tablas de verdad para proposiciones lógicas. Implementada en Python utilizando la librería SymPy, facilita la manipulación de operaciones lógicas y proporciona una interfaz para visualizar los resultados de manera clara y precisa.",
+                    "image": "./images/Calculadora.png",
+                    "technologies": [
+                        "Python",
+                        "SymPy"
+                    ],
+                    "status": "Completo",
+                    "additionalLinks": []
+                },
+                {
+                    "title": "2° Proyecto Web II - Completo",
+                    "description": "Este proyecto incluye el frontend y backend del '2° Proyecto Web II', que consta de una interfaz de usuario, una API REST mejorada y una API GraphQL. La interfaz permite gestionar perfiles, playlists y videos; la API REST ofrece autenticación de segundo factor y verificación de correos electrónicos; y la API GraphQL maneja operaciones CRUD con JWT y Mongoose.",
+                    "longDescription": "El '2° Proyecto Web II' es una solución integral que combina frontend y backend para gestionar perfiles, playlists y videos. El '2° Proyecto Web II Client' proporciona una interfaz de usuario construida con React, SCSS, HTML y CSS, permitiendo a los usuarios gestionar sus perfiles y playlists, y visualizar videos. El '2° Proyecto Web II Server Rest' es una API REST que extiende el sistema anterior con autenticación de segundo factor (2FA), verificación de correos electrónicos y manejo de tokens JWT para una mayor seguridad. Además, el '2° Proyecto Web II Server GraphQL' añade una capa de GraphQL a la API REST existente, ofreciendo resolvers para operaciones CRUD sobre recursos clave como cuentas, avatares, playlists, usuarios y videos, utilizando JWT para autenticación y Mongoose para esquemas de datos.",
+                    "image": "./images/Web2II.png",
+                    "technologies": [
+                        "React",
+                        "SCSS",
+                        "HTML",
+                        "CSS",
+                        "Node.js",
+                        "Mongoose",
+                        "Express.js",
+                        "JWT",
+                        "GraphQL"
+                    ],
+                    "status": "Completo",
+                    "githubLinks": [
+                        {
+                            "text": "Ver Cliente en GitHub",
+                            "url": "https://github.com/FierceSpectrum/1-Proyecto-Web-II-Client"
+                        },
+                        {
+                            "text": "Ver API REST en GitHub",
+                            "url": "https://github.com/FierceSpectrum/2-Proyecto-Web-II-Server-Rest"
+                        },
+                        {
+                            "text": "Ver API GraphQL en GitHub",
+                            "url": "https://github.com/FierceSpectrum/2-Proyecto-Web-II-Server-GraphQL"
+                        }
+                    ],
+                    "morelinks": true,
+                    "additionalLinks": []
+                },
+                {
+                    "title": "1° Proyecto Web II - Completo",
+                    "description": "El '1° Proyecto Web II' consiste en una aplicación web completa con un frontend para la gestión de contenido y una API REST para la administración de datos. El frontend permite a los padres gestionar el contenido visible para sus hijos, mientras que la API REST maneja usuarios, cuentas, avatares, playlists y videos.",
+                    "longDescription": "El '1° Proyecto Web II' es un proyecto integral desarrollado durante el primer cuatrimestre del año 2024 como parte del curso Web 2. La solución incluye dos componentes principales: el frontend y la API REST. El '1° Proyecto Web II Client' es una aplicación web construida con React, SCSS, HTML y CSS, diseñada para permitir a los padres gestionar el contenido que ven sus hijos en una plataforma similar a Netflix. Los usuarios pueden registrar cuentas, iniciar sesión, crear y gestionar perfiles, y administrar playlists de videos de YouTube. Cada perfil puede tener hasta seis playlists de videos, facilitando el control parental y la personalización del contenido. Por otro lado, el '1° Proyecto Web II Server' es una API REST desarrollada con Node.js, MongoDB y Express.js. Esta API proporciona operaciones CRUD para gestionar usuarios, cuentas, avatares, playlists y videos, sirviendo como el backend para el frontend mencionado. La API asegura una gestión robusta de datos y una integración eficiente con la aplicación web.",
+                    "image": "./images/Web2I.png",
+                    "technologies": [
+                        "React",
+                        "SCSS",
+                        "HTML",
+                        "CSS",
+                        "Node.js",
+                        "MongoDB",
+                        "Express.js"
+                    ],
+                    "status": "Completo",
+                    "githubLinks": [
+                        {
+                            "text": "Ver Frontend en GitHub",
+                            "url": "https://github.com/FierceSpectrum/1-Proyecto-Web-II-Client"
+                        },
+                        {
+                            "text": "Ver API Backend en GitHub",
+                            "url": "https://github.com/FierceSpectrum/1-Proyecto-Web-II-Server"
+                        }
+                    ],
+                    "morelinks": true,
+                    "additionalLinks": []
+                },
+                {
+                    "title": "Información sobre videojuegos",
+                    "description": "Una página web para dar información relevante de algunos juegos modernos por categorías.",
+                    "githubLink": {
+                        "text": "Ver en GitHub",
+                        "url": "https://github.com/FierceSpectrum/Proyecto-Web"
+                    },
+                    "longDescription": "Este proyecto es una página web que ofrece información detallada sobre una variedad de videojuegos modernos, organizados por categorías como MMORPG, MOBAS y Shooters. La web incluye descripciones, capturas de pantalla",
+                    "status": "completado",
+                    "image": "./images/WebJuegos.png",
+                    "technologies": [
+                        "HTML",
+                        "SCSS",
+                        "CSS"
+                    ],
+                    "additionalLinks": []
+                },
+                {
+                    "title": "Veterinaria",
+                    "description": "Una aplicación de escritorio en C# para la gestión de información en una veterinaria, incluyendo clientes, mascotas, enfermedades y medicamentos.",
+                    "githubLink": {
+                        "text": "Ver en GitHub",
+                        "url": "https://github.com/FierceSpectrum/LaVeterinaria1"
+                    },
+                    "longDescription": "Veterinaria 1 es una aplicación de escritorio desarrollada en C# para gestionar la información en una veterinaria. Permite al personal registrar y administrar datos relacionados con clientes, mascotas, enfermedades y medicamentos. Utilizando Visual Studio 2022 como entorno de desarrollo, el proyecto facilita una gestión eficiente de la información veterinaria.",
+                    "image": "./images/Veterinaria.png",
+                    "technologies": [
+                        "C#",
+                        "Visual Studio 2022"
+                    ],
+                    "status": "Completo",
+                    "additionalLinks": []
+                }
+            ],
+            "modal": {
+                "title1": "Tecnologías utilizadas",
+                "title2": "Enlaces adicionales"
+            }
+        },
         "featured": {
             "title": "Proyectos Destacados",
             "projects": [
@@ -281,7 +454,7 @@
         }
     },
     "aboutMe": {
-        "title":"Sobre Mí",
+        "title": "Sobre Mí",
         "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Actualmente, estudio <strong>Ingeniería de Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
         "passion": "Estoy siempre en busca de nuevas tecnologías y métodos para mejorar mis habilidades. Si deseas conectar o conocer más sobre mi trabajo, no dudes en contactarme a través de las redes sociales.",
         "email": "benjaminsandisalas@gmail.com",
@@ -300,16 +473,49 @@
                 "name": "Twitter",
                 "url": "https://x.com/BenjaminSandiS1",
                 "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
-            },
-            {
-                "name": "Instagram",
-                "url": "https://www.instagram.com/fiercespectrum",
-                "logo": "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg"
             }
-        ]
+        ],
+        "modal": {
+            "AboutMe": {
+                "title": "Mi Trayectoria en Ingeniería del Software",
+                "description": "Soy un estudiante apasionado de Ingeniería de Software. Mi camino hacia la programación no fue directo; inicialmente, me inclinaba más por las matemáticas. Sin embargo, descubrí que mi verdadera pasión residía en la resolución de problemas complejos y en la creación de soluciones innovadoras. La programación me ofrece el desafío continuo de aprender y adaptarme, lo que me motiva a seguir creciendo en este campo. Decidí especializarme en Full Stack, abarcando tanto el Backend como el Frontend, porque me encanta tener una visión completa de cómo funciona una aplicación, desde la base de datos hasta la interfaz del usuario."
+            },
+            "Leadership": {
+                "title": "Habilidades Interpersonales",
+                "description": "Soy una persona curiosa e insaciable, siempre buscando aprender y mejorar. Me considero un líder colaborativo que valora la empatía y la cooperación. Disfruto resolviendo problemas y ayudando a otros a superar sus desafíos. Creo en la importancia de no dejar a nadie atrás y de fomentar un ambiente de aprendizaje continuo."
+            },
+            "Personal_Interests": {
+                "title": "Intereses Personales",
+                "description": "Fuera de la programación, disfruto de actividades como el ajedrez, que alimenta mi amor por la lógica y la estrategia. Me gusta escuchar música, especialmente música electrónica, y disfruto de la natación, que me ayuda a mantener un equilibrio saludable. Además, valoro mucho el tiempo con mi familia y amigos, y disfruto de actividades al aire libre como ir a la playa y jugar juegos de mesa."
+            }
+        }
     },
     "curriculum": {},
     "footer": {
-        "email": "Correo"
+        "email": "Obtener Correo Electrónico",
+        "links": [
+            {
+                "name": "Inicio",
+                "href": "Home"
+            },
+            {
+                "name": "Sobre_Mí",
+                "href": "Home",
+                "id": "AboutMe"
+            },
+            {
+                "name": "Habilidades",
+                "href": "Home",
+                "id": "Skills"
+            },
+            {
+                "name": "Proyectos",
+                "href": "Projects"
+            },
+            {
+                "name": "Curriculum",
+                "href": "Curriculum"
+            }
+        ]
     }
 }

@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import "./FeaturedProjects.scss";
+import "./Projects.scss";
+import { useTranslation } from "react-i18next";
 import Project from "../Project/Project";
 import Modal from "../Modal/Modal";
-import { useTranslation } from "react-i18next";
 
-const FeaturedProjects = () => {
+const Projects = () => {
   const { t } = useTranslation();
-  const { featured } = t("projects", { returnObjects: true });
-  const { projects } = featured;
-
+  const all = t("projects.all", { returnObjects: true });
+  const { title, projects } = all;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -23,15 +22,11 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <div className="FeaturedProjects">
-      <h2>{featured.title}</h2>
-      <div className="Project-container">
+    <div className="Projects">
+      <h2>{title}</h2>
+      <div className="Projects-container">
         {projects.map((project, index) => (
-          <Project
-            key={index}
-            project={project}
-            openModal={openModal}
-          />
+          <Project key={index} project={project} openModal={openModal} />
         ))}
       </div>
       {selectedProject && (
@@ -43,7 +38,7 @@ const FeaturedProjects = () => {
           <h3>{selectedProject.title}</h3>
           <p>{selectedProject.longDescription}</p>
           <div className="technologies">
-            <h4>{featured.modal.title1}:</h4>
+            <h4>{all.modal.title1}:</h4>
             <ul>
               {selectedProject.technologies.map((tech, idx) => (
                 <li key={idx}>{tech}</li>
@@ -52,7 +47,7 @@ const FeaturedProjects = () => {
           </div>
           {selectedProject.additionalLinks && (
             <div className="additional-links">
-              <h4>{featured.modal.title2}:</h4>
+              <h4>{all.modal.title2}:</h4>
               <ul>
                 {[
                   ...(selectedProject.morelinks
@@ -79,4 +74,4 @@ const FeaturedProjects = () => {
   );
 };
 
-export default FeaturedProjects;
+export default Projects;

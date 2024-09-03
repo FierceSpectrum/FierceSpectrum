@@ -1,8 +1,6 @@
 @import "../../Styles/Variables/colors.scss";
 
-/* Estilos para la sección de proyectos destacados */
-.FeaturedProjects {
-
+.Projects {
   h2 {
     font-size: 2rem;
     text-align: center;
@@ -10,22 +8,12 @@
     margin-bottom: $gap-size;
   }
 
-  .Project-container {
-    width: $container-size;
+  .Projects-container {
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: $gap-size;
     justify-content: center;
   }
-
-
-
-  // Media queries para diseño responsivo
-  @media (max-width: 768px) {
-    .Project-container {
-      width: 90%;
-    }
-  }
 }
-

@@ -3,13 +3,14 @@ import "./Footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const footer = t("footer", { returnObjects: true });
   const aboutMe = t("aboutMe", { returnObjects: true });
-  const navigation = t("navigation", { returnObjects: true });
   const { email, socialLinks } = aboutMe;
 
   // Función para copiar el email al portapapeles
@@ -24,15 +25,23 @@ const Footer = () => {
       });
   };
 
+  const handleClick = (href, id) => {
+    if (href === "Home") {
+      const scrollTo = id ? { state: { scrollTo: id } } : {};
+      navigate("/", scrollTo);
+    } else {
+      navigate(`/${href}`);
+    }
+  };
+
   return (
     <div className="Footer">
       <footer className="footer">
         <div className="footer-content">
           <div className="contact-info">
             <p>
-              {footer.email}:{" "}
               <a href={`mailto:${email}`} className="email-link">
-                {email}
+                {footer.email}
               </a>
               <button className="copy-button" onClick={copyToClipboard}>
                 <FontAwesomeIcon icon={faCopy} />
@@ -53,8 +62,10 @@ const Footer = () => {
             ))}
           </ul>
           <div className="quick-links">
-            {navigation.links.map((link) => (
-              <a href={`#/${link.href}`}>{link.name}</a>
+            {footer.links.map((link) => (
+              <button onClick={() => handleClick(link.href, link.id)}>
+                {link.name}
+              </button>
             ))}
           </div>
         </div>

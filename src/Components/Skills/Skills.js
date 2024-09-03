@@ -64,7 +64,7 @@ const Skills = () => {
         onClose={closeModal}
         nameClass="skills-section"
       >
-        <h3>{fullstack.modla.title1}</h3>
+        <h3>{fullstack.modal.title1}</h3>
         <div className="skills-list">
           {allSkills.map((category) => (
             <div key={category.type} className="skills-category">
@@ -73,12 +73,14 @@ const Skills = () => {
               </h4>
               <div>
                 {category.items.map((skill) => (
-                  <img
-                    key={skill.name}
-                    src={skill.icon}
-                    alt={skill.name}
-                    style={{ display: "inline-block", marginRight: "10px" }}
-                  />
+                  <div className="skill">
+                    <img
+                      key={skill.name}
+                      src={skill.icon}
+                      alt={skill.name}
+                    />
+                    <span>{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>

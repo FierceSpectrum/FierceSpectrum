@@ -1,19 +1,32 @@
 import "./Navegation.scss";
-import { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import LenguageSwitcher from "../LenguageSwitcher/LenguageSwitcher";
-import Footer from "../Footer/Footer";
 
 const NavigationItems = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const links = t("navigation.links", { returnObjects: true });
+
+  const handleClick = (href, id) => {
+    if (href === "Home") {
+      const scrollTo = id ? { state: { scrollTo: id } } : {};
+      navigate("/", scrollTo);
+    } else {
+      navigate(`/${href}`);
+    }
+  };
+
   return (
     <ul className="Items">
       {links.map((link) => (
-        <li>
-          <Link to={`/${link.href}`}>{link.name}</Link>
+        <li key={link.href}>
+          <button onClick={() => handleClick(link.href, link.id)}>
+            {link.name}
+          </button>
         </li>
       ))}
     </ul>
@@ -61,8 +74,7 @@ const Navegation = () => {
           </div>
         </header>
       </div>
-      <Outlet />
-      <Footer />
+      {/* <Outlet /> */}
     </>
   );
 };
