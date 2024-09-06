@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FierceSpectrum/build/static/css/main.20ba63c9.css",
+    "main.js": "/FierceSpectrum/build/static/js/main.f70bed83.js",
+    "static/media/Web2.png": "/FierceSpectrum/build/static/media/Web2.8e9fa5ce63cec02a4122.png",
+    "static/media/Web1.png": "/FierceSpectrum/build/static/media/Web1.67930e0d44eac2909456.png",
+    "index.html": "/FierceSpectrum/build/index.html",
+    "main.20ba63c9.css.map": "/FierceSpectrum/build/static/css/main.20ba63c9.css.map",
+    "main.f70bed83.js.map": "/FierceSpectrum/build/static/js/main.f70bed83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20ba63c9.css",
+    "static/js/main.f70bed83.js"
+  ]
+}
