@@ -10,6 +10,7 @@ import {
 import Navegation from "./Components/Navegation/Navegation";
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
+import Curriculum from "./Components/Curriculum/Curriculum";
 import Footer from "./Components/Footer/Footer";
 
 const Layout = () => {
@@ -40,7 +41,7 @@ const router = createHashRouter([
     children: [
       {
         path: "Curriculum",
-        element: <></>,
+        element: <Curriculum />,
       },
       {
         path: "Projects",

@@ -1,6 +1,6 @@
 import "./Navegation.scss";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import LenguageSwitcher from "../LenguageSwitcher/LenguageSwitcher";

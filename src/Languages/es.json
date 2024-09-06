@@ -490,7 +490,119 @@
             }
         }
     },
-    "curriculum": {},
+    "curriculum": {
+        "header": {
+            "name": "Benjamín Sandí Salas",
+            "image": "./images/Yo.png"
+        },
+        "personalInfo": {
+            "address": "San Antonio, Ciudad Quesada",
+            "email": "benjaminsandisalas@gmail.com",
+            "birthDate": "21/08/2003",
+            "nationality": "Costa Rica",
+            "linkedin": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
+        },
+        "profile": {
+            "description": "Soy un desarrollador Full Stack con un enfoque especial en el backend. Actualmente estudio Ingeniería de Software y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar APIs, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión. Mi trayectoria en el campo de la programación refleja una constante búsqueda de aprendizaje y adaptación a nuevas tecnologías y métodos."
+        },
+        "education": [
+            {
+                "year": "2021 - 2025",
+                "degree": "Ingeniería en Software",
+                "institution": "Universidad Técnica Nacional",
+                "location": "Ciudad Quesada",
+                "average": "8.47"
+            },
+            {
+                "year": "2016 - 2020",
+                "degree": "Bachillerato",
+                "institution": "Colegio Cooperativo San Carlos Borromeo"
+            }
+        ],
+        "experience": [
+            {
+                "title": "Desarrollo de Aplicación de Gestión de Proyectos",
+                "description": "Actualmente desarrollando una aplicación web para la gestión de proyectos en equipo."
+            }
+        ],
+        "skills": {
+            "technical": [
+                {
+                    "name": "JavaScript",
+                    "level": 3
+                },
+                {
+                    "name": "React",
+                    "level": 3
+                },
+                {
+                    "name": "Node.js",
+                    "level": 3
+                },
+                {
+                    "name": "GraphQL",
+                    "level": 2
+                },
+                {
+                    "name": "C#",
+                    "level": 2
+                },
+                {
+                    "name": "Git",
+                    "level": 2
+                },
+                {
+                    "name": "Sass",
+                    "level": 2
+                }
+            ],
+            "interpersonal": [
+                "Liderazgo",
+                "Comunicación Asertiva",
+                "Trabajo en Equipo",
+                "Resolución de Problemas",
+                "Liderazgo colaborativo",
+                "Comunicación Asertiva",
+                "Trabajo en Equipo",
+                "Resolución de Problemas",
+                "Empatía",
+                "Fomento de un ambiente de aprendizaje continuo"
+            ]
+        },
+        "languages": [
+            {
+                "language": "Español",
+                "level": "Nativo"
+            },
+            {
+                "language": "Inglés",
+                "level": "Intermedio"
+            }
+        ],
+        "projects": [
+            {
+                "title": "Aplicación de Gestión de Proyectos",
+                "description": "Actualmente desarrollando una aplicación web para facilitar la administración de proyectos en equipo."
+            }
+        ],
+        "socialMedia": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/FierceSpectrum",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://x.com/BenjaminSandiS1",
+                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+            }
+        ]
+    },
     "footer": {
         "email": "Obtener Correo Electrónico",
         "links": [
