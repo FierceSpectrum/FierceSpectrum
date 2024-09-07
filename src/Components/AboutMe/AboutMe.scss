@@ -8,6 +8,8 @@
   border-radius: 10px;
   padding: 20px;
   margin-top: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
 
   h2 {
     font-size: 2rem;
@@ -149,4 +151,9 @@
       color: #ff6f61;
     }
   }
+}
+
+// Media queries para diseño responsivo
+@media (max-width: 768px) {
+  .AboutMe {}
 }

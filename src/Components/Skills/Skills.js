@@ -46,7 +46,7 @@ const Skills = () => {
           <ul>
             {category.skills.map((skill, index) => {
               const angle = index * (360 / category.skills.length);
-              const distance = 50 + index * 20; // Adjust distance as needed
+              const distance = 50 + index * 20;
               return (
                 <SkillItem
                   key={skill.name}
@@ -74,12 +74,12 @@ const Skills = () => {
               <div>
                 {category.items.map((skill) => (
                   <div className="skill">
-                    <img
+                    <img className="img-modal"
                       key={skill.name}
                       src={skill.icon}
                       alt={skill.name}
                     />
-                    <span>{skill.name}</span>
+                    <span className="span-modal">{skill.name}</span>
                   </div>
                 ))}
               </div>

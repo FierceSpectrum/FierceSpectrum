@@ -208,3 +208,15 @@
         z-index: 100;
     }
 }
+
+// Media queries para diseño responsivo
+@media (max-width: 768px) {
+    .navigation-bar {
+        .actions {
+            display: flex;
+            flex-direction: row;
+            margin-left: -25%;
+            justify-content: space-around;
+        }
+    }
+}

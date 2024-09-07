@@ -1,7 +1,6 @@
 @import "../../Styles/main.scss";
 
 .ToggleTheme {
-  padding-right: 15px;
 
   /* From Uiverse.io by rishichawda */
   /* The switch - the box around the slider */
@@ -75,11 +74,18 @@
       }
     }
   }
+}
 
+// Media queries para diseño responsivo
+@media (max-width: 768px) {
+  .ToggleTheme {
+    scale: 0.8;
+  }
+}
 
-
-
-
-
-
+// Media queries para diseño responsivo
+@media (max-width: 480px) {
+  .ToggleTheme {
+    scale: 0.6;
+  }
 }

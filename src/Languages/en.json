@@ -69,7 +69,7 @@
                         "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                     },
                     {
-                        "name": "CSS3",
+                        "name": "CSS",
                         "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
                         "link": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                     },
@@ -664,6 +664,13 @@
                     "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
                 }
             ]
+        },
+        "download": {
+            "title": "Download Resume",
+            "pdfFile": {
+                "name": "curriculum_benjamín_english.pdf",
+                "url": "./documents/curriculum_benjamín_english.pdf"
+            }
         }
     },
     "footer": {

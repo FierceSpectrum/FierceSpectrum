@@ -2,6 +2,8 @@ import React from "react";
 import "./Curriculum.scss";
 import { useTranslation } from "react-i18next";
 
+import PdfDownloadButton from "../PdfDownloadButton/PdfDownloadButton";
+
 const Curriculum = () => {
   const { t } = useTranslation();
 
@@ -44,7 +46,7 @@ const Curriculum = () => {
               <strong>{personalInfo.address.title}:</strong>{" "}
               {personalInfo.address.data}
             </p>
-            <p>
+            <p className="email">
               <strong>{personalInfo.email.title}:</strong>{" "}
               <a href={`mailto:${personalInfo.email.data}`}>
                 {personalInfo.email.data}
@@ -73,7 +75,7 @@ const Curriculum = () => {
               ))}
             </ul>
             <h2>{skills.title2}</h2>
-            <ul>
+            <ul className="skills-technical">
               {skills.technical.map((skill, index) => (
                 <li key={index} className="skill-item">
                   <span>{skill.name}</span>
@@ -191,6 +193,7 @@ const Curriculum = () => {
           </section>
         </div>
       </div>
+      <PdfDownloadButton />
     </div>
   );
 };

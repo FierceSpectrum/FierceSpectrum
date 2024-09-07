@@ -1,17 +1,10 @@
 @import "../../Styles/main.scss";
 
-.LenguageSwitcher {
-  display: flex;
-  justify-content: center;
-  gap: &gap-size;
-  background-color: var(--color-nav);
-  padding: 10px;
-  border-radius: $border-radius;
-  box-shadow: 0 4px 6px var(--modal-shadow-color);
-  margin: 10px 0;
-  max-width: $container-size;
-
+.PdfDownloadButton {
+  
   button {
+    margin: 50px;
+    scale: 1.5;
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
@@ -49,12 +42,5 @@
         outline: none;
       }
     }
-  }
-}
-
-// Media queries para diseño responsivo
-@media (max-width: 768px) {
-  .LenguageSwitcher {
-    scale: 0.8;
   }
 }

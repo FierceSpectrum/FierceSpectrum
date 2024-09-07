@@ -25,6 +25,15 @@
   @media (max-width: 768px) {
     .Project-container {
       width: 90%;
+      // flex-direction: column;
+    }
+  }
+
+  // Media queries para diseño responsivo
+  @media (max-width: 480px) {
+    .Project-container {
+      width: 90%;
+      flex-direction: column;
     }
   }
 }

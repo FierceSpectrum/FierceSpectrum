@@ -217,3 +217,10 @@
     }
   }
 }
+
+// Media queries para diseño responsivo
+@media (max-width: 480px) {
+  .Project {
+    width: 100%;
+  }
+}
