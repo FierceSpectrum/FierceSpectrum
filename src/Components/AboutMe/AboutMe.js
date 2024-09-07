@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const AboutMe = () => {
   const { t } = useTranslation();
   const aboutMe = t("aboutMe", { returnObjects: true });
-  const { introduction, passion, modal } = aboutMe;
+  const { introduction, passion, modal, button } = aboutMe;
   const { AboutMe, Leadership, Personal_Interests } = modal;
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,7 +32,9 @@ const AboutMe = () => {
           </li>
         ))}
       </ul>
-      <span className="more" onClick={openModal}>More AboutMe</span>
+      <span className="more" onClick={openModal}>
+        {button.title}
+      </span>
       <Modal
         isOpen={modalIsOpen}
         onClose={closeModal}

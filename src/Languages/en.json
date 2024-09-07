@@ -488,6 +488,9 @@
                 "title": "Personal Interests",
                 "description": "Outside of programming, I enjoy activities like chess, which fuels my love for logic and strategy. I like listening to music, especially electronic music, and I enjoy swimming, which helps me maintain a healthy balance. Additionally, I highly value time with my family and friends, and I enjoy outdoor activities like going to the beach and playing board games."
             }
+        },
+        "button": {
+            "title": "More About Me"
         }
     },
     "curriculum": {

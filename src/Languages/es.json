@@ -488,6 +488,9 @@
                 "title": "Intereses Personales",
                 "description": "Fuera de la programación, disfruto de actividades como el ajedrez, que alimenta mi amor por la lógica y la estrategia. Me gusta escuchar música, especialmente música electrónica, y disfruto de la natación, que me ayuda a mantener un equilibrio saludable. Además, valoro mucho el tiempo con mi familia y amigos, y disfruto de actividades al aire libre como ir a la playa y jugar juegos de mesa."
             }
+        },
+        "button": {
+            "title": "Mas Sobre Mí"
         }
     },
     "curriculum": {
