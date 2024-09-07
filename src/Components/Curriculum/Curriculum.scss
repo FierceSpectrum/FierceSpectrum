@@ -6,8 +6,15 @@ body {
   margin: 0;
 }
 
+.navigation-bar,
+.Footer {
+  display: none;
+}
+
+
+
 .Curriculum {
-  max-width: 900px;
+  // max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
