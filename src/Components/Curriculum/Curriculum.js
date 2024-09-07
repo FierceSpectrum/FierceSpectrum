@@ -12,8 +12,8 @@ const Curriculum = () => {
     education,
     experience,
     skills,
-    languages,
-    projects,
+    language,
+    project,
     socialMedia,
   } = t("curriculum", { returnObjects: true });
 
@@ -39,50 +39,66 @@ const Curriculum = () => {
         <div className="left-section">
           {/* Información Personal */}
           <section className="personal-info">
-            <h2>Información Personal</h2>
+            <h2>{personalInfo.title}</h2>
             <p>
-              <strong>Dirección:</strong> {personalInfo.address}
+              <strong>{personalInfo.address.title}:</strong>{" "}
+              {personalInfo.address.data}
             </p>
             <p>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+              <strong>{personalInfo.email.title}:</strong>{" "}
+              <a href={`mailto:${personalInfo.email.data}`}>
+                {personalInfo.email.data}
+              </a>
             </p>
             <p>
-              <strong>Fecha de Nacimiento:</strong> {personalInfo.birthDate}
+              <strong>{personalInfo.birthDate.title}:</strong>{" "}
+              {personalInfo.birthDate.data}
             </p>
             <p>
-              <strong>Nacionalidad:</strong> {personalInfo.nationality}
+              <strong>{personalInfo.nationality.title}:</strong>{" "}
+              {personalInfo.nationality.data}
             </p>
             <p>
-              <strong>LinkedIn:</strong>{" "}
-              <a href={personalInfo.linkedin}>LinkedIn</a>
+              <strong>{personalInfo.linkedin.title}:</strong>{" "}
+              <a href={personalInfo.linkedin.data}>LinkedIn</a>
             </p>
           </section>
 
           {/* Habilidades */}
           <section className="skills">
-            <h2>Habilidades Técnicas</h2>
-            <ul>
-              {skills.technical.map((skill, index) => (
-                <li key={index}>
-                  <span>{skill.name}</span>
-                  <span>{skill.level}</span>
-                </li>
+            <h2>{skills.title1}</h2>
+            <ul className="skills-interpersonal">
+              {skills.soft.map((skill, index) => (
+                <li key={index}>{skill}</li>
               ))}
             </ul>
-            <h2>Habilidades Interpersonales</h2>
+            <h2>{skills.title2}</h2>
             <ul>
-              {skills.interpersonal.map((skill, index) => (
-                <li key={index}>{skill}</li>
+              {skills.technical.map((skill, index) => (
+                <li key={index} className="skill-item">
+                  <span>{skill.name}</span>
+                  <div className="skill-level">
+                    {Array(4)
+                      .fill(0)
+                      .map((_, i) => (
+                        <span
+                          key={i}
+                          className={`circle ${
+                            i < skill.level ? "filled" : ""
+                          }`}
+                        ></span>
+                      ))}
+                  </div>
+                </li>
               ))}
             </ul>
           </section>
 
           {/* Idiomas */}
           <section className="languages">
-            <h2>Idiomas</h2>
+            <h2>{language.title}</h2>
             <ul>
-              {languages.map((lang, index) => (
+              {language.languages.map((lang, index) => (
                 <li key={index}>
                   {lang.language} ({lang.level})
                 </li>
@@ -95,17 +111,20 @@ const Curriculum = () => {
         <div className="right-section">
           {/* Perfil */}
           <section className="profile">
-            <h2>Perfil Profesional</h2>
+            <h2>{profile.title}</h2>
             <p>{profile.description}</p>
           </section>
 
           {/* Educación */}
           <section className="education">
-            <h2>Educación</h2>
+            <h2>{education.title}</h2>
             <ul>
-              {education.map((edu, index) => (
+              {education.education.map((edu, index) => (
                 <li key={index}>
-                  <strong>{edu.year}</strong>: {edu.degree}, {edu.institution}
+                  <strong>{edu.year}</strong>{" "}
+                  <p>
+                    {edu.degree}, {edu.institution}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -113,8 +132,8 @@ const Curriculum = () => {
 
           {/* Experiencia */}
           {/* <section className="experience">
-            <h2>Experiencia Profesional</h2>
-            {experience.map((exp, index) => (
+            <h2>{experience.title}</h2>
+            {experience.experience.map((exp, index) => (
               <p key={index}>
                 <strong>{exp.title}</strong> - {exp.description}
               </p>
@@ -123,29 +142,55 @@ const Curriculum = () => {
 
           {/* Proyectos */}
           <section className="projects">
-            <h2>Proyectos</h2>
-            {projects.map((proj, index) => (
-              <p key={index}>
-                <strong>{proj.title}</strong> - {proj.description}
-              </p>
+            <h2>{project.title}</h2>
+            {project.projects.map((proj, index) => (
+              <div key={index}>
+                <p>
+                  <strong>{proj.title}</strong> - {proj.description}
+                </p>
+                {proj.links && (
+                  <ul className="links">
+                    {proj.links.map((link, i) => (
+                      <li key={i} className="link">
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
+          </section>
+          {/* Redes Sociales */}
+          <section className="social-media">
+            <h2>{socialMedia.title}</h2>
+            <ul>
+              {socialMedia.socialMedia.map((social, index) => (
+                <li key={index} className={`social-item ${social.name}`}>
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={social.icon}
+                      alt={`${social.name} icon`}
+                      width="20"
+                      className="social-logo"
+                    />{" "}
+                    {social.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
       </div>
-      {/* Redes Sociales */}
-      <section className="social-media">
-        <h2>Redes Sociales</h2>
-        <ul>
-          {socialMedia.map((social, index) => (
-            <li key={index}>
-              <a href={social.url} target="_blank" rel="noopener noreferrer">
-                <img src={social.icon} alt={`${social.name} icon`} width="20" />{" "}
-                {social.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
     </div>
   );
 };

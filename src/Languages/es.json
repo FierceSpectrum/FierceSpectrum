@@ -496,43 +496,71 @@
             "image": "./images/Yo.png"
         },
         "personalInfo": {
-            "address": "San Antonio, Ciudad Quesada",
-            "email": "benjaminsandisalas@gmail.com",
-            "birthDate": "21/08/2003",
-            "nationality": "Costa Rica",
-            "linkedin": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
+            "title": "Información Personal",
+            "address": {
+                "title": "Dirección",
+                "data": "Ciudad Quesada, Costa Rica"
+            },
+            "email": {
+                "title": "Email",
+                "data": "benjaminsandisalas@gmail.com"
+            },
+            "birthDate": {
+                "title": "Fecha de Nacimiento",
+                "data": "21/08/2003"
+            },
+            "nationality": {
+                "title": "Nacionalidad",
+                "data": "Costa Rica"
+            },
+            "linkedin": {
+                "title": "LinkedIn",
+                "data": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
+            }
         },
         "profile": {
-            "description": "Soy un desarrollador Full Stack con un enfoque especial en el backend. Actualmente estudio Ingeniería de Software y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar APIs, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión. Mi trayectoria en el campo de la programación refleja una constante búsqueda de aprendizaje y adaptación a nuevas tecnologías y métodos."
+            "title": "Perfil",
+            "description": "Soy un desarrollador Full Stack apasionado por el desarrollo de soluciones web eficientes y escalables. Actualmente estoy cursando Ingeniería de Software y me especializo en la creación de arquitecturas backend robustas, APIs RESTful y soluciones de base de datos. Con una mentalidad orientada a resultados, mi enfoque es combinar creatividad técnica y precisión en el código para resolver problemas complejos. Me mantengo en constante aprendizaje y adaptación a las tecnologías más recientes, siempre buscando optimizar procesos y mejorar la experiencia del usuario final. Si bien me destaco en el desarrollo backend, tengo una sólida comprensión del frontend que me permite entregar productos completos y funcionales. Además, me caracteriza una fuerte ética de trabajo, liderazgo colaborativo y una capacidad natural para comunicar y trabajar de manera efectiva en equipo."
         },
-        "education": [
-            {
-                "year": "2021 - 2025",
-                "degree": "Ingeniería en Software",
-                "institution": "Universidad Técnica Nacional",
-                "location": "Ciudad Quesada",
-                "average": "8.47"
-            },
-            {
-                "year": "2016 - 2020",
-                "degree": "Bachillerato",
-                "institution": "Colegio Cooperativo San Carlos Borromeo"
-            }
-        ],
-        "experience": [
-            {
-                "title": "Desarrollo de Aplicación de Gestión de Proyectos",
-                "description": "Actualmente desarrollando una aplicación web para la gestión de proyectos en equipo."
-            }
-        ],
+        "education": {
+            "title": "Educación",
+            "education": [
+                {
+                    "year": "2021 - 2025",
+                    "degree": "Ingeniería en Software",
+                    "institution": "Universidad Técnica Nacional"
+                },
+                {
+                    "year": "2016 - 2020",
+                    "degree": "Bachillerato",
+                    "institution": "Colegio Cooperativo San Carlos Borromeo"
+                },
+                {
+                    "year": "2009 - 2015",
+                    "degree": "Educación Básica",
+                    "institution": "Escuela el Carmen"
+                }
+            ]
+        },
+        "experience": {
+            "title": "Experiencia Profesional",
+            "experience": [
+                {
+                    "title": "Desarrollo de Aplicación de Gestión de Proyectos",
+                    "description": "Actualmente desarrollando una aplicación web para la gestión de proyectos en equipo. El proyecto incluye la implementación de funcionalidades para la asignación de tareas, la gestión del tiempo y la colaboración entre miembros del equipo, utilizando tecnologías modernas como React, Node.js y PostgreSQL."
+                }
+            ]
+        },
         "skills": {
+            "title1": "Habilidades Blandas",
+            "title2": "Habilidades Técnicas",
             "technical": [
                 {
                     "name": "JavaScript",
                     "level": 3
                 },
                 {
-                    "name": "React",
+                    "name": "Express.js",
                     "level": 3
                 },
                 {
@@ -540,7 +568,19 @@
                     "level": 3
                 },
                 {
-                    "name": "GraphQL",
+                    "name": "React",
+                    "level": 3
+                },
+                {
+                    "name": "PostgreSQL",
+                    "level": 3
+                },
+                {
+                    "name": "MongoDB",
+                    "level": 3
+                },
+                {
+                    "name": "APIs REST y GraphQL",
                     "level": 2
                 },
                 {
@@ -556,52 +596,75 @@
                     "level": 2
                 }
             ],
-            "interpersonal": [
+            "soft": [
+                "Adaptabilidad",
+                "Comunicación asertiva",
                 "Liderazgo",
-                "Comunicación Asertiva",
-                "Trabajo en Equipo",
+                "Toma de decisiones críticas",
+                "Resolución de conflictos",
                 "Resolución de Problemas",
-                "Liderazgo colaborativo",
-                "Comunicación Asertiva",
-                "Trabajo en Equipo",
-                "Resolución de Problemas",
+                "Compromiso",
+                "Creatividad",
                 "Empatía",
-                "Fomento de un ambiente de aprendizaje continuo"
+                "Perseverancia"
             ]
         },
-        "languages": [
-            {
-                "language": "Español",
-                "level": "Nativo"
-            },
-            {
-                "language": "Inglés",
-                "level": "Intermedio"
-            }
-        ],
-        "projects": [
-            {
-                "title": "Aplicación de Gestión de Proyectos",
-                "description": "Actualmente desarrollando una aplicación web para facilitar la administración de proyectos en equipo."
-            }
-        ],
-        "socialMedia": [
-            {
-                "name": "LinkedIn",
-                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
-                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
-            },
-            {
-                "name": "GitHub",
-                "url": "https://github.com/FierceSpectrum",
-                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
-            },
-            {
-                "name": "Twitter",
-                "url": "https://x.com/BenjaminSandiS1",
-                "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
-            }
-        ]
+        "language": {
+            "title": "Idiomas",
+            "languages": [
+                {
+                    "language": "Español",
+                    "level": "Nativo"
+                },
+                {
+                    "language": "Inglés",
+                    "level": "Intermedio"
+                }
+            ]
+        },
+        "project": {
+            "title": "Proyectos",
+            "projects": [
+                {
+                    "title": "Aplicación de Gestión de Proyectos",
+                    "description": "Actualmente desarrollando una aplicación web para facilitar la administración de proyectos en equipo."
+                },
+                {
+                    "title": "Explorar Más Proyectos",
+                    "description": "Si te interesa conocer más sobre mi trabajo, puedes visitar mi GitHub o portafolio para ver proyectos adicionales.",
+                    "links": [
+                        {
+                            "name": "GitHub",
+                            "url": "https://github.com/FierceSpectrum"
+                        },
+                        {
+                            "name": "Portafolio",
+                            "url": "https://fiercespectrum.github.io/FierceSpectrum/build/"
+                        }
+                    ]
+                }
+            ]
+        },
+        "socialMedia": {
+            "title": "Redes Sociales",
+            "socialMedia": [
+                {
+                    "name": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/FierceSpectrum",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                },
+                {
+                    "name": "Twitter",
+                    "url": "https://x.com/BenjaminSandiS1",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                }
+            ]
+        }
     },
     "footer": {
         "email": "Obtener Correo Electrónico",

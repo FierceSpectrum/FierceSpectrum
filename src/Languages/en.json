@@ -490,7 +490,182 @@
             }
         }
     },
-    "curriculum": {},
+    "curriculum": {
+        "header": {
+            "name": "Benjamín Sandí Salas",
+            "image": "./images/Yo.png"
+        },
+        "personalInfo": {
+            "title": "Personal Information",
+            "address": {
+                "title": "Address",
+                "data": "Ciudad Quesada, Costa Rica"
+            },
+            "email": {
+                "title": "Email",
+                "data": "benjaminsandisalas@gmail.com"
+            },
+            "birthDate": {
+                "title": "Date of Birth",
+                "data": "21/08/2003"
+            },
+            "nationality": {
+                "title": "Nationality",
+                "data": "Costa Rica"
+            },
+            "linkedin": {
+                "title": "LinkedIn",
+                "data": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
+            }
+        },
+        "profile": {
+            "title": "Profile",
+            "description": "I am a passionate Full Stack developer focused on building efficient and scalable web solutions. Currently pursuing a Software Engineering degree, I specialize in creating robust backend architectures, RESTful APIs, and database solutions. With a results-driven mindset, I aim to combine technical creativity and code precision to solve complex problems. I constantly stay updated with the latest technologies, always seeking to optimize processes and improve the end-user experience. While I excel in backend development, I possess a strong understanding of the frontend, enabling me to deliver complete and functional products. Additionally, I am known for my strong work ethic, collaborative leadership, and ability to communicate and work effectively within a team."
+        },
+        "education": {
+            "title": "Education",
+            "education": [
+                {
+                    "year": "2021 - 2025",
+                    "degree": "Software Engineering",
+                    "institution": "Universidad Técnica Nacional"
+                },
+                {
+                    "year": "2016 - 2020",
+                    "degree": "High School Diploma",
+                    "institution": "Colegio Cooperativo San Carlos Borromeo"
+                },
+                {
+                    "year": "2009 - 2015",
+                    "degree": "Primary Education",
+                    "institution": "Escuela el Carmen"
+                }
+            ]
+        },
+        "experience": {
+            "title": "Professional Experience",
+            "experience": [
+                {
+                    "title": "Project Management Application Development",
+                    "description": "Currently developing a web application for team project management. The project includes task assignment, time management, and team collaboration features, using modern technologies such as React, Node.js, and PostgreSQL."
+                }
+            ]
+        },
+        "skills": {
+            "title1": "Soft Skills",
+            "title2": "Technical Skills",
+            "technical": [
+                {
+                    "name": "JavaScript",
+                    "level": 3
+                },
+                {
+                    "name": "Express.js",
+                    "level": 3
+                },
+                {
+                    "name": "Node.js",
+                    "level": 3
+                },
+                {
+                    "name": "React",
+                    "level": 3
+                },
+                {
+                    "name": "PostgreSQL",
+                    "level": 3
+                },
+                {
+                    "name": "MongoDB",
+                    "level": 3
+                },
+                {
+                    "name": "REST and GraphQL APIs",
+                    "level": 2
+                },
+                {
+                    "name": "C#",
+                    "level": 2
+                },
+                {
+                    "name": "Git",
+                    "level": 2
+                },
+                {
+                    "name": "Sass",
+                    "level": 2
+                }
+            ],
+            "soft": [
+                "Adaptability",
+                "Assertive Communication",
+                "Leadership",
+                "Critical Decision Making",
+                "Conflict Resolution",
+                "Problem Solving",
+                "Commitment",
+                "Creativity",
+                "Empathy",
+                "Perseverance"
+            ]
+        },
+        "language": {
+            "title": "Languages",
+            "languages": [
+                {
+                    "language": "Spanish",
+                    "level": "Native"
+                },
+                {
+                    "language": "English",
+                    "level": "Intermediate"
+                }
+            ]
+        },
+        "project": {
+            "title": "Projects",
+            "projects": [
+                {
+                    "title": "Project Management Application",
+                    "description": "Currently developing a web application to facilitate team project management."
+                },
+                {
+                    "title": "Explore More Projects",
+                    "description": "If you're interested in learning more about my work, feel free to visit my GitHub or portfolio for additional projects.",
+                    "links": [
+                        {
+                            "name": "GitHub",
+                            "url": "https://github.com/FierceSpectrum"
+                        },
+                        {
+                            "name": "Portfolio",
+                            "url": "https://fiercespectrum.github.io/FierceSpectrum/build/"
+                        }
+                    ]
+                }
+            ]
+        },
+        "socialMedia": {
+            "title": "Social Media",
+            "socialMedia": [
+                {
+                    "name": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/FierceSpectrum",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                },
+                {
+                    "name": "Twitter",
+                    "url": "https://x.com/BenjaminSandiS1",
+                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                }
+            ]
+        }
+    },
     "footer": {
         "email": "Get Email",
         "links": [
