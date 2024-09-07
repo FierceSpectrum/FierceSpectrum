@@ -18,8 +18,8 @@ i18n
         translation: es,
       },
     },
-    fallbackLng: "en", // Idioma por defecto si no se encuentra nada
-    lng: sessionStorage.getItem("language") || "en", // Cargar idioma desde sessionStorage
+    fallbackLng: "es", // Idioma por defecto si no se encuentra nada
+    lng: sessionStorage.getItem("language") || "es", // Cargar idioma desde sessionStorage
     interpolation: {
       escapeValue: false, // React ya hace escaping de valores
     },
