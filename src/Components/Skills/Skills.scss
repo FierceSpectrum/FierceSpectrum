@@ -327,7 +327,7 @@
   }
 
   .skills-section.modal {
-    width: 70%;
+    width: 80%;
 
     .skills-category {
       h4 {
@@ -364,8 +364,6 @@
   }
 
   .skills-section.modal {
-    scale: 0.85;
-    width: 70%;
 
     .skills-category {
       h4 {
@@ -382,6 +380,15 @@
           font-size: 10px;
         }
       }
+    }
+
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 }

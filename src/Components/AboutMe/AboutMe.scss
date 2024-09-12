@@ -156,4 +156,15 @@
 // Media queries para diseño responsivo
 @media (max-width: 768px) {
   // .AboutMe {}
+  .aboutMe-section.modal{
+    width: 80%;
+
+    h3{
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
 }
