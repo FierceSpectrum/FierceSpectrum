@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import Navegation from "./Components/Navegation/Navegation";
+import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Curriculum from "./Components/Curriculum/Curriculum";
@@ -27,7 +27,7 @@ const Layout = () => {
 
   return (
     <>
-      <Navegation />
+      <Navigation />
       <Outlet />
       <Footer />
     </>

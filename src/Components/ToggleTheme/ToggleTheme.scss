@@ -1,14 +1,12 @@
 @import "../../Styles/main.scss";
 
 .ToggleTheme {
-
+  width: 5rem;
   /* From Uiverse.io by rishichawda */
   /* The switch - the box around the slider */
   #theme-toggle-button {
-    position: relative;
     display: inline-block;
-    width: 5em;
-    margin-top: -5px;
+    width: 100%;
     cursor: pointer;
 
     /* Hide default HTML checkbox */
@@ -79,13 +77,13 @@
 // Media queries para diseño responsivo
 @media (max-width: 768px) {
   .ToggleTheme {
-    scale: 0.8;
+    width: 4rem;
   }
 }
 
 // Media queries para diseño responsivo
 @media (max-width: 480px) {
   .ToggleTheme {
-    scale: 0.6;
+    width: 3.5rem;
   }
 }

@@ -1,7 +1,7 @@
 {
     "navigation": {
         "english": "English",
-        "espanish": "Espanish",
+        "spanish": "Espanish",
         "links": [
             {
                 "name": "Home",
@@ -455,7 +455,7 @@
     },
     "aboutMe": {
         "title": "About Me",
-        "introduction": "I am a <strong>Full Stack</strong> developer with a special focus on <strong>backend</strong>. I am currently studying <strong>Software Engineering</strong> and am passionate about creating web solutions that solve complex problems. I specialize in designing and developing <strong>APIs</strong>, managing database connections, and tackling technical challenges with creativity and precision.",
+        "introduction": "I am a <strong>Full Stack</strong> developer with a special focus on <strong>backend</strong>. I am currently studying <strong>Software Engineering</strong> and am passionate about creating web solutions that solve complex problems. I specialize in designing and developing <strong>APIs</strong>, managing database, and tackling technical challenges with creativity and precision.",
         "passion": "I am always on the lookout for new technologies and methods to improve my skills. If you wish to connect or learn more about my work, feel free to contact me through social media.",
         "email": "benjaminsandisalas@gmail.com",
         "socialLinks": [
@@ -523,7 +523,7 @@
         },
         "profile": {
             "title": "Profile",
-            "description": "I am a passionate Full Stack developer focused on building efficient and scalable web solutions. Currently pursuing a Software Engineering degree, I specialize in creating robust backend architectures, RESTful APIs, and database solutions. With a results-driven mindset, I aim to combine technical creativity and code precision to solve complex problems. I constantly stay updated with the latest technologies, always seeking to optimize processes and improve the end-user experience. While I excel in backend development, I possess a strong understanding of the frontend, enabling me to deliver complete and functional products. Additionally, I am known for my strong work ethic, collaborative leadership, and ability to communicate and work effectively within a team."
+            "description": "I am a passionate Full Stack developer focused on building efficient and scalable web solutions. Currently pursuing a Software Engineering degree, I specialize in creating robust backend architectures, RESTful APIs, and database solutions. With a results-driven mindset, I aim to combine technical creativity and code precision to solve complex problems. I constantly stay updated with the latest technologies, always seeking to optimize processes and improve the end-user experience. While backend development is my specialty, I have a strong knowledge of the frontend, enabling me to deliver complete and functional products. Additionally, I am known for my strong work ethic, collaborative leadership, and ability to communicate and work effectively within a team."
         },
         "education": {
             "title": "Education",
@@ -684,7 +684,7 @@
                 "href": "Home"
             },
             {
-                "name": "About_Me",
+                "name": "About Me",
                 "href": "Home",
                 "id": "AboutMe"
             },

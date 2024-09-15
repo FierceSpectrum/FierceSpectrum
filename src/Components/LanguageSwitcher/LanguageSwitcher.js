@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./LenguageSwitcher.scss";
+import "./LanguageSwitcher.scss";
 import { useTranslation } from "react-i18next";
 
-const LenguageSwitcher = () => {
+const LanguageSwitcher = () => {
   const { t, i18n } = useTranslation();
   const navigation = t("navigation", { returnObjects: true });
 
@@ -15,7 +15,7 @@ const LenguageSwitcher = () => {
   };
 
   return (
-    <div className="LenguageSwitcher">
+    <div className="LanguageSwitcher">
       <button
         onClick={() => changeLanguage("en")}
         className={activeLanguage === "en" ? "active" : ""}
@@ -26,10 +26,10 @@ const LenguageSwitcher = () => {
         onClick={() => changeLanguage("es")}
         className={activeLanguage === "es" ? "active" : ""}
       >
-        {navigation.espanish}
+        {navigation.spanish}
       </button>
     </div>
   );
 };
 
-export default LenguageSwitcher;
+export default LanguageSwitcher;

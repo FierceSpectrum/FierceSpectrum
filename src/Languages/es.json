@@ -1,7 +1,7 @@
 {
     "navigation": {
         "english": "Ingles",
-        "espanish": "Español",
+        "spanish": "Español",
         "links": [
             {
                 "name": "Inicio",
@@ -684,7 +684,7 @@
                 "href": "Home"
             },
             {
-                "name": "Sobre_Mí",
+                "name": "Sobre Mí",
                 "href": "Home",
                 "id": "AboutMe"
             },
