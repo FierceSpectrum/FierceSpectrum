@@ -1,61 +1,69 @@
+# Hi, I'm Benjamin Sandi 👋
 
-<h1>Hi 👋, I'm Benjamín Sandi Salas</h1>
-<p>A passionate fullstack developer from Costa Rica</p>
+**Software Engineer** | Backend Systems · APIs · Scalable Architecture
 
-<h2>🚀 Languages and Tools I Use</h2>
+I build robust backend solutions that solve real problems — from API design to production-ready systems that scale.
 
-#### 💻 Skills:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="42" height="42" /></a>
-    <!-- <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="42" height="42" /></a>   -->
-</p>
+---
 
-#### 🎨 Frontend:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="42" height="42" /></a>
-</p>
+## 🧑‍💻 About Me
 
-#### 🛠️ Backend:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://img.shields.io/badge/Express-ffffff?style=for-the-badge" alt="express" width="80" height="40" style="display: block;" /></a>
-    <a target="_blank" href="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" style="display: inline-block;"><img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="42" height="42" /></a>
-</p>
+I'm a software engineer specialized in **backend development**, **API design**, and **scalable system architecture**. My work focuses on building maintainable, high-performance solutions using modern engineering practices.
 
-#### 🗄️ Database:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="42" height="42" /></a>
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="42" height="42" /></a>
-    <a target="_blank" href="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" style="display: inline-block;"><img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="42" height="42" /></a>
-</p>
+I have hands-on experience across the **full Software Development Lifecycle** — from requirements gathering and system design to implementation, testing, and deployment. I prioritize clean code, efficient data models, and architectures that grow with business needs.
 
-#### 🚀 DevOps:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg" style="display: inline-block; margin-right: 10px;"><img src="https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg" alt="vagrant" width="42" height="42" /></a>
-    <a target="_blank" href="https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg" style="display: inline-block;"><img src="https://upload.vectorlogo.zone/logos/gnu_bash/images/66582b8e-a291-4a1b-b89c-76628277a33b.svg" alt="bash" width="42" height="42" /></a>
-</p>
+My core expertise includes:
+- Designing and implementing **REST and GraphQL APIs**
+- Building **microservices** and distributed systems
+- Database modeling and optimization for performance and scalability
+- Writing maintainable, testable code with strong engineering fundamentals
+- Working collaboratively in Agile teams to deliver production-grade software
 
-#### 🖥️ Software:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" style="display: inline-block;"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="42" height="42" /></a>
-</p>
+I'm constantly learning, building side projects, and contributing to solutions that make an impact.
 
-#### 🌐 Other:
-<p style="margin-bottom: 20px;">
-    <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" style="display: inline-block; margin-right: 10px;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="42" height="42" /></a>
-    <a target="_blank" href="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" style="display: inline-block;"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="42" height="42" /></a>
-</p>
+---
 
-<h2>⚡️ Where to find me</h2>
-<p>
-    <a target="_blank" href="https://x.com/BenjaminSandiS1" style="display: inline-block; margin-right: 10px;"><img src="https://img.shields.io/badge/twitter-x?style=for-the-badge&logo=x&logoColor=white&color=%230f1419" alt="twitter" /></a>
-    <a target="_blank" href="https://www.linkedin.com/in/benjamin-sandi-salas-440159324/" style="display: inline-block; margin-right: 10px;"><img src="https://img.shields.io/badge/linkedin-logo?style=for-the-badge&logo=linkedin&logoColor=white&color=%230a77b6" alt="linkedin" /></a>
-    <a target="_blank" href="https://www.facebook.com/benjamin.sandi.1" style="display: inline-block; margin-right: 10px;"><img src="https://img.shields.io/badge/facebook-logo?style=for-the-badge&logo=facebook&logoColor=white&color=%230866ff" alt="facebook" /></a>
-    <a target="_blank" href="https://www.instagram.com/fiercespectrum" style="display: inline-block;"><img src="https://img.shields.io/badge/instagram-logo?style=for-the-badge&logo=instagram&logoColor=white&color=%23F35369" alt="instagram" /></a>
-    <a target="_blank" href="https://fiercespectrum.github.io/FierceSpectrum/build/" style="display: inline-block;"><img src="https://img.shields.io/badge/portafolio-logo?style=for-the-badge&logo=Github&logoColor=white&color=%23465369" alt="GitHub" /></a>
-</p>
+## 🛠️ Tech Stack
+
+### Backend
+- **Languages:** Python, Node.js, C#
+- **Frameworks:** Django, Express.js
+- **APIs:** REST, GraphQL
+
+### Frontend
+- **Languages:** JavaScript
+- **Frameworks:** React, Vue.js
+- **Styling:** CSS, SCSS
+
+### Databases
+- **Relational:** PostgreSQL, SQLserver
+- **NoSQL:** MongoDB, Redis
+- **ORMs:** Sequelize, Mongoose
+
+### DevOps & Tools
+- **Containerization:** Docker
+- **Version Control:** Git, GitHub, GitLab
+- **Testing:** Jest, Pytest
+
+### Data & Analytics
+- **Tools:** Pandas, NumPy
+- **Visualization:** Matplotlib, Plotly
+
+---
+
+## 🎓 Education
+
+**Bachelor’s Degree in Software Engineering**
+Universidad Técnica Nacional  
+2021 – 2025
+
+---
+
+## 📫 Let's Connect
+
+I'm always open to discussing new projects, collaboration opportunities, or just talking tech.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN_USERNAME)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB_USERNAME)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://your-portfolio-url.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
