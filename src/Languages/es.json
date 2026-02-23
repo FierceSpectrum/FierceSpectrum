@@ -240,27 +240,6 @@
             "title": "Mis Proyectos",
             "projects": [
                 {
-                    "title": "Backend de Project Track",
-                    "description": "Una API en desarrollo para la gestión de proyectos que incluye la creación de cuentas, comunidades, proyectos, roles y tareas, con administración de permisos y roles.",
-                    "githubLink": {
-                        "text": "Ver en GitHub",
-                        "url": "https://github.com/FierceSpectrum/ProjectTrack-backend"
-                    },
-                    "longDescription": "Project Track Backend es una API que facilita la gestión de proyectos a través de la creación de cuentas, comunidades y proyectos. Los usuarios pueden formar comunidades, invitar a otros usuarios a proyectos, y asignar roles con permisos específicos. La API también permite la creación y administración de tareas dentro de los proyectos, organizadas por roles como Backend y Frontend. Actualmente en desarrollo, se enfoca en la lógica de base de datos y permisos, y se planea una futura integración con un frontend.",
-                    "image": "./images/ProjectTrack.png",
-                    "technologies": [
-                        "JavaScript",
-                        "Node.js",
-                        "Express",
-                        "PostgreSQL",
-                        "Sequelize",
-                        "JSON Web Token",
-                        "Google Authenticator"
-                    ],
-                    "status": "En progreso",
-                    "additionalLinks": []
-                },
-                {
                     "title": "Social Hub",
                     "description": "Gestor de publicaciones para redes sociales, construido con Node.js y React.",
                     "longDescription": "Social Hub es una plataforma que permite a los usuarios gestionar publicaciones en múltiples redes sociales desde un único lugar. Incluye características como programación de publicaciones, análisis de rendimiento y más. El backend está construido en Node.js con Express, y el frontend en React con SCSS. Utiliza un sistema de autenticación de dos factores (2FA) con OTP a través de Google Authenticator y códigos QR. Actualmente, soporta la vinculación de cuentas de Mastodon y Reddit para realizar publicaciones.",
@@ -460,7 +439,7 @@
     },
     "aboutMe": {
         "title": "Sobre Mí",
-        "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Actualmente, estudio <strong>Ingeniería de Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
+        "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Soy graduado en <strong>Ingeniería en Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
         "passion": "Estoy siempre en busca de nuevas tecnologías y métodos para mejorar mis habilidades. Si deseas conectar o conocer más sobre mi trabajo, no dudes en contactarme a través de las redes sociales.",
         "email": "benjaminsandisalas@gmail.com",
         "highlights": [
@@ -484,7 +463,7 @@
         "modal": {
             "AboutMe": {
                 "title": "Mi Trayectoria en Ingeniería del Software",
-                "description": "Soy un estudiante apasionado de Ingeniería de Software. Mi camino hacia la programación no fue directo; inicialmente, me inclinaba más por las matemáticas. Sin embargo, descubrí que mi verdadera pasión residía en la resolución de problemas complejos y en la creación de soluciones innovadoras. La programación me ofrece el desafío continuo de aprender y adaptarme, lo que me motiva a seguir creciendo en este campo. Decidí especializarme en Full Stack, abarcando tanto el Backend como el Frontend, porque me encanta tener una visión completa de cómo funciona una aplicación, desde la base de datos hasta la interfaz del usuario."
+                "description": "Soy un apasionado de la Ingeniería en Software. Mi camino hacia la programación no fue directo; inicialmente, me inclinaba más por las matemáticas. Sin embargo, descubrí que mi verdadera pasión residía en la resolución de problemas complejos y en la creación de soluciones innovadoras. La programación me ofrece el desafío continuo de aprender y adaptarme, lo que me motiva a seguir creciendo en este campo. Decidí especializarme en Full Stack, abarcando tanto el Backend como el Frontend, porque me encanta tener una visión completa de cómo funciona una aplicación, desde la base de datos hasta la interfaz del usuario."
             },
             "Leadership": {
                 "title": "Habilidades Interpersonales",

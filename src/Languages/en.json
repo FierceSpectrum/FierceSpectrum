@@ -240,27 +240,6 @@
             "title": "My Projects",
             "projects": [
                 {
-                    "title": "Project Track Backend",
-                    "description": "An in-progress API for project management that includes account creation, communities, projects, roles, and tasks, with permissions and role management.",
-                    "githubLink": {
-                        "text": "View on GitHub",
-                        "url": "https://github.com/FierceSpectrum/ProjectTrack-backend"
-                    },
-                    "longDescription": "Project Track Backend is an API that facilitates project management through the creation of accounts, communities, and projects. Users can form communities, invite other users to projects, and assign roles with specific permissions. The API also allows for the creation and management of tasks within projects, organized by roles such as Backend and Frontend. Currently in development, it focuses on database logic and permissions, with future plans for integration with a frontend.",
-                    "image": "./images/ProjectTrack.png",
-                    "technologies": [
-                        "JavaScript",
-                        "Node.js",
-                        "Express",
-                        "PostgreSQL",
-                        "Sequelize",
-                        "JSON Web Token",
-                        "Google Authenticator"
-                    ],
-                    "status": "In Progress",
-                    "additionalLinks": []
-                },
-                {
                     "title": "Social Hub",
                     "description": "Social media post manager, built with Node.js and React.",
                     "longDescription": "Social Hub is a platform that allows users to manage posts across multiple social media networks from a single place. It includes features such as post scheduling, performance analysis, and more. The backend is built with Node.js and Express, and the frontend with React and SCSS. It uses a two-factor authentication (2FA) system with OTP via Google Authenticator and QR codes. Currently, it supports linking Mastodon and Reddit accounts for posting.",
@@ -460,7 +439,7 @@
     },
     "aboutMe": {
         "title": "About Me",
-        "introduction": "I am a <strong>Full Stack</strong> developer with a special focus on <strong>backend</strong>. I am currently studying <strong>Software Engineering</strong> and am passionate about creating web solutions that solve complex problems. I specialize in designing and developing <strong>APIs</strong>, managing database, and tackling technical challenges with creativity and precision.",
+        "introduction": "I am a <strong>Full Stack</strong> developer with a special focus on <strong>backend</strong>. I am a graduate in <strong>Software Engineering</strong> and am passionate about creating web solutions that solve complex problems. I specialize in designing and developing <strong>APIs</strong>, managing database, and tackling technical challenges with creativity and precision.",
         "passion": "I am always on the lookout for new technologies and methods to improve my skills. If you wish to connect or learn more about my work, feel free to contact me through social media.",
         "email": "benjaminsandisalas@gmail.com",
         "highlights": [
@@ -484,7 +463,7 @@
         "modal": {
             "AboutMe": {
                 "title": "My Journey in Software Engineering",
-                "description": "I am a passionate Software Engineering student. My path to programming wasn't direct; initially, I was more inclined towards mathematics. However, I discovered that my true passion lay in solving complex problems and creating innovative solutions. Programming offers me the continuous challenge of learning and adapting, which motivates me to keep growing in this field. I decided to specialize in Full Stack, covering both Backend and Frontend, because I love having a complete view of how an application works, from the database to the user interface."
+                "description": "I am a passionate Software Engineer. My path to programming wasn't direct; initially, I was more inclined towards mathematics. However, I discovered that my true passion lay in solving complex problems and creating innovative solutions. Programming offers me the continuous challenge of learning and adapting, which motivates me to keep growing in this field. I decided to specialize in Full Stack, covering both Backend and Frontend, because I love having a complete view of how an application works, from the database to the user interface."
             },
             "Leadership": {
                 "title": "Interpersonal Skills",
