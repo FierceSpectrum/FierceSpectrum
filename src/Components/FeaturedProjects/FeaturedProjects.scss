@@ -1,39 +1,29 @@
 @import "../../Styles/main.scss";
 
-/* Estilos para la sección de proyectos destacados */
 .FeaturedProjects {
+  @include container;
+  padding-bottom: $space-24;
 
   h2 {
-    font-size: 2rem;
+    @include text-clamp($text-3xl, 4vw, $text-5xl);
+    font-weight: 700;
     text-align: center;
-    color: var(--text-color2);
-    margin-bottom: $gap-size;
+    color: var(--color-secundario);
+    margin-bottom: $space-16;
   }
 
   .Project-container {
-    width: $container-size;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: $space-8;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap-size;
-    justify-content: center;
+    max-width: 900px;
   }
 
-
-
-  // Media queries para diseño responsivo
-  @media (max-width: 768px) {
+  @media (max-width: $tablet) {
     .Project-container {
-      width: 90%;
-      // flex-direction: column;
-    }
-  }
-
-  // Media queries para diseño responsivo
-  @media (max-width: 480px) {
-    .Project-container {
-      width: 90%;
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: $space-6;
     }
   }
 }

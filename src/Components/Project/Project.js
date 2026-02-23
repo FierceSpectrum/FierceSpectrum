@@ -13,10 +13,17 @@ const Project = ({ project, openModal }) => {
   const links = project.morelinks ? project.githubLinks : [project.githubLink];
   const allLinks = [...links, ...(project.additionalLinks || [])];
 
+  const getImagePath = (path) => {
+    if (path && path.startsWith("./")) {
+      return process.env.PUBLIC_URL + path.substring(1);
+    }
+    return path;
+  };
+
   return (
     <div className="Project" onClick={() => openModal(project)}>
       <img
-        src={project.image}
+        src={getImagePath(project.image)}
         alt={`Imagen de ${project.title}`}
         className="project-image"
       />

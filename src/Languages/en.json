@@ -1,7 +1,7 @@
 {
     "navigation": {
-        "english": "English",
-        "spanish": "Espanish",
+        "english": "EN",
+        "spanish": "ES",
         "links": [
             {
                 "name": "Home",
@@ -28,8 +28,8 @@
         ]
     },
     "welcome": {
-        "title": "Welcome, I'm Benjamín Sandí!",
-        "description": "Full Stack Developer with a focus on Backend"
+        "title": "Backend Software Engineer",
+        "description": "Building scalable architectures and efficient solutions"
     },
     "skills": {
         "all": [
@@ -167,6 +167,11 @@
                         "name": "Git",
                         "icon": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
                         "link": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                    },
+                    {
+                        "name": "Power BI",
+                        "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg",
+                        "link": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg"
                     }
                 ]
             }
@@ -300,8 +305,8 @@
                 },
                 {
                     "title": "2nd Web Project II - Complete",
-                    "description": "This project includes the frontend and backend of '2nd Web Project II', consisting of a user interface, an enhanced REST API, and a GraphQL API. The interface allows managing profiles, playlists, and videos; the REST API offers second-factor authentication and email verification; and the GraphQL API handles CRUD operations with JWT and Mongoose.",
-                    "longDescription": "The '2nd Web Project II' is a comprehensive solution combining frontend and backend to manage profiles, playlists, and videos. The '2nd Web Project II Client' provides a user interface built with React, SCSS, HTML, and CSS, allowing users to manage their profiles and playlists, and view videos. The '2nd Web Project II Server Rest' is a REST API that extends the previous system with second-factor authentication (2FA), email verification, and JWT token handling for enhanced security. Additionally, the '2nd Web Project II Server GraphQL' adds a GraphQL layer to the existing REST API, offering resolvers for CRUD operations on key resources like accounts, avatars, playlists, users, and videos, using JWT for authentication and Mongoose for data schemas.",
+                    "description": "Developed the interface and management APIs for profiles, playlists, and videos, implementing 2FA authentication with JWT and Mongoose.",
+                    "longDescription": "Designed and developed a comprehensive solution combining frontend and backend to manage profiles, playlists, and videos. The client provides a user interface built with React, SCSS, HTML, and CSS, allowing users to dynamically manage their playlists. On the infrastructure side, I implemented a REST API extending the system with two-factor authentication (2FA), email verification, and JWT token handling for maximized security. Subsequently, I structured a GraphQL layer on top of the existing REST API, offering efficient resolvers for CRUD operations on accounts, avatars, and videos.",
                     "image": "./images/Web2II.png",
                     "technologies": [
                         "React",
@@ -334,8 +339,8 @@
                 },
                 {
                     "title": "1st Web Project II - Complete",
-                    "description": "The '1st Web Project II' consists of a complete web application with a frontend for content management and a REST API for data administration. The frontend allows parents to manage the content visible to their children, while the REST API handles users, accounts, avatars, playlists, and videos.",
-                    "longDescription": "The '1st Web Project II' is a comprehensive project developed during the first semester of 2024 as part of the Web 2 course. The solution includes two main components: the frontend and the REST API. The '1st Web Project II Client' is a web application built with React, SCSS, HTML, and CSS, designed to allow parents to manage the content their children see on a platform similar to Netflix. Users can register accounts, log in, create and manage profiles, and manage YouTube video playlists. Each profile can have up to six video playlists, facilitating parental control and content personalization. On the other hand, the '1st Web Project II Server' is a REST API developed with Node.js, MongoDB, and Express.js. This API provides CRUD operations to manage users, accounts, avatars, playlists, and videos, serving as the backend for the mentioned frontend. The API ensures robust data management and efficient integration with the web application.",
+                    "description": "Implemented a Full Stack application for parental control of YouTube content, orchestrating a REST API in Node.js and a Frontend in React.",
+                    "longDescription": "Developed a comprehensive web application designed to allow parents to manage the content their children see on a Netflix-inspired platform. I built the client interface in React and SCSS, enabling profile creation and up to six customized playlists per user. I engineered the server side by orchestrating a robust REST API with Node.js, Express, and MongoDB, providing scalable CRUD operations acting as the backend backbone for identities and data management.",
                     "image": "./images/Web2I.png",
                     "technologies": [
                         "React",
@@ -404,8 +409,8 @@
             "projects": [
                 {
                     "title": "Social Hub",
-                    "description": "Social media post manager, built with Node.js and React.",
-                    "longDescription": "Social Hub is a platform that allows users to manage posts across multiple social media networks from a single place. It includes features such as post scheduling, performance analysis, and more. The backend is built with Node.js and Express, and the frontend with React and SCSS. It uses a two-factor authentication (2FA) system with OTP via Google Authenticator and QR codes. Currently, it supports linking Mastodon and Reddit accounts for posting.",
+                    "description": "Social media post manager and scheduler, engineered with Node.js and React.",
+                    "longDescription": "Social Hub is a centralized platform that allows users to manage posts across multiple social media networks from a single dashboard. I implemented post scheduling mechanics and 2-factor authentication controls using Google Authenticator (OTP). I developed the backend leveraging Node.js, Express, and PostgreSQL to ensure data concurrency, and designed a reactive client in React and SCSS. The system supports orchestrating content bridging efficiently to Mastodon and Reddit.",
                     "status": "completed",
                     "image": "./images/WebSocialHub.png",
                     "technologies": [
@@ -458,21 +463,22 @@
         "introduction": "I am a <strong>Full Stack</strong> developer with a special focus on <strong>backend</strong>. I am currently studying <strong>Software Engineering</strong> and am passionate about creating web solutions that solve complex problems. I specialize in designing and developing <strong>APIs</strong>, managing database, and tackling technical challenges with creativity and precision.",
         "passion": "I am always on the lookout for new technologies and methods to improve my skills. If you wish to connect or learn more about my work, feel free to contact me through social media.",
         "email": "benjaminsandisalas@gmail.com",
-        "socialLinks": [
+        "highlights": [
             {
-                "name": "LinkedIn",
-                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                "title": "Backend",
+                "description": "Node.js, Express, PostgreSQL, MongoDB",
+                "icon": "FiServer"
             },
             {
-                "name": "GitHub",
-                "url": "https://github.com/FierceSpectrum",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                "title": "Frontend",
+                "description": "React, JavaScript, SCSS, HTML5",
+                "icon": "FiLayout"
             },
             {
-                "name": "Twitter",
-                "url": "https://x.com/BenjaminSandiS1",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                "title": "More About Me",
+                "description": "My journey and interests",
+                "icon": "FiUser",
+                "isButton": true
             }
         ],
         "modal": {
@@ -488,183 +494,64 @@
                 "title": "Personal Interests",
                 "description": "Outside of programming, I enjoy activities like chess, which fuels my love for logic and strategy. I like listening to music, especially electronic music, and I enjoy swimming, which helps me maintain a healthy balance. Additionally, I highly value time with my family and friends, and I enjoy outdoor activities like going to the beach and playing board games."
             }
-        },
-        "button": {
-            "title": "More About Me"
         }
     },
     "curriculum": {
         "header": {
-            "name": "Benjamín Sandí Salas",
-            "image": "./images/Yo.png"
-        },
-        "personalInfo": {
-            "title": "Personal Information",
-            "address": {
-                "title": "Address",
-                "data": "Ciudad Quesada, Costa Rica"
-            },
-            "email": {
-                "title": "Email",
-                "data": "benjaminsandisalas@gmail.com"
-            },
-            "birthDate": {
-                "title": "Date of Birth",
-                "data": "21/08/2003"
-            },
-            "nationality": {
-                "title": "Nationality",
-                "data": "Costa Rica"
-            },
-            "linkedin": {
-                "title": "LinkedIn",
-                "data": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
-            }
+            "name": "BENJAMÍN SANDÍ",
+            "title": "SOFTWARE ENGINEER",
+            "contact": "Costa Rica | +506 8703 4733 | benjaminsandisalas@gmail.com\nLinkedIn · GitHub · Portfolio"
         },
         "profile": {
-            "title": "Profile",
-            "description": "I am a passionate Full Stack developer focused on building efficient and scalable web solutions. Currently pursuing a Software Engineering degree, I specialize in creating robust backend architectures, RESTful APIs, and database solutions. With a results-driven mindset, I aim to combine technical creativity and code precision to solve complex problems. I constantly stay updated with the latest technologies, always seeking to optimize processes and improve the end-user experience. While backend development is my specialty, I have a strong knowledge of the frontend, enabling me to deliver complete and functional products. Additionally, I am known for my strong work ethic, collaborative leadership, and ability to communicate and work effectively within a team."
-        },
-        "education": {
-            "title": "Education",
-            "education": [
-                {
-                    "year": "2021 - 2025",
-                    "degree": "Software Engineering",
-                    "institution": "Universidad Técnica Nacional"
-                },
-                {
-                    "year": "2016 - 2020",
-                    "degree": "High School Diploma",
-                    "institution": "Colegio Cooperativo San Carlos Borromeo"
-                },
-                {
-                    "year": "2009 - 2015",
-                    "degree": "Primary Education",
-                    "institution": "Escuela el Carmen"
-                }
-            ]
+            "title": "PROFESSIONAL PROFILE",
+            "description": "Software Engineer with solid academic training and hands-on experience in the design and development of backend solutions, specializing in REST and GraphQL APIs. I have participated in academic and professional internship projects covering the full software development lifecycle, from requirements gathering to implementation and analysis. My main strengths are business logic design and building maintainable solutions, with the ability to collaborate in Full Stack and data analysis environments."
         },
         "experience": {
-            "title": "Professional Experience",
-            "experience": [
+            "title": "PRACTICAL AND ACADEMIC EXPERIENCE",
+            "items": [
                 {
-                    "title": "Project Management Application Development",
-                    "description": "Currently developing a web application for team project management. The project includes task assignment, time management, and team collaboration features, using modern technologies such as React, Node.js, and PostgreSQL."
-                }
-            ]
-        },
-        "skills": {
-            "title1": "Soft Skills",
-            "title2": "Technical Skills",
-            "technical": [
-                {
-                    "name": "JavaScript",
-                    "level": 3
+                    "title": "University Professional Internship – Analytical Module Development",
+                    "details": [
+                        "Development of a backend–frontend module for enterprise project analysis.",
+                        "Implementation of efficient queries using GraphQL.",
+                        "Construction of analytical dashboards and performance evaluation metrics.",
+                        "Backend development with Laravel and frontend development with Vue.js."
+                    ]
                 },
                 {
-                    "name": "Express.js",
-                    "level": 3
-                },
-                {
-                    "name": "Node.js",
-                    "level": 3
-                },
-                {
-                    "name": "React",
-                    "level": 3
-                },
-                {
-                    "name": "PostgreSQL",
-                    "level": 3
-                },
-                {
-                    "name": "MongoDB",
-                    "level": 3
-                },
-                {
-                    "name": "REST and GraphQL APIs",
-                    "level": 2
-                },
-                {
-                    "name": "C#",
-                    "level": 2
-                },
-                {
-                    "name": "Git",
-                    "level": 2
-                },
-                {
-                    "name": "Sass",
-                    "level": 2
-                }
-            ],
-            "soft": [
-                "Adaptability",
-                "Assertive Communication",
-                "Leadership",
-                "Critical Decision Making",
-                "Conflict Resolution",
-                "Problem Solving",
-                "Commitment",
-                "Creativity",
-                "Empathy",
-                "Perseverance"
-            ]
-        },
-        "language": {
-            "title": "Languages",
-            "languages": [
-                {
-                    "language": "Spanish",
-                    "level": "Native"
-                },
-                {
-                    "language": "English",
-                    "level": "Intermediate"
-                }
-            ]
-        },
-        "project": {
-            "title": "Projects",
-            "projects": [
-                {
-                    "title": "Project Management Application",
-                    "description": "Currently developing a web application to facilitate team project management."
-                },
-                {
-                    "title": "Explore More Projects",
-                    "description": "If you're interested in learning more about my work, feel free to visit my GitHub or portfolio for additional projects.",
-                    "links": [
-                        {
-                            "name": "GitHub",
-                            "url": "https://github.com/FierceSpectrum"
-                        },
-                        {
-                            "name": "Portfolio",
-                            "url": "https://fiercespectrum.github.io/FierceSpectrum/build/"
-                        }
+                    "title": "Academic Project – Parental Control System (Full Stack)",
+                    "details": [
+                        "Development of an application with parent/child roles and content access control.",
+                        "Implementation of REST and GraphQL APIs with JWT-based authentication.",
+                        "Backend architecture design focused on maintainability and scalability."
                     ]
                 }
             ]
         },
-        "socialMedia": {
-            "title": "Social Media",
-            "socialMedia": [
+        "skills": {
+            "title": "PROFESSIONAL SKILLS",
+            "items": [
                 {
-                    "name": "LinkedIn",
-                    "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                    "category": "Technical",
+                    "details": "Node.js, Express / REST APIs and GraphQL / JavaScript / Python / PostgreSQL / MongoDB / Git / Power BI"
                 },
                 {
-                    "name": "GitHub",
-                    "url": "https://github.com/FierceSpectrum",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                    "category": "Soft",
+                    "details": "Analytical thinking / Problem solving / Technical communication / Collaborative work / Adaptability / Professional commitment"
                 },
                 {
-                    "name": "Twitter",
-                    "url": "https://x.com/BenjaminSandiS1",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                    "category": "Languages",
+                    "details": "Spanish (native) / English (intermediate)"
+                }
+            ]
+        },
+        "education": {
+            "title": "EDUCATION",
+            "items": [
+                {
+                    "degree": "Bachelor’s Degree in Software Engineering",
+                    "institution": "Universidad Técnica Nacional",
+                    "year": "2021 – 2025"
                 }
             ]
         },
@@ -677,7 +564,15 @@
         }
     },
     "footer": {
-        "email": "Get Email",
+        "contactTitle": "Contact",
+        "email": "benjaminsandisalas@gmail.com",
+        "copyEmail": "Copy Email",
+        "emailCopied": "Copied!",
+        "openEmail": "Open Mail Client",
+        "socialTitle": "Social Media",
+        "navTitle": "Quick Links",
+        "rights": "All rights reserved.",
+        "backToTop": "Back to Top",
         "links": [
             {
                 "name": "Home",

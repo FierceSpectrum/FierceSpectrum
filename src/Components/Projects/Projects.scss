@@ -1,19 +1,27 @@
 @import "../../Styles/main.scss";
 
 .Projects {
+  padding-top: calc(#{$nav-height} + #{$space-12});
+  padding-bottom: $space-20;
+  @include container;
+
   h2 {
-    font-size: 2rem;
+    @include text-clamp($text-3xl, 4vw, $text-5xl);
+    font-weight: 700;
     text-align: center;
-    color: var(--text-color2);
-    margin-bottom: $gap-size;
+    color: var(--color-secundario);
+    margin-bottom: $space-16;
   }
 
   .Projects-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap-size;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: $space-8;
+  }
+
+  @media (max-width: 480px) {
+    .Projects-container {
+      grid-template-columns: 1fr;
+    }
   }
 }

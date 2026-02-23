@@ -1,28 +1,6 @@
 @import "../../Styles/main.scss";
 
-@keyframes backgroundChange {
-    0% {
-        background-image: url('../../Assets/Web1.png');
-    }
-
-    25% {
-        background-image: url('../../Assets/Web1.png');
-    }
-
-    50% {
-        background-image: url('../../Assets/Web2.png');
-    }
-
-    75% {
-        background-image: url('../../Assets/Web2.png');
-    }
-
-    100% {
-        background-image: url('../../Assets/Web1.png');
-    }
-}
-
-// Estilos globales
+// Global base styles
 body {
     margin: 0;
     padding: 0;
@@ -30,6 +8,7 @@ body {
     font-size: $font-size-base;
     color: var(--text-color);
     background-color: var(--color-primario);
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -47,104 +26,215 @@ a {
     }
 }
 
-// Contenedor del portafolio
+// Home container
 .Home {
     .section {
-        scroll-margin-top: calc(10vh);
+        scroll-margin-top: $nav-height;
+    }
+}
+
+// Hero section
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: $nav-height;
+
+    // Gradient overlay
+    .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--hero-gradient-from), transparent, var(--hero-gradient-to));
+        z-index: 0;
     }
 
-    .home-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: var(--padding-base);
+    // Animated blobs
+    .hero-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: 0;
+
+        &--1 {
+            top: 25%;
+            left: 25%;
+            width: 250px;
+            height: 250px;
+            background-color: var(--hero-blob-1);
+            animation: blobPulse1 8s ease-in-out infinite;
+        }
+
+        &--2 {
+            bottom: 25%;
+            right: 25%;
+            width: 350px;
+            height: 350px;
+            background-color: var(--hero-blob-2);
+            animation: blobPulse2 10s ease-in-out infinite;
+        }
     }
 
-    .welcome {
-        margin-bottom: 40px;
-        padding: $padding-base;
-        background-color: var(--color-nav);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        width: 70%; 
-        max-width: 1000px; 
-        margin: 0 auto;
-        margin-top: 10px;
-        aspect-ratio: 16/9;
-        background: url('../../Assets/Web1.png') no-repeat center center;
-        background-size: cover;
-        align-items: center;
+    // Hero content
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        @include container;
+        max-width: 900px;
+    }
+
+    .hero-title {
+        @include text-clamp($text-4xl, 5vw, $text-7xl);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin-bottom: $space-6;
+        color: var(--color-secundario);
+    }
+
+    .hero-subtitle {
+        font-size: clamp($text-lg, 2.5vw, $text-2xl);
+        color: var(--color-muted-foreground);
+        max-width: 600px;
+        margin: 0 auto $space-10;
+        line-height: 1.6;
+    }
+
+    // CTA buttons
+    .hero-ctas {
         display: flex;
-        justify-content: center;
-        animation: backgroundChange 10s infinite;
-        box-shadow: 0px 3px 10px var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: $space-4;
+        margin-bottom: $space-12;
 
-        .welcome-content {
-            background-color: rgba(0, 0, 0, 0.8); 
-            padding: 30px;
-            border-radius: 5px;
-            color: #fff;
-            margin-left: 20px;
+        @include respond-to(480px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
 
-            h1 {
-                margin: 0;
-                font-size: 2em;
-                line-height: 1.2;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            }
+    // Scroll indicator
+    .scroll-indicator {
+        padding-top: $space-8;
 
-            p {
-                margin: 10px 0 0 0;
-                font-size: 1em;
-                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            }
+        .scroll-indicator__mouse {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            border: 2px solid var(--color-muted-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 4px;
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+
+        .scroll-indicator__dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-muted-foreground);
+            border-radius: 50%;
         }
     }
 }
 
+// Buttons
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-3 $space-6;
+    font-family: $font-family;
+    font-size: $text-base;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    cursor: pointer;
+    transition: all $transition-slow;
+    border: 2px solid transparent;
+    min-width: 180px;
+    justify-content: center;
 
-@media (max-width: 768px) {
+    &--primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        border-color: var(--primary-color);
 
-    .Portafolio {
-        .welcome {
-            width: 70%;
-            max-width: 1000px;
-
-            .welcome-content {
-                padding: 10px;
-
-                h1 {
-                    font-size: 1.5em;
-                }
-
-                p {
-                    font-size: 0.8em;
-                }
-            }
+        &:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
+    }
+
+    &--outline {
+        background-color: transparent;
+        color: var(--color-secundario);
+        border-color: var(--border-color);
+
+        &:hover {
+            background-color: var(--color-accent);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+    }
+
+    .btn-arrow {
+        transition: transform $transition-base;
+    }
+
+    &:hover .btn-arrow {
+        transform: translateX(4px);
+    }
+
+    .btn-icon {
+        font-size: $text-lg;
     }
 }
 
+// Keyframes
+@keyframes blobPulse1 {
 
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
 
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
 
-@media (max-width: 480px) {
-    .Portafolio {
-        .welcome {
-            width: 70%;
-            // aspect-ratio: 4/3;
-            max-width: 1000px;
+@keyframes blobPulse2 {
 
-            .welcome-content {
-                padding: 10px;
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
 
-                h1 {
-                    font-size: 1em;
-                }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+}
 
-                p {
-                    font-size: 0.77em;
-                }
-            }
-        }
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
     }
 }

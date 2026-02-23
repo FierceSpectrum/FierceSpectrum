@@ -1,18 +1,79 @@
-
 //1st argument = breakpoint value
 //2n argument (optional) = ya sea el valor de breakpoint o the la palabra "max" para hacer un max witdh query
 @mixin respond-to($val, $val2: none) {
-    @if ($val2 == none) {
+    @if ($val2 ==none) {
         @media (min-width: $val) {
             @content;
         }
-    } @else if($val == max) {
+    }
+
+    @else if($val ==max) {
         @media (max-width: $val) {
             @content;
         }
-    } @else {
+    }
+
+    @else {
         @media (min-width: $val) and (max-width: $val2) {
             @content;
         }
     }
+}
+
+// Container mixin — max-width centered with horizontal padding
+@mixin container($max: $container-max) {
+    max-width: $max;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $space-4;
+    padding-right: $space-4;
+
+    @include respond-to($tablet) {
+        padding-left: $space-6;
+        padding-right: $space-6;
+    }
+}
+
+// Backdrop blur for nav and modals
+@mixin backdrop-blur($blur: 12px) {
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+}
+
+// Section padding
+@mixin section-padding {
+    padding-top: $space-20;
+    padding-bottom: $space-20;
+
+    @include respond-to($tablet) {
+        padding-top: $space-32;
+        padding-bottom: $space-32;
+    }
+}
+
+// Card hover effect
+@mixin card-hover {
+    transition: transform $transition-slow, box-shadow $transition-slow;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// Smooth gradient background
+@mixin gradient-bg($from, $to) {
+    background: linear-gradient(135deg, $from, transparent, $to);
+}
+
+// Flex center
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Text clamp for responsive typography
+@mixin text-clamp($min, $preferred, $max) {
+    font-size: clamp(#{$min}, #{$preferred}, #{$max});
 }

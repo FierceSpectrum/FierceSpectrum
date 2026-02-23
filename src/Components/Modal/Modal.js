@@ -62,7 +62,7 @@ const Modal = ({ isOpen, onClose, children, nameClass }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <div id="modal-root" className={isOpen ? "open" : ""}>
+    <div className={`modal-wrapper ${isOpen ? "open" : ""}`}>
       <div className="modal-overlay" onClick={onClose}></div>
       <div className={`modal ${nameClass}`} ref={modalRef}>
         <button className="modal-close-button" onClick={onClose}>

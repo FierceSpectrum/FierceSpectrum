@@ -1,32 +1,28 @@
 import React, { useState } from "react";
 import "./LanguageSwitcher.scss";
 import { useTranslation } from "react-i18next";
+import { FiGlobe } from "react-icons/fi";
 
 const LanguageSwitcher = () => {
-  const { t, i18n } = useTranslation();
-  const navigation = t("navigation", { returnObjects: true });
+  const { i18n } = useTranslation();
 
-  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
+  const baseLang = i18n.language ? i18n.language.substring(0, 2) : "en";
+  const [activeLanguage, setActiveLanguage] = useState(baseLang);
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    sessionStorage.setItem("language", lng);
-    setActiveLanguage(lng);
+  const toggleLanguage = () => {
+    const nextLang = activeLanguage === "en" ? "es" : "en";
+    i18n.changeLanguage(nextLang);
+    sessionStorage.setItem("language", nextLang);
+    setActiveLanguage(nextLang);
   };
+
+  const langText = activeLanguage === "en" ? "EN" : "ES";
 
   return (
     <div className="LanguageSwitcher">
-      <button
-        onClick={() => changeLanguage("en")}
-        className={activeLanguage === "en" ? "active" : ""}
-      >
-        {navigation.english}
-      </button>
-      <button
-        onClick={() => changeLanguage("es")}
-        className={activeLanguage === "es" ? "active" : ""}
-      >
-        {navigation.spanish}
+      <button onClick={toggleLanguage} className="lang-toggle-btn">
+        <FiGlobe className="icon" />
+        <span className="lang-text">{langText}</span>
       </button>
     </div>
   );

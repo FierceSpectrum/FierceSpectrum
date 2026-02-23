@@ -1,350 +1,181 @@
 @import "../../Styles/main.scss";
 
-body {
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
-  margin: 0;
-}
-
 .Curriculum {
-  max-width: 900px;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: center;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    text-align: start;
-    font-size: 1.3rem;
-  }
-}
-
-.profile-header {
   width: 100%;
-  padding: 40px 0;
+  padding: calc(#{$nav-height} + #{$space-8}) $space-4 $space-12;
+  box-sizing: border-box;
+
+  .cv-download-top {
+    margin-bottom: $space-8;
+  }
+}
+
+.cv-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: transparent;
+  color: var(--text-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
+  flex-direction: column;
+}
 
-  .header {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 0px;
-    text-align: center;
-    width: 90%;
+.cv-header {
+  background-color: var(--color-accent);
+  border-bottom: 2px solid var(--border-color);
+  color: var(--color-secundario);
+  padding: $space-10 $space-8;
+  text-align: center;
+  border-radius: $radius-2xl $radius-2xl 0 0;
 
+  .name {
+    font-size: $text-4xl;
+    margin: 0 0 $space-2 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-secundario);
+  }
 
-    .profile-picture {
-      border-radius: 50%;
-      width: 150px;
-      height: auto;
-      display: flex;
-      justify-self: center;
-      background-color: #a8a8a8;
-    }
+  .title {
+    font-size: $text-xl;
+    margin: 0 0 $space-4 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-bottom: $space-4;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--color-muted-foreground);
+    display: inline-block;
+  }
 
-    .name {
-      font-size: 2.5rem;
-      font-weight: bold;
-      display: flex;
-      justify-self: center;
-      align-items: start;
+  .contact-info {
+    p {
+      margin: $space-1 0;
+      font-size: $text-sm;
+      color: var(--color-muted-foreground);
     }
   }
 }
 
-[data-theme='dark'] {
-  .profile-header {
-    background-image: url("../../Assets/CurriculumHeader-dark.png");
-
-    .profile-picture {
-      border: 7px solid var(--color-nav);
-    }
-  }
-
+.cv-body {
+  padding: $space-10 $space-8;
+  text-align: left;
 }
 
+.cv-section {
+  margin-bottom: $space-10;
 
-[data-theme='light'] {
-  .profile-header {
-    background-image: url("../../Assets/CurriculumHeader-light.png");
-
-    .profile-picture {
-      border: 7px solid #000;
-    }
+  .section-title {
+    font-size: $text-lg;
+    text-transform: uppercase;
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: $space-2;
+    margin-bottom: $space-4;
+    letter-spacing: 0.05em;
   }
-}
 
-.parent {
-  display: grid;
-  grid-template-columns: 0.7fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 0px;
-  gap: 50px;
-  width: 90%;
-  margin: 20px;
-  list-style: none;
-
-  .left-section,
-  .right-section {
-
-    h2 {
-      font-size: 1.5rem;
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-
-
+  .section-content {
+    h4.item-title {
+      font-size: $text-lg;
+      margin: 0 0 $space-2 0;
+      font-weight: 600;
+      color: var(--color-secundario);
     }
 
-    p,
-    ul {
-      line-height: 1.6;
-      margin: 10px 0;
+    p {
+      margin: 0 0 $space-3 0;
+      line-height: 1.7;
+      color: var(--color-muted-foreground);
     }
 
     ul {
-      list-style: none;
-      padding: 0;
+      margin: 0 0 $space-4 0;
+      padding-left: $space-6;
 
       li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-
-        &::before {
-          // content: '•';
-          font-size: 1.2rem;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
-
-  .left-section {
-    section {
-      margin-bottom: 30px;
-    }
-
-    .personal-info {
-
-      * {
-        text-align: start;
+        margin-bottom: $space-2;
+        line-height: 1.6;
+        color: var(--color-muted-foreground);
       }
     }
 
-    .skills {
-      margin-top: 20px;
-
-      .skill-item {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-
-        .skill-name {
-          flex: 1;
-          font-size: 1.1rem;
-        }
-
-        .skill-level {
-          flex: 1;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-
-          .circle {
-            @media (max-width: 768px) {
-              margin-left: 5px;
-            }
-
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            margin-left: 15px;
-            border: 2px solid var(--color-level-dark);
-
-            &.filled {
-              width: 15px;
-              height: 15px;
-              background-color: var(--color-level-light);
-              border: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .right-section {
-    text-align: start;
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    .profile {
-      text-align: start;
-    }
-
-    .education {
-
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
 
       li {
-        text-align: start;
-        margin-bottom: 15px;
+        margin-bottom: $space-3;
+        padding: $space-3 $space-4;
+        background-color: var(--color-accent);
+        border-radius: $radius-lg;
+        border: 1px solid var(--border-color);
 
         strong {
-          margin-left: 0;
-          display: flex;
-          align-self: start;
-          min-width: 100px;
-          max-width: 100px;
+          color: var(--primary-color);
         }
-
-        p {
-          margin: 0;
-          display: flex;
-        }
-      }
-
-    }
-
-    .projects {
-      .links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
       }
     }
 
-    .social-media {
-      margin-top: 30px;
+    .education-item {
+      margin-bottom: $space-4;
+      padding: $space-4;
+      background-color: var(--color-accent);
+      border-radius: $radius-lg;
+      border: 1px solid var(--border-color);
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      h4.item-title {
+        margin-bottom: $space-1;
+      }
 
-        li {
-          display: flex;
-          align-items: center;
+      p {
+        margin-bottom: $space-1;
 
-          img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-          }
-
-          a {
-            // color: $primary-color;
-            font-weight: bold;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
+        &.year {
+          color: var(--color-muted-foreground);
+          font-style: italic;
+          font-size: $text-sm;
         }
+      }
+    }
+
+    .experience-item {
+      margin-bottom: $space-6;
+      padding-left: $space-6;
+      border-left: 2px solid var(--primary-color);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        border: 3px solid var(--color-primario);
       }
     }
   }
 }
 
+@media (max-width: $tablet) {
+  .cv-header {
+    padding: $space-6;
+    border-radius: 0;
 
-@media (max-width: 768px) {
-  .Curriculum {
-
-    .profile-header {
-      .header {
-        .profile-picture {
-          width: 100px;
-        }
-
-        .name {
-          font-size: 1.6rem;
-        }
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-
+    .name {
+      font-size: $text-2xl;
     }
 
-    .parent {
-      grid-template-columns: 0.4fr 1fr;
-      grid-row-gap: 0px;
-      gap: 20px;
-      width: 90%;
-      margin: 0;
-
-      h2 {
-        font-size: 1rem;
-      }
-
-      .left-section,
-      .right-section {
-        // width: 50%;
-        font-size: 70%;
-      }
-
-      .left-section {
-        .personal-info {
-
-          * {
-            font-size: 0.7rem;
-            display: flex;
-            flex-direction: column;
-          }
-
-          .email a {
-            font-size: 0.5rem;
-          }
-        }
-
-        .skills {
-
-          .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-
-            .skill-name {
-              flex: 1;
-              font-size: 1.1rem;
-            }
-
-            .skill-level {
-              flex: 1;
-              display: flex;
-              justify-content: flex-end;
-              align-items: center;
-
-              .circle {
-                scale: 0.7;
-              }
-            }
-          }
-        }
-      }
-
-      .right-section {
-        .education {
-          li {
-            display: flex;
-            flex-direction: column;
-          }
-
-        }
-      }
+    .title {
+      font-size: $text-base;
     }
+  }
+
+  .cv-body {
+    padding: $space-6;
   }
 }

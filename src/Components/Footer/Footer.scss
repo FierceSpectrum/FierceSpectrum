@@ -1,159 +1,177 @@
 @import "../../Styles/main.scss";
 
 .Footer {
-  margin-top: 25px;
-  background-color: var(--color-nav);
+  background-color: rgba(var(--color-muted-rgb, 120, 120, 120), 0.1);
+  border-top: 1px solid var(--border-color);
   color: var(--text-color);
+  margin-top: auto;
 
-  padding: 20px 10px;
-  text-align: center;
+  .footer-container {
+    @include container;
+    padding-top: $space-12;
+    padding-bottom: $space-8;
 
-  .footer {
-    max-width: 1200px;
-    margin: 0 auto;
+    @include respond-to($tablet) {
+      padding-top: $space-16;
+      padding-bottom: $space-12;
+    }
+  }
 
-    .footer-content {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-8;
+    margin-bottom: $space-12;
+
+    @include respond-to($tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: $space-12;
+    }
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $space-4;
+
+    .section-title {
+      font-weight: 600;
+      font-size: $text-base;
+      color: var(--text-color);
+      margin: 0;
+    }
+  }
+
+  // Contact Info
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-3;
+
+    .email-display {
+      display: flex;
+      align-items: center;
+      gap: $space-2;
+      font-size: $text-sm;
+      color: var(--color-muted-foreground);
+    }
+
+    .action-buttons {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
+      gap: $space-2;
+    }
+  }
+
+  // Social Links
+  .social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: $space-3;
+
+    .social-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      display: flex;
       align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      transition: all $transition-base;
+      text-decoration: none;
 
-      .contact-info {
-        flex: 1;
-        padding: 10px;
-
-        p {
-          margin: 0;
-          font-size: 1rem;
-          color: var(--text-color);
-          width: fit-content;
-          padding-bottom: 3px;
-          border-bottom: var(--secondary-color) solid;
-          cursor: pointer;
-
-          .email-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin: 0 5px;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-
-          .copy-button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            color: #42aff8;
-            font-size: 16px;
-            padding: 5px;
-            transition: color 0.3s;
-
-            &:hover {
-              color: var(--primary-color);
-            }
-
-            &:focus {
-              outline: none;
-            }
-          }
-        }
-      }
-
-      .social-links {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        padding: 10px;
-
-        .social-item {
-          background-color: var(--color-background);
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background-color 0.3s;
-
-
-
-          &:hover {
-            background-color: var(--color-primario-light);
-          }
-
-          .social-logo {
-            display: flex;
-            width: 24px;
-            height: 24px;
-          }
-        }
-      }
-
-      .quick-links {
-        flex: 1;
-        padding: 10px;
-
-        button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          font: inherit;
-          color: var(--color-secundario);
-          text-decoration: none;
-          margin: 0 10px;
-          font-size: 1rem;
-          border-radius: 10px;
-          padding: 5px;
-
-          &:hover {
-            color: var(--secondary-color-light);
-            background-color: var(--color-primario);
-            text-decoration: underline;
-          }
-        }
+      &:hover {
+        background-color: var(--color-accent-strong);
+        color: var(--primary-color);
       }
     }
   }
 
-  // Media queries para responsividad
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
+  // Quick Links
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    align-items: center;
 
-      .contact-info,
-      .social-links,
-      .quick-links {
-        text-align: center;
-        margin-bottom: 10px;
-      }
+    .nav-link {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: $font-family;
+      color: var(--color-muted-foreground);
+      font-size: $text-sm;
+      padding: 0;
+      transition: color $transition-base;
+      text-align: center;
 
-      .social-links {
-        justify-content: center;
-
-        .social-item {
-          width: 30px;
-          height: 30px;
-
-          .social-logo {
-            width: 20px;
-            height: 20px;
-          }
-        }
+      &:hover {
+        color: var(--text-color);
       }
     }
   }
-}
 
-[data-theme='dark'] {
+  // Buttons
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: $text-sm;
+    font-weight: 500;
+    padding: $space-2 $space-4;
+    border-radius: $radius-md;
+    cursor: pointer;
+    transition: all $transition-base;
+    font-family: $font-family;
 
-  .GitHub,
-  .Twitter {
-    .social-logo {
-      filter: invert(1);
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--text-color);
     }
+  }
+
+  // Bottom Section
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-4;
+    padding-top: $space-8;
+    border-top: 1px solid var(--border-color);
+
+    @include respond-to($tablet) {
+      flex-direction: row;
+    }
+
+    .rights-text {
+      font-size: $text-sm;
+      color: var(--color-muted-foreground);
+      margin: 0;
+      text-align: center;
+
+      @include respond-to($tablet) {
+        text-align: left;
+      }
+    }
+  }
+
+  // Icons
+  .icon-sm {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-md {
+    width: 20px;
+    height: 20px;
   }
 }

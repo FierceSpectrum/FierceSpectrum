@@ -1,225 +1,207 @@
 @import "../../Styles/main.scss";
 
-/* Keyframes */
-@keyframes changeColor {
-    0% {
-        box-shadow: 0px 3px 3px var(--color-nav-box2);
-    }
-
-    100% {
-        box-shadow: 0px 3px 3px var(--color-nav-box);
-    }
-}
-
-/* Navigation Bar */
 .navigation-bar {
-    width: 100hv;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    background-color: var(--color-nav);
-    box-shadow: 0px 3px 3px var(--color-background);
-    padding: 5px 15px;
+    background-color: transparent;
+    transition: background-color $transition-slow, box-shadow $transition-slow;
 
-    .navigation-header {
-        color: var(--color-secundario);
+    &.scrolled {
+        background-color: var(--nav-bg-scrolled);
+        @include backdrop-blur(12px);
+        box-shadow: 0 1px 0 var(--border-color);
+    }
+
+    .navigation-container {
+        @include container;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        height: $nav-height;
 
-        .navigation-container {
-            text-align: left;
-            width: 100%;
-            display: flex;
+        @media (max-width: $tablet) {
+            height: $nav-height-mobile;
+        }
+    }
 
-            .actions {
-                display: flex;
-                flex-direction: row;
-                margin-right: 15px;
+    // Logo
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: $radius-lg;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 700;
+            font-size: $text-lg;
+            @include flex-center;
+
+            @include respond-to($tablet) {
+                width: 40px;
+                height: 40px;
+                font-size: $text-xl;
+            }
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: $text-lg;
+            color: var(--color-secundario);
+            display: none;
+
+            @include respond-to(480px) {
+                display: inline;
             }
 
-            .navigation-content {
-                display: flex;
-                align-self: center;
-                width: 90%;
+            @include respond-to($tablet) {
+                font-size: $text-xl;
+            }
+        }
+    }
 
-                .nav-cell {
-                    display: flex;
-                    width: 100%;
+    // Desktop navigation links
+    .nav-desktop {
+        display: flex;
+        align-items: center;
 
-                    .menu-hamburger {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        height: 50px;
-                        display: block;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: $space-1;
 
-                        .checkbox,
-                        .menu-icon {
-                            position: absolute;
-                            top: 30px;
-                            left: 25px;
-                            height: 20px;
-                            width: 26px;
-                        }
+            li {
+                .nav-link-btn {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-family: $font-family;
+                    font-size: $text-base;
+                    font-weight: 500;
+                    color: var(--color-secundario);
+                    padding: $space-2 $space-3;
+                    border-radius: $radius-md;
+                    transition: color $transition-base, background-color $transition-base;
+                    white-space: nowrap;
 
-                        .checkbox {
-                            margin: 0;
-                            z-index: 5;
-                            opacity: 0;
-                            cursor: pointer;
-                        }
-
-                        .menu-icon {
-                            z-index: 2;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-
-                            .line {
-                                height: 3px;
-                                width: 100%;
-                                border-radius: 10px;
-                                background: var(--color-secundario);
-                                transition: transform 0.4s ease-in-out;
-
-                                &.line1 {
-                                    transform-origin: 0% 0%;
-                                    transition: transform 0.4s ease-in-out;
-                                }
-
-                                &.line2 {
-                                    transition: transform 0.2s ease-in-out;
-                                }
-
-                                &.line3 {
-                                    transform-origin: 0% 100%;
-                                    transition: transform 0.4s ease-in-out;
-                                }
-                            }
-                        }
-
-                        input[type="checkbox"]:checked~ {
-                            .nav-items-wrapper {
-                                transform: translateX(0);
-                            }
-
-                            .menu-icon {
-                                .line1 {
-                                    transform: rotate(45deg);
-                                }
-
-                                .line2 {
-                                    opacity: 0;
-                                }
-
-                                .line3 {
-                                    transform: rotate(-45deg);
-                                }
-                            }
-                        }
-
-                        .nav-items-wrapper {
-                            padding-top: 80px;
-                            height: 100vh;
-                            width: 120%;
-                            transform: translateX(-150%);
-                            display: flex;
-                            flex-direction: column;
-                            margin: -10px 0 0 -40px;
-                            padding-left: 40px;
-                            transition: transform 0.5s ease-in-out;
-                            background-color: var(--color-nav);
-                            box-shadow: 0px 3px 3px var(--color-background);
-
-                            .Items {
-                                display: flex;
-                                flex-direction: column;
-
-                                li {
-                                    font-size: 1.2rem;
-                                    padding: 8px;
-                                    color: #333;
-                                    list-style: none;
-                                    transition: background-color 0.3s ease;
-
-                                    button {
-                                        background: none;
-                                        border: none;
-                                        cursor: pointer;
-                                        font: inherit;
-                                        color: var(--color-secundario);
-                                        text-decoration: none;
-                                        font-size: 20px;
-                                        font-weight: bold;
-                                        padding: 5px;
-                                        border-radius: 10px;
-
-                                        &:hover {
-                                            background-color: var(--color-primario);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .open {
-                            transform: translateX(0);
-                        }
-                    }
-                }
-
-                .Items {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    list-style: none;
-                    margin: 0;
-                    padding: 5px;
-
-                    li {
-                        padding: 10px;
-                        list-style: none;
-
-                        button {
-                            background: none;
-                            border: none;
-                            cursor: pointer;
-                            font: inherit;
-                            color: var(--color-secundario);
-                            text-decoration: none;
-                            font-size: 20px;
-                            font-weight: bold;
-                            padding: 5px;
-                            border-radius: 10px;
-                            transition: background-color 0.3s ease;
-
-                            &:hover {
-                                background-color: var(--color-primario);
-                            }
-                        }
+                    &:hover {
+                        color: var(--primary-color);
+                        background-color: var(--color-accent);
                     }
                 }
             }
         }
     }
-}
 
-@include respond-to($desktop) {
-    .navigation-bar {
-        padding: 0;
-        z-index: 100;
+    // Actions (theme + language + hamburger)
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+
+        @include respond-to($tablet) {
+            gap: $space-3;
+        }
     }
-}
 
-// Media queries para diseño responsivo
-@media (max-width: 768px) {
-    .navigation-bar {
-        .actions {
+    // Hamburger button
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: $radius-md;
+        transition: background-color $transition-base;
+
+        &:hover {
+            background-color: var(--color-accent);
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-secundario);
+            border-radius: 2px;
+            transition: transform $transition-slow, opacity $transition-base;
+        }
+
+        &.open {
+            .hamburger-line:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-line:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    }
+
+    // Mobile menu
+    .nav-mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--nav-bg-scrolled);
+        @include backdrop-blur(12px);
+        border-top: 1px solid var(--border-color);
+        transition: max-height $transition-slow ease-in-out, opacity $transition-base;
+        opacity: 0;
+
+        &.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: $space-4 $space-6 $space-6;
             display: flex;
-            flex-direction: row;
-            margin-left: -25%;
-            justify-content: space-around;
+            flex-direction: column;
+            gap: $space-1;
+
+            li {
+                .nav-link-btn {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-family: $font-family;
+                    font-size: $text-lg;
+                    font-weight: 600;
+                    color: var(--color-secundario);
+                    padding: $space-3 $space-4;
+                    border-radius: $radius-md;
+                    transition: color $transition-base, background-color $transition-base;
+
+                    &:hover {
+                        color: var(--primary-color);
+                        background-color: var(--color-accent);
+                    }
+                }
+            }
         }
     }
 }

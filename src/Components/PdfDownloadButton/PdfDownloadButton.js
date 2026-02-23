@@ -8,9 +8,16 @@ const PdfDownloadButton = () => {
   const { download } = t("curriculum", { returnObjects: true });
   const { pdfFile } = download;
 
+  const getFilePath = (path) => {
+    if (path && path.startsWith("./")) {
+      return process.env.PUBLIC_URL + path.substring(1);
+    }
+    return path;
+  };
+
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = pdfFile.url; // Ruta del archivo desde el JSON
+    link.href = getFilePath(pdfFile.url); // Ruta del archivo resolviendo el entorno
     link.download = pdfFile.name; // Nombre del archivo para descargar
     link.click();
   };

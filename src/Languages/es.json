@@ -1,7 +1,7 @@
 {
     "navigation": {
-        "english": "Ingles",
-        "spanish": "Español",
+        "english": "EN",
+        "spanish": "ES",
         "links": [
             {
                 "name": "Inicio",
@@ -28,8 +28,8 @@
         ]
     },
     "welcome": {
-        "title": "¡Bienvenido, Soy Benjamín Sandí!",
-        "description": "Desarrollador Full Stack con un enfoque en Backend"
+        "title": "Ingeniero de Software Backend",
+        "description": "Construyendo arquitecturas escalables y soluciones eficientes"
     },
     "skills": {
         "all": [
@@ -167,6 +167,11 @@
                         "name": "Git",
                         "icon": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
                         "link": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                    },
+                    {
+                        "name": "Power BI",
+                        "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg",
+                        "link": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg"
                     }
                 ]
             }
@@ -299,9 +304,9 @@
                     "additionalLinks": []
                 },
                 {
-                    "title": "2° Proyecto Web II - Completo",
-                    "description": "Este proyecto incluye el frontend y backend del '2° Proyecto Web II', que consta de una interfaz de usuario, una API REST mejorada y una API GraphQL. La interfaz permite gestionar perfiles, playlists y videos; la API REST ofrece autenticación de segundo factor y verificación de correos electrónicos; y la API GraphQL maneja operaciones CRUD con JWT y Mongoose.",
-                    "longDescription": "El '2° Proyecto Web II' es una solución integral que combina frontend y backend para gestionar perfiles, playlists y videos. El '2° Proyecto Web II Client' proporciona una interfaz de usuario construida con React, SCSS, HTML y CSS, permitiendo a los usuarios gestionar sus perfiles y playlists, y visualizar videos. El '2° Proyecto Web II Server Rest' es una API REST que extiende el sistema anterior con autenticación de segundo factor (2FA), verificación de correos electrónicos y manejo de tokens JWT para una mayor seguridad. Además, el '2° Proyecto Web II Server GraphQL' añade una capa de GraphQL a la API REST existente, ofreciendo resolvers para operaciones CRUD sobre recursos clave como cuentas, avatares, playlists, usuarios y videos, utilizando JWT para autenticación y Mongoose para esquemas de datos.",
+                    "title": "2do Proyecto Web II - Completo",
+                    "description": "Desarrollé la interfaz y APIs de gestión para perfiles, playlists y videos, implementando autenticación (2FA) con JWT y Mongoose.",
+                    "longDescription": "Diseñé y desarrollé una solución integral combinando frontend y backend para gestionar perfiles, listas de reproducción y videos. El cliente web ofrece una interfaz construida con React, SCSS, HTML y CSS que permite a los usuarios administrar sus listas de reproducción dinámicamente. A nivel de infraestructura, implementé una API REST con doble factor de autenticación (2FA), verificación de correo electrónico y manejo de tokens JWT para maximizar la seguridad. Posteriormente, estructuré una capa GraphQL sobre la API REST existente, ofreciendo resolutores eficientes para operaciones CRUD sobre cuentas, avatares y videos.",
                     "image": "./images/Web2II.png",
                     "technologies": [
                         "React",
@@ -333,9 +338,9 @@
                     "additionalLinks": []
                 },
                 {
-                    "title": "1° Proyecto Web II - Completo",
-                    "description": "El '1° Proyecto Web II' consiste en una aplicación web completa con un frontend para la gestión de contenido y una API REST para la administración de datos. El frontend permite a los padres gestionar el contenido visible para sus hijos, mientras que la API REST maneja usuarios, cuentas, avatares, playlists y videos.",
-                    "longDescription": "El '1° Proyecto Web II' es un proyecto integral desarrollado durante el primer cuatrimestre del año 2024 como parte del curso Web 2. La solución incluye dos componentes principales: el frontend y la API REST. El '1° Proyecto Web II Client' es una aplicación web construida con React, SCSS, HTML y CSS, diseñada para permitir a los padres gestionar el contenido que ven sus hijos en una plataforma similar a Netflix. Los usuarios pueden registrar cuentas, iniciar sesión, crear y gestionar perfiles, y administrar playlists de videos de YouTube. Cada perfil puede tener hasta seis playlists de videos, facilitando el control parental y la personalización del contenido. Por otro lado, el '1° Proyecto Web II Server' es una API REST desarrollada con Node.js, MongoDB y Express.js. Esta API proporciona operaciones CRUD para gestionar usuarios, cuentas, avatares, playlists y videos, sirviendo como el backend para el frontend mencionado. La API asegura una gestión robusta de datos y una integración eficiente con la aplicación web.",
+                    "title": "1er Proyecto Web II - Completo",
+                    "description": "Implementé una aplicación Full Stack para control parental de contenido de YouTube, orquestando una API REST en Node.js y un Frontend en React.",
+                    "longDescription": "Desarrollé una aplicación completa diseñada para permitir a los padres gestionar el contenido que sus hijos consumen, en una plataforma inspirada en el flujo de Netflix. Construí la interfaz de cliente en React y SCSS, permitiendo la creación de perfiles y hasta seis listas de reproducción personalizadas por cada uno. Diseñé el lado del servidor orquestando una API REST robusta con Node.js, Express y MongoDB, proporcionando operaciones CRUD escalables que actúan como la columna vertebral de la gestión de identidades y datos.",
                     "image": "./images/Web2I.png",
                     "technologies": [
                         "React",
@@ -458,21 +463,22 @@
         "introduction": "Soy un desarrollador <strong>Full Stack</strong> con un enfoque especial en el <strong>backend</strong>. Actualmente, estudio <strong>Ingeniería de Software</strong> y me apasiona crear soluciones web que resuelvan problemas complejos. Me especializo en diseñar y desarrollar <strong>APIs</strong>, manejar conexiones entre bases de datos y enfrentar desafíos técnicos con creatividad y precisión.",
         "passion": "Estoy siempre en busca de nuevas tecnologías y métodos para mejorar mis habilidades. Si deseas conectar o conocer más sobre mi trabajo, no dudes en contactarme a través de las redes sociales.",
         "email": "benjaminsandisalas@gmail.com",
-        "socialLinks": [
+        "highlights": [
             {
-                "name": "LinkedIn",
-                "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                "title": "Backend",
+                "description": "Node.js, Express, PostgreSQL, MongoDB",
+                "icon": "FiServer"
             },
             {
-                "name": "GitHub",
-                "url": "https://github.com/FierceSpectrum",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                "title": "Frontend",
+                "description": "React, JavaScript, SCSS, HTML5",
+                "icon": "FiLayout"
             },
             {
-                "name": "Twitter",
-                "url": "https://x.com/BenjaminSandiS1",
-                "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                "title": "Más Sobre Mí",
+                "description": "Conoce mi trayectoria e intereses",
+                "icon": "FiUser",
+                "isButton": true
             }
         ],
         "modal": {
@@ -488,183 +494,64 @@
                 "title": "Intereses Personales",
                 "description": "Fuera de la programación, disfruto de actividades como el ajedrez, que alimenta mi amor por la lógica y la estrategia. Me gusta escuchar música, especialmente música electrónica, y disfruto de la natación, que me ayuda a mantener un equilibrio saludable. Además, valoro mucho el tiempo con mi familia y amigos, y disfruto de actividades al aire libre como ir a la playa y jugar juegos de mesa."
             }
-        },
-        "button": {
-            "title": "Mas Sobre Mí"
         }
     },
     "curriculum": {
         "header": {
-            "name": "Benjamín Sandí Salas",
-            "image": "./images/Yo.png"
-        },
-        "personalInfo": {
-            "title": "Información Personal",
-            "address": {
-                "title": "Dirección",
-                "data": "Ciudad Quesada, Costa Rica"
-            },
-            "email": {
-                "title": "Email",
-                "data": "benjaminsandisalas@gmail.com"
-            },
-            "birthDate": {
-                "title": "Fecha de Nacimiento",
-                "data": "21/08/2003"
-            },
-            "nationality": {
-                "title": "Nacionalidad",
-                "data": "Costa Rica"
-            },
-            "linkedin": {
-                "title": "LinkedIn",
-                "data": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/"
-            }
+            "name": "BENJAMÍN SANDÍ",
+            "title": "INGENIERO EN SOFTWARE",
+            "contact": "Costa Rica | +506 8703 4733 | benjaminsandisalas@gmail.com\nLinkedIn · GitHub · Portafolio"
         },
         "profile": {
-            "title": "Perfil",
-            "description": "Soy un desarrollador Full Stack apasionado por el desarrollo de soluciones web eficientes y escalables. Actualmente estoy cursando Ingeniería de Software y me especializo en la creación de arquitecturas backend robustas, APIs RESTful y soluciones de base de datos. Con una mentalidad orientada a resultados, mi enfoque es combinar creatividad técnica y precisión en el código para resolver problemas complejos. Me mantengo en constante aprendizaje y adaptación a las tecnologías más recientes, siempre buscando optimizar procesos y mejorar la experiencia del usuario final. Si bien me destaco en el desarrollo backend, tengo una sólida comprensión del frontend que me permite entregar productos completos y funcionales. Además, me caracteriza una fuerte ética de trabajo, liderazgo colaborativo y una capacidad natural para comunicar y trabajar de manera efectiva en equipo."
-        },
-        "education": {
-            "title": "Educación",
-            "education": [
-                {
-                    "year": "2021 - 2025",
-                    "degree": "Ingeniería en Software",
-                    "institution": "Universidad Técnica Nacional"
-                },
-                {
-                    "year": "2016 - 2020",
-                    "degree": "Bachillerato",
-                    "institution": "Colegio Cooperativo San Carlos Borromeo"
-                },
-                {
-                    "year": "2009 - 2015",
-                    "degree": "Educación Básica",
-                    "institution": "Escuela el Carmen"
-                }
-            ]
+            "title": "PERFIL PROFESIONAL",
+            "description": "Ingeniero en Software con formación académica sólida y experiencia práctica en el diseño y desarrollo de soluciones backend, especializado en APIs REST y GraphQL.\nHe participado en proyectos académicos y de práctica profesional que abarcan todo el ciclo de vida del software, desde levantamiento de requisitos hasta implementación y análisis.\nMi principal fortaleza es la lógica de negocio y la estructuración de soluciones mantenibles, con capacidad para colaborar en entornos Full Stack y de análisis de datos."
         },
         "experience": {
-            "title": "Experiencia Profesional",
-            "experience": [
+            "title": "EXPERIENCIA PRÁCTICA Y ACADÉMICA",
+            "items": [
                 {
-                    "title": "Desarrollo de Aplicación de Gestión de Proyectos",
-                    "description": "Actualmente desarrollando una aplicación web para la gestión de proyectos en equipo. El proyecto incluye la implementación de funcionalidades para la asignación de tareas, la gestión del tiempo y la colaboración entre miembros del equipo, utilizando tecnologías modernas como React, Node.js y PostgreSQL."
-                }
-            ]
-        },
-        "skills": {
-            "title1": "Habilidades Blandas",
-            "title2": "Habilidades Técnicas",
-            "technical": [
-                {
-                    "name": "JavaScript",
-                    "level": 3
+                    "title": "Práctica Profesional Universitaria – Desarrollo de Módulo Analítico",
+                    "details": [
+                        "Desarrollo de módulo backend–frontend para análisis de proyectos empresariales.",
+                        "Implementación de consultas eficientes mediante GraphQL.",
+                        "Construcción de gráficos analíticos y métricas para evaluación de desempeño.",
+                        "Trabajo con backend en Laravel y frontend en Vue.js."
+                    ]
                 },
                 {
-                    "name": "Express.js",
-                    "level": 3
-                },
-                {
-                    "name": "Node.js",
-                    "level": 3
-                },
-                {
-                    "name": "React",
-                    "level": 3
-                },
-                {
-                    "name": "PostgreSQL",
-                    "level": 3
-                },
-                {
-                    "name": "MongoDB",
-                    "level": 3
-                },
-                {
-                    "name": "APIs REST y GraphQL",
-                    "level": 2
-                },
-                {
-                    "name": "C#",
-                    "level": 2
-                },
-                {
-                    "name": "Git",
-                    "level": 2
-                },
-                {
-                    "name": "Sass",
-                    "level": 2
-                }
-            ],
-            "soft": [
-                "Adaptabilidad",
-                "Comunicación asertiva",
-                "Liderazgo",
-                "Toma de decisiones críticas",
-                "Resolución de conflictos",
-                "Resolución de Problemas",
-                "Compromiso",
-                "Creatividad",
-                "Empatía",
-                "Perseverancia"
-            ]
-        },
-        "language": {
-            "title": "Idiomas",
-            "languages": [
-                {
-                    "language": "Español",
-                    "level": "Nativo"
-                },
-                {
-                    "language": "Inglés",
-                    "level": "Intermedio"
-                }
-            ]
-        },
-        "project": {
-            "title": "Proyectos",
-            "projects": [
-                {
-                    "title": "Aplicación de Gestión de Proyectos",
-                    "description": "Actualmente desarrollando una aplicación web para facilitar la administración de proyectos en equipo."
-                },
-                {
-                    "title": "Explorar Más Proyectos",
-                    "description": "Si te interesa conocer más sobre mi trabajo, puedes visitar mi GitHub o portafolio para ver proyectos adicionales.",
-                    "links": [
-                        {
-                            "name": "GitHub",
-                            "url": "https://github.com/FierceSpectrum"
-                        },
-                        {
-                            "name": "Portafolio",
-                            "url": "https://fiercespectrum.github.io/FierceSpectrum/build/"
-                        }
+                    "title": "Proyecto Académico – Sistema de Control Parental (Full Stack)",
+                    "details": [
+                        "Desarrollo de aplicación con roles padre/hijo y control de acceso a contenido.",
+                        "Implementación de API REST y GraphQL con autenticación JWT.",
+                        "Diseño de arquitectura backend orientada a mantenibilidad y escalabilidad."
                     ]
                 }
             ]
         },
-        "socialMedia": {
-            "title": "Redes Sociales",
-            "socialMedia": [
+        "skills": {
+            "title": "COMPETENCIAS PROFESIONALES",
+            "items": [
                 {
-                    "name": "LinkedIn",
-                    "url": "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
+                    "category": "Técnicas",
+                    "details": "Node.js, Express / APIs REST y GraphQL / JavaScript / Python / PostgreSQL / MongoDB / Git / Power BI"
                 },
                 {
-                    "name": "GitHub",
-                    "url": "https://github.com/FierceSpectrum",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                    "category": "Blandas",
+                    "details": "Pensamiento analítico / Resolución de problemas / Comunicación técnica / Trabajo colaborativo / Adaptabilidad / Compromiso profesional"
                 },
                 {
-                    "name": "Twitter",
-                    "url": "https://x.com/BenjaminSandiS1",
-                    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg"
+                    "category": "Idiomas",
+                    "details": "Español (nativo) / Inglés (intermedio)"
+                }
+            ]
+        },
+        "education": {
+            "title": "EDUCACIÓN",
+            "items": [
+                {
+                    "degree": "Ingeniería en Software",
+                    "institution": "Universidad Técnica Nacional",
+                    "year": "2021 – 2025"
                 }
             ]
         },
@@ -677,7 +564,15 @@
         }
     },
     "footer": {
-        "email": "Obtener Correo Electrónico",
+        "contactTitle": "Contacto",
+        "email": "benjaminsandisalas@gmail.com",
+        "copyEmail": "Copiar Correo",
+        "emailCopied": "¡Copiado!",
+        "openEmail": "Abrir Correo",
+        "socialTitle": "Redes Sociales",
+        "navTitle": "Navegación",
+        "rights": "Todos los derechos reservados.",
+        "backToTop": "Volver Arriba",
         "links": [
             {
                 "name": "Inicio",

@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowUp, FiCheck, FiExternalLink } from "react-icons/fi";
 
 const Footer = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const footerData = t("footer", { returnObjects: true });
+  const [emailCopied, setEmailCopied] = useState(false);
 
-  const footer = t("footer", { returnObjects: true });
-  const aboutMe = t("aboutMe", { returnObjects: true });
-  const { email, socialLinks } = aboutMe;
-
-  // Función para copiar el email al portapapeles
-  const copyToClipboard = () => {
-    navigator.clipboard
-      .writeText(email || "")
-      .then(() => {
-        alert("Email copiado al portapapeles!");
-      })
-      .catch((err) => {
-        console.error("Error al copiar el email: ", err);
-      });
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(footerData.email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
   };
 
-  const handleClick = (href, id) => {
+  const openEmailClient = () => {
+    window.location.href = `mailto:${footerData.email}`;
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const socialLinks = [
+    { icon: FiGithub, href: "https://github.com/FierceSpectrum", label: "GitHub", className: "GitHub" },
+    { icon: FiLinkedin, href: "https://www.linkedin.com/in/benjamin-sandi-salas-440159324/", label: "LinkedIn", className: "LinkedIn" },
+    { icon: FiTwitter, href: "https://x.com/BenjaminSandiS1", label: "Twitter", className: "Twitter" },
+  ];
+
+  const handleLinkClick = (href, id) => {
     if (href === "Home") {
       const scrollTo = id ? { state: { scrollTo: id } } : {};
       navigate("/", scrollTo);
@@ -35,42 +44,83 @@ const Footer = () => {
   };
 
   return (
-    <div className="Footer">
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="contact-info">
-            <p>
-              <a href={`mailto:${email}`} className="email-link">
-                {footer.email}
-              </a>
-              <button className="copy-button" onClick={copyToClipboard}>
-                <FontAwesomeIcon icon={faCopy} />
-              </button>
-            </p>
+    <footer className="Footer">
+      <div className="footer-container">
+        <div className="footer-grid">
+          {/* Contact Section */}
+          <div className="footer-section">
+            <h3 className="section-title">{footerData.contactTitle}</h3>
+            <div className="contact-actions">
+              <div className="email-display">
+                <FiMail className="icon-sm" />
+                <span>{footerData.email}</span>
+              </div>
+              <div className="action-buttons">
+                <button className="btn-outline" onClick={copyEmail}>
+                  {emailCopied ? (
+                    <>
+                      <FiCheck className="icon-sm" /> {footerData.emailCopied}
+                    </>
+                  ) : (
+                    <>
+                      <FiMail className="icon-sm" /> {footerData.copyEmail}
+                    </>
+                  )}
+                </button>
+                <button className="btn-outline" onClick={openEmailClient}>
+                  <FiExternalLink className="icon-sm" /> {footerData.openEmail}
+                </button>
+              </div>
+            </div>
           </div>
-          <ul className="social-links">
-            {socialLinks.map((link) => (
-              <li key={link.name} className={`social-item ${link.name}`}>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={link.logo}
-                    alt={`${link.name} logo`}
-                    className="social-logo"
-                  />
+
+          {/* Social Media Section */}
+          <div className="footer-section">
+            <h3 className="section-title">{footerData.socialTitle}</h3>
+            <div className="social-links-grid">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className={`social-item ${social.className}`}
+                >
+                  <social.icon className="icon-md" />
                 </a>
-              </li>
-            ))}
-          </ul>
-          <div className="quick-links">
-            {footer.links.map((link) => (
-              <button onClick={() => handleClick(link.href, link.id)}>
-                {link.name}
-              </button>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Section */}
+          <div className="footer-section">
+            <h3 className="section-title">{footerData.navTitle}</h3>
+            <nav className="quick-links">
+              {footerData.links.map((link, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleLinkClick(link.href, link.id)}
+                  className="nav-link"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </nav>
           </div>
         </div>
-      </footer>
-    </div>
+
+        {/* Bottom Section */}
+        <div className="footer-bottom">
+          <p className="rights-text">
+            © {new Date().getFullYear()} Developer Portfolio. {footerData.rights}
+          </p>
+          <button className="btn-outline btn-top" onClick={scrollToTop}>
+            {footerData.backToTop} <FiArrowUp className="icon-sm" />
+          </button>
+        </div>
+      </div>
+    </footer>
   );
 };
 

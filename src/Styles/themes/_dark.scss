@@ -29,4 +29,27 @@
     --tech-background-color: #355370;
     --color-level-light: #1abc9c;
     --color-level-dark: #08745e;
+
+    // New design tokens
+    --color-muted: #1e2a35;
+    --color-muted-foreground: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --color-accent: rgba(26, 188, 156, 0.15);
+    --color-accent-strong: rgba(26, 188, 156, 0.25);
+    --color-surface: rgba(23, 29, 37, 0.8);
+    --color-surface-hover: rgba(32, 42, 54, 0.9);
+    --hero-gradient-from: rgba(26, 188, 156, 0.05);
+    --hero-gradient-to: rgba(66, 175, 248, 0.05);
+    --hero-blob-1: rgba(26, 188, 156, 0.08);
+    --hero-blob-2: rgba(66, 175, 248, 0.06);
+    --nav-bg-scrolled: rgba(17, 17, 17, 0.85);
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-bg: #1a2332;
+    --card-bg-hover: #1f2b3d;
+    --tag-bg: rgba(26, 188, 156, 0.15);
+    --tag-color: #1abc9c;
+    --section-alt-bg: rgba(30, 42, 53, 0.3);
+    --scrollbar-track: #283746;
+    --scrollbar-thumb: #1abc9c;
+    --scrollbar-thumb-hover: #28e1bd;
 }
