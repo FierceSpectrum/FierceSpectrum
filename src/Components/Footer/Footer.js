@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Footer.scss";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowUp, FiCheck, FiExternalLink } from "react-icons/fi";
 
 const Footer = () => {
