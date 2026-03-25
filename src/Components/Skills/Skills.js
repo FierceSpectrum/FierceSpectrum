@@ -26,8 +26,8 @@ const Skills = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [allSkills, setAllSkills] = useState([]);
   const { t } = useTranslation();
-  const { fullstack, alls } = t("skills", { returnObjects: true });
-  const { skills } = fullstack;
+  const { fullstack = {}, alls = [] } = t("skills", { returnObjects: true }) || {};
+  const skills = fullstack?.skills || [];
 
   useEffect(() => {
     if (modalIsOpen) {
