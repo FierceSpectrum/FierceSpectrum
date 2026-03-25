@@ -33,7 +33,7 @@ const Skills = () => {
     if (modalIsOpen) {
       setAllSkills(alls);
     }
-  }, [modalIsOpen]);
+  }, [modalIsOpen, alls]);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
