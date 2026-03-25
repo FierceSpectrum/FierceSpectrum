@@ -31,7 +31,7 @@ const Skills = () => {
 
   useEffect(() => {
     if (modalIsOpen) {
-      setAllSkills(all);
+      setAllSkills({});
     }
   }, [modalIsOpen]);
 
