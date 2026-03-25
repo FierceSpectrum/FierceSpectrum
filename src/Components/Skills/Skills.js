@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Skills.scss";
 import Modal from "../Modal/Modal";
@@ -26,16 +26,13 @@ const Skills = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [allSkills, setAllSkills] = useState([]);
   const { t } = useTranslation();
-  const { fullstack = {}, alls = [] } = t("skills", { returnObjects: true }) || {};
+  const { fullstack = {}, all = [] } = t("skills", { returnObjects: true }) || {};
   const skills = fullstack?.skills || [];
 
-  useEffect(() => {
-    if (modalIsOpen) {
-      setAllSkills(alls);
-    }
-  }, [modalIsOpen, alls]);
-
-  const openModal = () => setModalIsOpen(true);
+  const openModal = () => {
+    setAllSkills(Array.isArray(all) ? all : []);
+    setModalIsOpen(true);
+  };
   const closeModal = () => setModalIsOpen(false);
 
   return (
@@ -64,22 +61,21 @@ const Skills = () => {
         onClose={closeModal}
         nameClass="skills-section"
       >
-        <h3>{fullstack.modal.title1}</h3>
+        <h3>{fullstack?.modal?.title1 || "Skills List"}</h3>
         <div className="skills-list">
-          {allSkills.map((category) => (
-            <div key={category.type} className="skills-category">
+          {(allSkills || []).map((category, idx) => (
+            <div key={category?.type || idx} className="skills-category">
               <h4>
-                {category.icon} {category.type}
+                {category?.icon} {category?.type}
               </h4>
               <div>
-                {category.items.map((skill) => (
-                  <div className="skill">
+                {(category?.items || []).map((skill) => (
+                  <div key={skill?.name} className="skill">
                     <img className="img-modal"
-                      key={skill.name}
-                      src={skill.icon}
-                      alt={skill.name}
+                      src={skill?.icon}
+                      alt={skill?.name}
                     />
-                    <span className="span-modal">{skill.name}</span>
+                    <span className="span-modal">{skill?.name}</span>
                   </div>
                 ))}
               </div>
