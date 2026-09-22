@@ -24,6 +24,10 @@
             {
                 "name": "Curriculum",
                 "href": "Curriculum"
+            },
+            {
+                "name": "Education",
+                "href": "Education"
             }
         ]
     },
@@ -542,6 +546,29 @@
             }
         }
     },
+    "educationGallery": {
+        "title": "Education & Certificates",
+        "copyLink": "Copy direct link",
+        "linkCopied": "Link copied!",
+        "items": [
+            {
+                "id": "bachillerato-ingenieria-software",
+                "title": "Bachelor's Degree in Software Engineering",
+                "institution": "Universidad Técnica Nacional",
+                "year": "2025",
+                "image": "./images/certificates/Bachillerato_Ing_Software.jpg",
+                "alt": "Bachelor's Degree in Software Engineering diploma"
+            },
+            {
+                "id": "data-analytics-essentials",
+                "title": "Data Analytics Essentials (40 hours)",
+                "institution": "MICITT – CECI",
+                "year": "2026",
+                "image": "./images/certificates/Data_Analytics_Essentials.jpg",
+                "alt": "Data Analytics Essentials certificate"
+            }
+        ]
+    },
     "footer": {
         "contactTitle": "Contact",
         "email": "benjaminsandisalas@gmail.com",
@@ -574,6 +601,10 @@
             {
                 "name": "Curriculum",
                 "href": "Curriculum"
+            },
+            {
+                "name": "Education",
+                "href": "Education"
             }
         ]
     }

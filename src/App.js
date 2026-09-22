@@ -11,6 +11,7 @@ import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Curriculum from "./Components/Curriculum/Curriculum";
+import Education from "./Components/Education/Education";
 import Footer from "./Components/Footer/Footer";
 
 const Layout = () => {
@@ -42,6 +43,10 @@ const router = createHashRouter([
       {
         path: "Curriculum",
         element: <Curriculum />,
+      },
+      {
+        path: "Education",
+        element: <Education />,
       },
       {
         path: "Projects",

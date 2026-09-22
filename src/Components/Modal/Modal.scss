@@ -42,6 +42,30 @@
         transition: transform $transition-slow;
     }
 
+    .modal-close-button {
+        position: absolute;
+        top: $space-3;
+        right: $space-3;
+        width: $space-8;
+        height: $space-8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        border-radius: $radius-md;
+        color: var(--color-secundario);
+        font-size: $text-2xl;
+        line-height: 1;
+        cursor: pointer;
+        transition: color $transition-fast, background-color $transition-fast;
+
+        &:hover {
+            color: var(--primary-color);
+            background-color: var(--color-accent);
+        }
+    }
+
     &.open .modal {
         transform: scale(1);
     }
