@@ -5,6 +5,7 @@ import {
   createHashRouter,
   RouterProvider,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 
 import Navigation from "./Components/Navigation/Navigation";
@@ -49,10 +50,22 @@ const router = createHashRouter([
         element: <Education />,
       },
       {
+        // Deep link robusto para compartir (sin ? ni = en la URL):
+        // #/Education/bachillerato-ingenieria-software
+        path: "Education/:certId",
+        element: <Education />,
+      },
+      {
         path: "Projects",
         element: <Projects />,
       },
       { index: true, element: <Home /> },
+      // Cualquier ruta desconocida (link malformado por un PDF/chat)
+      // cae al inicio en vez de la pantalla de error del router.
+      {
+        path: "*",
+        element: <Navigate to="/" replace />,
+      },
     ],
   },
 ]);

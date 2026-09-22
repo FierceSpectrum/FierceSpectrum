@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Education.scss";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useParams, useNavigate } from "react-router-dom";
 import Modal from "../Modal/Modal";
 
 const getImagePath = (path) => {
@@ -13,29 +13,34 @@ const getImagePath = (path) => {
 
 const Education = () => {
   const { t } = useTranslation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const { certId: pathCertId } = useParams();
+  const navigate = useNavigate();
   const gallery = t("educationGallery", { returnObjects: true });
-  const { title, subtitle, hint, items } = gallery;
+  const { title, items } = gallery;
   const [selected, setSelected] = useState(null);
 
-  // Deep link: /Education?cert=<id> abre ese certificado directo
+  // Deep link en dos formas (la de ruta es la robusta para compartir):
+  //   #/Education/<id>   (preferida: sin ? ni =)
+  //   #/Education?cert=<id>  (compatibilidad con links viejos)
+  const certId = pathCertId || searchParams.get("cert");
+
   useEffect(() => {
-    const certId = searchParams.get("cert");
     if (certId && items?.length) {
       const found = items.find((item) => item.id === certId);
       if (found) setSelected(found);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  }, [certId]);
 
   const openItem = (item) => {
     setSelected(item);
-    setSearchParams({ cert: item.id }, { replace: true });
+    navigate(`/Education/${item.id}`, { replace: true });
   };
 
   const closeModal = () => {
     setSelected(null);
-    setSearchParams({}, { replace: true });
+    navigate("/Education", { replace: true });
   };
 
   return (
